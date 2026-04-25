@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paneo | Compare Local Window Providers</title>
+
+    <meta name="description"
+        content="Paneo helps homeowners compare local window providers for installation, replacement, repair, custom design, energy-efficient windows, and consultations.">
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="logo" href="index.html" aria-label="Paneo home">
+                <span class="logo-mark" aria-hidden="true"></span>
+                <span data-company>Paneo</span>
+            </a>
+
+            <nav class="desktop-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+
+                <div class="nav-dropdown">
+                    <button class="nav-dropdown-toggle" type="button" aria-expanded="false">
+                        Services <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+
+                    <div class="services-dropdown" data-services-dropdown></div>
+                </div>
+
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <a class="btn btn-primary" href="tel:+18884206731" data-phone>
+                    Get Window Quotes
+                </a>
+
+                <button class="mobile-menu-toggle" type="button" data-menu-toggle aria-label="Open menu"
+                    aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" data-mobile-menu aria-hidden="true">
+        <div class="mobile-menu-inner">
+            <nav class="mobile-nav" aria-label="Mobile navigation">
+                <a href="index.html">Home</a>
+
+                <button class="mobile-services-toggle" type="button" data-mobile-services-toggle aria-expanded="false">
+                    Services <i class="fa-solid fa-plus"></i>
+                </button>
+
+                <div class="mobile-services-list" data-mobile-services-list></div>
+
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="mobile-contact">
+                <a href="tel:+18884206731" data-phone-number>+1 888 420 6731</a>
+                <a href="mailto:hello@paneomatch.com" data-email-link data-email>hello@paneomatch.com</a>
+                <span data-address>1200 Brickell Avenue, Miami, FL 33131, USA</span>
+            </div>
+        </div>
+    </div>
+
+    <a class="sticky-service-btn" href="services.html">
+        <i class="fa-solid fa-table-cells-large"></i>
+        Services
+    </a>
+
+    <main id="main">
+        <!-- HERO -->
+        <section class="home-hero">
+            <div class="hero-bg">
+                <img src="images/home/home-hero-windows.jpg" alt="Modern architectural windows on a premium home">
+            </div>
+
+            <div class="hero-overlay"></div>
+
+            <div class="container hero-grid">
+                <div class="hero-content reveal-up">
+                    <span class="eyebrow">Independent window provider matching</span>
+
+                    <h1>Compare window providers with clarity.</h1>
+
+                    <p class="lead">
+                        Paneo helps homeowners explore local window companies for installation,
+                        replacement, repair, custom designs, and energy-efficient upgrades.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="contact.html">
+                            Start Comparing
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                        <a class="btn btn-ghost" href="services.html">
+                            View Services
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-panel premium-card reveal-up">
+                    <p class="panel-label">Matching platform</p>
+                    <h2>Not a contractor. Not an installer.</h2>
+                    <p>
+                        Paneo connects homeowners with independent local providers.
+                        You compare options and choose the company that fits your project.
+                    </p>
+
+                    <div class="hero-mini-grid">
+                        <div>
+                            <strong>6</strong>
+                            <span>Window categories</span>
+                        </div>
+                        <div>
+                            <strong>USA</strong>
+                            <span>Provider search area</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTRO STRIP -->
+        <section class="home-strip section">
+            <div class="container strip-grid">
+                <div class="strip-item reveal-up">
+                    <i class="fa-solid fa-magnifying-glass-location"></i>
+                    <h3>Compare</h3>
+                    <p>Review service types and request provider options based on your project.</p>
+                </div>
+
+                <div class="strip-item reveal-up">
+                    <i class="fa-solid fa-window-restore"></i>
+                    <h3>Match</h3>
+                    <p>Connect with independent window companies that may serve your area.</p>
+                </div>
+
+                <div class="strip-item reveal-up">
+                    <i class="fa-solid fa-file-signature"></i>
+                    <h3>Request</h3>
+                    <p>Ask for quotes and verify licenses, insurance, and project details directly.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES PREVIEW -->
+        <section class="home-services section">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="eyebrow">Window project categories</span>
+                    <h2>Designed around the way homeowners compare.</h2>
+                    <p class="lead">
+                        From full replacements to custom design requests, Paneo keeps the
+                        experience focused, simple, and provider-oriented.
+                    </p>
+                </div>
+
+                <div class="home-services-grid">
+                    <a class="image-card reveal-up" href="window-installation.html">
+                        <img src="images/services/window-installation.jpg" alt="Modern window installation project">
+                        <div class="image-card-content">
+                            <i class="fa-solid fa-window-maximize"></i>
+                            <h3>Window Installation</h3>
+                            <p>Compare local providers for new window projects.</p>
+                        </div>
+                    </a>
+
+                    <a class="image-card reveal-up" href="window-replacement.html">
+                        <img src="images/services/window-replacement.jpg" alt="Premium window replacement">
+                        <div class="image-card-content">
+                            <i class="fa-solid fa-repeat"></i>
+                            <h3>Window Replacement</h3>
+                            <p>Explore options for older or inefficient windows.</p>
+                        </div>
+                    </a>
+
+                    <a class="image-card reveal-up" href="custom-window-design.html">
+                        <img src="images/services/custom-window-design.jpg" alt="Custom architectural window design">
+                        <div class="image-card-content">
+                            <i class="fa-solid fa-pen-ruler"></i>
+                            <h3>Custom Window Design</h3>
+                            <p>Find providers for unique window shapes and finishes.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE SECTION -->
+        <section class="home-experience section">
+            <div class="container experience-grid">
+                <div class="experience-copy reveal-up">
+                    <span class="eyebrow">Premium comparison flow</span>
+                    <h2>A calmer way to start a window project.</h2>
+                    <p class="lead">
+                        Instead of searching through random listings, homeowners can start with
+                        clear categories, concise project context, and a simple request flow.
+                    </p>
+
+                    <div class="experience-list">
+                        <div>
+                            <span>01</span>
+                            <p>Select the window service category that fits your project.</p>
+                        </div>
+                        <div>
+                            <span>02</span>
+                            <p>Share basic details about the home, style, and timing.</p>
+                        </div>
+                        <div>
+                            <span>03</span>
+                            <p>Compare independent provider options before choosing who to contact.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-visual reveal-up">
+                    <img src="images/home/home-square-window-detail.jpg" alt="Close-up of modern window frame">
+                    <div class="floating-note">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <p>Always verify provider license and insurance before hiring.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SWIPER -->
+        <section class="home-slider section">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="eyebrow">Project situations</span>
+                    <h2>Different homes need different window conversations.</h2>
+                </div>
+
+                <div class="swiper homeProjectSwiper reveal-up">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide project-slide">
+                            <img src="images/home/slider-energy-windows.jpg" alt="Energy efficient windows">
+                            <div>
+                                <h3>Energy-focused upgrades</h3>
+                                <p>Compare providers based on glass type, insulation goals, and climate needs.</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide project-slide">
+                            <img src="images/home/slider-repair-window.jpg" alt="Window repair detail">
+                            <div>
+                                <h3>Repair or replace?</h3>
+                                <p>Review providers who may evaluate seals, frames, glass damage, and hardware.</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide project-slide">
+                            <img src="images/home/slider-custom-window.jpg" alt="Custom window design">
+                            <div>
+                                <h3>Architectural windows</h3>
+                                <p>Explore companies offering unusual sizes, shapes, materials, and finishes.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MAP + FORM -->
+        <section class="home-contact section">
+            <div class="container contact-grid">
+                <div class="map-card reveal-up">
+                    <div class="map-card-header">
+                        <span class="eyebrow">USA service area</span>
+                        <h2>Start from one simple request.</h2>
+                        <p>
+                            Paneo is built for homeowners across the United States who want
+                            to compare window provider options before committing.
+                        </p>
+                    </div>
+
+                    <div class="map-frame">
+                        <iframe title="Paneo map location"
+                            src="https://www.google.com/maps?q=1200%20Brickell%20Avenue%20Miami%20FL%2033131%20USA&output=embed"
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+                <form class="form-card reveal-up" data-lead-form>
+                    <span class="eyebrow">Request quotes</span>
+                    <h2>Tell us what you want to compare.</h2>
+
+                    <div class="form-grid">
+                        <label class="form-field">
+                            <input type="text" name="name" placeholder="Your name" required>
+                            <span class="field-check"></span>
+                        </label>
+
+                        <label class="form-field">
+                            <input type="email" name="email" placeholder="Email address" required>
+                            <span class="field-check"></span>
+                        </label>
+
+                        <label class="form-field">
+                            <input type="tel" name="phone" placeholder="Phone number" required>
+                            <span class="field-check"></span>
+                        </label>
+
+                        <label class="form-field">
+                            <select name="service" required>
+                                <option value="">Choose service</option>
+                                <option>Window Installation</option>
+                                <option>Window Replacement</option>
+                                <option>Window Repair</option>
+                                <option>Custom Window Design</option>
+                                <option>Energy-Efficient Windows</option>
+                                <option>Window Consultation</option>
+                            </select>
+                        </label>
+
+                        <label class="form-field">
+                            <textarea name="message" placeholder="Project details" required></textarea>
+                            <span class="field-check"></span>
+                        </label>
+
+                        <button class="btn btn-primary" type="submit">
+                            Submit Request
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                        <p class="form-message" data-form-message></p>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="home-faq section">
+            <div class="container faq-grid">
+                <div class="section-header reveal-up">
+                    <span class="eyebrow">FAQ</span>
+                    <h2>Clear answers before you compare.</h2>
+                </div>
+
+                <div class="faq-list reveal-up">
+                    <details>
+                        <summary>How do I compare local window providers?</summary>
+                        <p>Start by choosing a service category, then request provider options based on your project
+                            type, location, timing, and window preferences.</p>
+                    </details>
+
+                    <details>
+                        <summary>Is Paneo a window installation company?</summary>
+                        <p>No. Paneo is an independent matching platform. Contractors and providers are independent, and
+                            homeowners choose who they contact or hire.</p>
+                    </details>
+
+                    <details>
+                        <summary>Are quotes from providers usually free?</summary>
+                        <p>Many providers offer free estimates, but quote policies can vary. Homeowners should confirm
+                            pricing and terms directly with each provider.</p>
+                    </details>
+
+                    <details>
+                        <summary>What affects window project pricing?</summary>
+                        <p>Pricing may depend on window size, glass type, frame material, quantity, labor, property
+                            access, location, and the provider selected.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer"></footer>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How do I compare local window providers?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Start by choosing a service category, then request provider options based on your project type, location, timing, and window preferences."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is Paneo a window installation company?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Paneo is an independent matching platform. Contractors and providers are independent, and homeowners choose who they contact or hire."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Are quotes from providers usually free?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Many providers offer free estimates, but quote policies can vary. Homeowners should confirm pricing and terms directly with each provider."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What affects window project pricing?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Pricing may depend on window size, glass type, frame material, quantity, labor, property access, location, and the provider selected."
+                }
+            }
+        ]
+    }
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script src="js/config.js"></script>
+<script src="js/services-data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/home.js"></script>
+</body>
+
+</html>

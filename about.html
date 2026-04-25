@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Paneo | Independent Window Provider Matching Platform</title>
+
+    <meta name="description"
+        content="Learn how Paneo helps homeowners compare independent local window providers for installation, replacement, repair, custom design, and consultation requests.">
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="logo" href="index.html" aria-label="Paneo home">
+                <span class="logo-mark" aria-hidden="true"></span>
+                <span data-company>Paneo</span>
+            </a>
+
+            <nav class="desktop-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+
+                <div class="nav-dropdown">
+                    <button class="nav-dropdown-toggle" type="button" aria-expanded="false">
+                        Services <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="services-dropdown" data-services-dropdown></div>
+                </div>
+
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <a class="btn btn-primary" href="tel:+18884206731" data-phone>Get Window Quotes</a>
+
+                <button class="mobile-menu-toggle" type="button" data-menu-toggle aria-label="Open menu"
+                    aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu" data-mobile-menu aria-hidden="true">
+        <div class="mobile-menu-inner">
+            <nav class="mobile-nav" aria-label="Mobile navigation">
+                <a href="index.html">Home</a>
+
+                <button class="mobile-services-toggle" type="button" data-mobile-services-toggle aria-expanded="false">
+                    Services <i class="fa-solid fa-plus"></i>
+                </button>
+
+                <div class="mobile-services-list" data-mobile-services-list></div>
+
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="mobile-contact">
+                <a href="tel:+18884206731" data-phone-number>+1 888 420 6731</a>
+                <a href="mailto:hello@paneomatch.com" data-email-link data-email>hello@paneomatch.com</a>
+                <span data-address>1200 Brickell Avenue, Miami, FL 33131, USA</span>
+            </div>
+        </div>
+    </div>
+
+    <a class="sticky-service-btn" href="services.html">
+        <i class="fa-solid fa-table-cells-large"></i>
+        Services
+    </a>
+
+    <main id="main">
+        <section class="about-hero">
+            <div class="container about-hero-grid">
+                <div class="about-hero-copy reveal-up">
+                    <span class="eyebrow">About Paneo</span>
+                    <h1>Built for homeowners who want clearer window provider options.</h1>
+                    <p class="lead">
+                        Paneo is an independent matching platform for window projects.
+                        The goal is simple: help homeowners start with organized categories,
+                        clear expectations, and relevant local provider options.
+                    </p>
+
+                    <div class="about-hero-actions">
+                        <a class="btn btn-primary" href="services.html">
+                            Explore Services
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a class="btn btn-ghost" href="contact.html">Request Quotes</a>
+                    </div>
+                </div>
+
+                <div class="about-hero-visual reveal-up">
+                    <img src="images/about/about-architectural-windows.jpg" alt="Premium architectural windows">
+                    <div class="about-hero-badge">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <p>Paneo is not a direct window contractor or installer.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-story section">
+            <div class="container about-story-grid">
+                <div class="story-card premium-card reveal-up">
+                    <span class="eyebrow">Our story</span>
+                    <h2>A quieter alternative to messy contractor searches.</h2>
+                    <p>
+                        Paneo was created around a common homeowner problem: window projects
+                        often start with too many tabs, unclear service descriptions, and
+                        providers that may or may not fit the project.
+                    </p>
+                    <p>
+                        Instead of acting like a contractor, Paneo focuses on the first step:
+                        helping users describe the project and compare relevant independent
+                        window companies.
+                    </p>
+                </div>
+
+                <div class="story-note reveal-up">
+                    <i class="fa-solid fa-window-restore"></i>
+                    <h3>Focused on comparison, not direct service.</h3>
+                    <p>
+                        The platform does not install, repair, replace, price, inspect, or
+                        warranty windows. Those conversations happen directly between the
+                        homeowner and independent providers.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-model section">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="eyebrow">Aggregator model</span>
+                    <h2>How Paneo helps without pretending to be the provider.</h2>
+                    <p class="lead">
+                        A clear separation matters. Paneo helps organize the request,
+                        while independent providers remain responsible for their own work,
+                        estimates, availability, licenses, insurance, and warranties.
+                    </p>
+                </div>
+
+                <div class="model-grid">
+                    <div class="model-card reveal-up">
+                        <span>01</span>
+                        <i class="fa-solid fa-list-check"></i>
+                        <h3>Choose a category</h3>
+                        <p>Select installation, replacement, repair, custom design, energy-efficient windows, or
+                            consultation.</p>
+                    </div>
+
+                    <div class="model-card reveal-up">
+                        <span>02</span>
+                        <i class="fa-solid fa-house-chimney-window"></i>
+                        <h3>Share project context</h3>
+                        <p>Basic details help route the request toward providers that may fit the home and service type.
+                        </p>
+                    </div>
+
+                    <div class="model-card reveal-up">
+                        <span>03</span>
+                        <i class="fa-solid fa-people-arrows"></i>
+                        <h3>Compare provider options</h3>
+                        <p>Homeowners can review options and decide who to contact, question, compare, or hire.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-values section">
+            <div class="container values-layout">
+                <div class="values-image reveal-up">
+                    <img src="images/about/about-window-grid.jpg" alt="Square window grid on a modern building">
+                </div>
+
+                <div class="values-content reveal-up">
+                    <span class="eyebrow">What matters</span>
+                    <h2>Clear language. Better context. No misleading contractor claims.</h2>
+
+                    <div class="values-list">
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                            <p>Aggregator-safe content that avoids direct service claims.</p>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                            <p>Service pages organized around real homeowner project types.</p>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                            <p>Simple quote request flow with clear verification reminders.</p>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                            <p>USA-wide positioning without pretending to be one local contractor.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-disclaimer section">
+            <div class="container">
+                <div class="disclaimer-card reveal-up">
+                    <div>
+                        <span class="eyebrow">Important note</span>
+                        <h2>Homeowners remain responsible for final provider verification.</h2>
+                    </div>
+
+                    <p data-disclaimer>
+                        Disclaimer: This site is a free service to assist homeowners in connecting with local service
+                        providers. All contractors/providers are independent and this site does not warrant or guarantee
+                        any work performed. It is the responsibility of the homeowner to verify that the hired
+                        contractor furnishes the necessary license and insurance required for the work being performed.
+                        All persons depicted in a photo or video are actors or models and not contractors listed on this
+                        site.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-cta section">
+            <div class="container">
+                <div class="about-cta-card reveal-up">
+                    <span class="eyebrow">Start comparing</span>
+                    <h2>Ready to see which window category fits your project?</h2>
+                    <p>
+                        Browse the service categories or send a compact request to start comparing
+                        local provider options.
+                    </p>
+
+                    <div class="about-cta-actions">
+                        <a class="btn btn-primary" href="services.html">
+                            View Services
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a class="btn btn-ghost" href="contact.html">Contact Paneo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer"></footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/services-data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/about.js"></script>
+</body>
+
+</html>

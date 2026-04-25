@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Services | Paneo</title>
+
+    <meta name="description"
+        content="Compare local window providers for installation, replacement, repair, custom window design, energy-efficient windows, and window consultations.">
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="logo" href="index.html" aria-label="Paneo home">
+                <span class="logo-mark" aria-hidden="true"></span>
+                <span data-company>Paneo</span>
+            </a>
+
+            <nav class="desktop-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+
+                <div class="nav-dropdown">
+                    <button class="nav-dropdown-toggle" type="button" aria-expanded="false">
+                        Services <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="services-dropdown" data-services-dropdown></div>
+                </div>
+
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <a class="btn btn-primary" href="tel:+18884206731" data-phone>Get Window Quotes</a>
+
+                <button class="mobile-menu-toggle" type="button" data-menu-toggle aria-label="Open menu"
+                    aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu" data-mobile-menu aria-hidden="true">
+        <div class="mobile-menu-inner">
+            <nav class="mobile-nav" aria-label="Mobile navigation">
+                <a href="index.html">Home</a>
+
+                <button class="mobile-services-toggle" type="button" data-mobile-services-toggle aria-expanded="false">
+                    Services <i class="fa-solid fa-plus"></i>
+                </button>
+
+                <div class="mobile-services-list" data-mobile-services-list></div>
+
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="mobile-contact">
+                <a href="tel:+18884206731" data-phone-number>+1 888 420 6731</a>
+                <a href="mailto:hello@paneomatch.com" data-email-link data-email>hello@paneomatch.com</a>
+                <span data-address>1200 Brickell Avenue, Miami, FL 33131, USA</span>
+            </div>
+        </div>
+    </div>
+
+    <a class="sticky-service-btn" href="services.html">
+        <i class="fa-solid fa-table-cells-large"></i>
+        Services
+    </a>
+
+    <main id="main">
+        <section class="services-hero">
+            <div class="container services-hero-grid">
+                <div class="services-hero-copy reveal-up">
+                    <span class="eyebrow">Window provider categories</span>
+                    <h1>Explore window services without guessing where to start.</h1>
+                    <p class="lead">
+                        Paneo organizes common window project needs into clear categories,
+                        so homeowners can compare independent local providers with less friction.
+                    </p>
+
+                    <div class="services-hero-actions">
+                        <a class="btn btn-primary" href="contact.html">
+                            Request Provider Options
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a class="btn btn-ghost" href="#services-grid">Browse Categories</a>
+                    </div>
+                </div>
+
+                <div class="services-hero-card premium-card reveal-up">
+                    <div class="services-card-top">
+                        <i class="fa-solid fa-window-restore"></i>
+                        <span>Aggregator model</span>
+                    </div>
+
+                    <h2>Paneo does not perform window work directly.</h2>
+                    <p>
+                        The platform helps homeowners connect with independent companies.
+                        Provider details, pricing, licenses, insurance, timelines, and warranties
+                        should be confirmed directly before hiring.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-index section" id="services-grid">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="eyebrow">All services</span>
+                    <h2>Choose the project path that feels closest to your home.</h2>
+                    <p class="lead">
+                        Each category has its own page with provider-comparison context,
+                        project factors, and a simple quote request direction.
+                    </p>
+                </div>
+
+                <div class="services-grid" data-services-grid></div>
+            </div>
+        </section>
+
+        <section class="services-compare section">
+            <div class="container compare-layout">
+                <div class="compare-panel reveal-up">
+                    <span class="eyebrow">Before you choose</span>
+                    <h2>Good comparison starts with better questions.</h2>
+                    <p>
+                        A window project can involve frame material, glass performance,
+                        home age, climate, quantity, property access, and finish details.
+                        Paneo keeps the first step focused on matching you with relevant
+                        provider options.
+                    </p>
+                </div>
+
+                <div class="compare-list reveal-up">
+                    <div>
+                        <span>01</span>
+                        <h3>Project fit</h3>
+                        <p>Does the provider handle your service type and property style?</p>
+                    </div>
+
+                    <div>
+                        <span>02</span>
+                        <h3>Availability</h3>
+                        <p>Can the provider serve your area and expected project timeline?</p>
+                    </div>
+
+                    <div>
+                        <span>03</span>
+                        <h3>Verification</h3>
+                        <p>Can you confirm license, insurance, quote terms, and warranty details?</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-showcase section">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="eyebrow">Visual project types</span>
+                    <h2>From clean replacements to architectural glass moments.</h2>
+                </div>
+
+                <div class="swiper servicesSwiper reveal-up">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide showcase-slide">
+                            <img src="images/services/showcase-modern-window.jpg" alt="Modern square window design">
+                            <div>
+                                <h3>Modern profiles</h3>
+                                <p>For homeowners comparing clean, minimal, design-led window options.</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide showcase-slide">
+                            <img src="images/services/showcase-replacement.jpg" alt="Window replacement project">
+                            <div>
+                                <h3>Replacement planning</h3>
+                                <p>For older windows, drafts, damage, or performance concerns.</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide showcase-slide">
+                            <img src="images/services/showcase-custom-glass.jpg" alt="Custom glass window detail">
+                            <div>
+                                <h3>Custom glass</h3>
+                                <p>For unique openings, premium finishes, and architectural homes.</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide showcase-slide">
+                            <img src="images/services/showcase-energy.jpg" alt="Energy efficient window style">
+                            <div>
+                                <h3>Energy priorities</h3>
+                                <p>For insulation, glass type, climate needs, and comfort upgrades.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-cta section">
+            <div class="container">
+                <div class="services-cta-card reveal-up">
+                    <div>
+                        <span class="eyebrow">Ready to compare?</span>
+                        <h2>Start with a small request, not a big commitment.</h2>
+                        <p>
+                            Share the basic project category and location. Paneo helps point
+                            your request toward independent window providers that may match.
+                        </p>
+                    </div>
+
+                    <a class="btn btn-primary" href="contact.html">
+                        Get Window Quotes
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer"></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="js/config.js"></script>
+    <script src="js/services-data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/services.js"></script>
+</body>
+
+</html>

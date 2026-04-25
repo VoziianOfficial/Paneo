@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Paneo | Request Window Provider Options</title>
+
+    <meta name="description"
+        content="Contact Paneo to request local window provider options for installation, replacement, repair, custom window design, energy-efficient windows, and consultations.">
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="logo" href="index.html" aria-label="Paneo home">
+                <span class="logo-mark" aria-hidden="true"></span>
+                <span data-company>Paneo</span>
+            </a>
+
+            <nav class="desktop-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+
+                <div class="nav-dropdown">
+                    <button class="nav-dropdown-toggle" type="button" aria-expanded="false">
+                        Services <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="services-dropdown" data-services-dropdown></div>
+                </div>
+
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <a class="btn btn-primary" href="tel:+18884206731" data-phone>Get Window Quotes</a>
+
+                <button class="mobile-menu-toggle" type="button" data-menu-toggle aria-label="Open menu"
+                    aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu" data-mobile-menu aria-hidden="true">
+        <div class="mobile-menu-inner">
+            <nav class="mobile-nav" aria-label="Mobile navigation">
+                <a href="index.html">Home</a>
+
+                <button class="mobile-services-toggle" type="button" data-mobile-services-toggle aria-expanded="false">
+                    Services <i class="fa-solid fa-plus"></i>
+                </button>
+
+                <div class="mobile-services-list" data-mobile-services-list></div>
+
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="mobile-contact">
+                <a href="tel:+18884206731" data-phone-number>+1 888 420 6731</a>
+                <a href="mailto:hello@paneomatch.com" data-email-link data-email>hello@paneomatch.com</a>
+                <span data-address>1200 Brickell Avenue, Miami, FL 33131, USA</span>
+            </div>
+        </div>
+    </div>
+
+    <a class="sticky-service-btn" href="services.html">
+        <i class="fa-solid fa-table-cells-large"></i>
+        Services
+    </a>
+
+    <main id="main">
+        <section class="contact-hero">
+            <div class="container contact-hero-grid">
+                <div class="contact-hero-copy reveal-up">
+                    <span class="eyebrow">Request provider options</span>
+                    <h1>Start your window comparison with one compact request.</h1>
+                    <p class="lead">
+                        Share the basics about your window project. Paneo helps route your request
+                        toward independent local providers that may match your category and location.
+                    </p>
+
+                    <div class="contact-highlights">
+                        <div>
+                            <i class="fa-solid fa-window-maximize"></i>
+                            <span>Window projects</span>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>USA service area</span>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-user-check"></i>
+                            <span>Independent providers</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="form-card contact-form reveal-up" data-lead-form>
+                    <span class="eyebrow">Quick request</span>
+                    <h2>Compare window providers</h2>
+
+                    <div class="form-grid">
+                        <label class="form-field">
+                            <input type="text" name="name" placeholder="Full name" required>
+                            <span class="field-check"></span>
+                        </label>
+
+                        <label class="form-field">
+                            <input type="email" name="email" placeholder="Email address" required>
+                            <span class="field-check"></span>
+                        </label>
+
+                        <label class="form-field">
+                            <input type="tel" name="phone" placeholder="Phone number" required>
+                            <span class="field-check"></span>
+                        </label>
+
+                        <label class="form-field">
+                            <input type="text" name="zip" placeholder="ZIP code" required>
+                            <span class="field-check"></span>
+                        </label>
+
+                        <label class="form-field">
+                            <select name="service" required>
+                                <option value="">Service category</option>
+                                <option>Window Installation</option>
+                                <option>Window Replacement</option>
+                                <option>Window Repair</option>
+                                <option>Custom Window Design</option>
+                                <option>Energy-Efficient Windows</option>
+                                <option>Window Consultation</option>
+                            </select>
+                        </label>
+
+                        <label class="form-field">
+                            <textarea name="message" placeholder="Short project note" required></textarea>
+                            <span class="field-check"></span>
+                        </label>
+
+                        <button class="btn btn-primary" type="submit">
+                            Submit Request
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                        <p class="form-message" data-form-message></p>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="contact-main section">
+            <div class="container contact-main-grid">
+                <div class="contact-info-panel reveal-up">
+                    <span class="eyebrow">Contact details</span>
+                    <h2>Built for simple first contact.</h2>
+                    <p>
+                        Paneo is an independent matching platform. The information below helps
+                        identify the platform, but homeowners should confirm project details
+                        directly with any provider before hiring.
+                    </p>
+
+                    <div class="contact-info-list">
+                        <a href="tel:+18884206731" data-phone-number>
+                            +1 888 420 6731
+                        </a>
+
+                        <a href="mailto:hello@paneomatch.com" data-email-link data-email>
+                            hello@paneomatch.com
+                        </a>
+
+                        <span data-address>
+                            1200 Brickell Avenue, Miami, FL 33131, USA
+                        </span>
+                    </div>
+                </div>
+
+                <div class="contact-map-card reveal-up">
+                    <div class="map-label">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                        <span>Paneo reference location</span>
+                    </div>
+
+                    <iframe title="Paneo map location"
+                        src="https://www.google.com/maps?q=1200%20Brickell%20Avenue%20Miami%20FL%2033131%20USA&output=embed"
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-process section">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="eyebrow">What happens next</span>
+                    <h2>A simple flow, without direct contractor promises.</h2>
+                </div>
+
+                <div class="contact-process-grid">
+                    <div class="process-card reveal-up">
+                        <span>01</span>
+                        <i class="fa-solid fa-clipboard-list"></i>
+                        <h3>Submit project basics</h3>
+                        <p>Choose the window category and share your contact details, ZIP code, and short note.</p>
+                    </div>
+
+                    <div class="process-card reveal-up">
+                        <span>02</span>
+                        <i class="fa-solid fa-network-wired"></i>
+                        <h3>Request is organized</h3>
+                        <p>Your request can be routed toward independent provider options suited to the category.</p>
+                    </div>
+
+                    <div class="process-card reveal-up">
+                        <span>03</span>
+                        <i class="fa-solid fa-file-signature"></i>
+                        <h3>You compare directly</h3>
+                        <p>Confirm quotes, licenses, insurance, timelines, and warranty terms directly with providers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-note section">
+            <div class="container">
+                <div class="contact-note-card reveal-up">
+                    <div>
+                        <span class="eyebrow">Important</span>
+                        <h2>Paneo does not perform window work.</h2>
+                    </div>
+
+                    <p>
+                        Paneo helps homeowners connect with independent local service providers.
+                        Any estimate, inspection, installation, repair, replacement, warranty,
+                        schedule, or work agreement is handled directly by the independent provider.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer"></footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/services-data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+
+</html>
