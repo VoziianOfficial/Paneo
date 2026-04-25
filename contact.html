@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
 </head>
 
 <body>
@@ -84,81 +85,89 @@
 
     <main id="main">
         <section class="contact-hero">
-            <div class="container contact-hero-grid">
-                <div class="contact-hero-copy reveal-up">
-                    <span class="eyebrow">Request provider options</span>
-                    <h1>Start your window comparison with one compact request.</h1>
-                    <p class="lead">
-                        Share the basics about your window project. Paneo helps route your request
-                        toward independent local providers that may match your category and location.
-                    </p>
+            <div class="container contact-hero-shell">
+                <div class="contact-hero-grid">
+                    <div class="contact-hero-copy reveal-up">
+                        <span class="eyebrow">Contact us</span>
+                        <h1>Let's find the right window solution together.</h1>
+                        <p class="lead">
+                            Have questions or need help getting started?
+                            We are here to help at every step of your window project.
+                        </p>
 
-                    <div class="contact-highlights">
-                        <div>
-                            <i class="fa-solid fa-window-maximize"></i>
-                            <span>Window projects</span>
-                        </div>
-                        <div>
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>USA service area</span>
-                        </div>
-                        <div>
-                            <i class="fa-solid fa-user-check"></i>
-                            <span>Independent providers</span>
+                        <div class="contact-benefits">
+                            <article class="contact-benefit">
+                                <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                                <h3>Fast response</h3>
+                                <p>We reply quickly on business days.</p>
+                            </article>
+                            <article class="contact-benefit">
+                                <i class="fa-regular fa-handshake" aria-hidden="true"></i>
+                                <h3>Expert support</h3>
+                                <p>Guidance for choosing the right category and next step.</p>
+                            </article>
+                            <article class="contact-benefit">
+                                <i class="fa-regular fa-circle-check" aria-hidden="true"></i>
+                                <h3>No pressure</h3>
+                                <p>No obligation to hire. Compare providers first.</p>
+                            </article>
                         </div>
                     </div>
+
+                    <form class="contact-form reveal-up" data-lead-form>
+                        <h2>Send us a message</h2>
+                        <div class="contact-form-grid">
+                            <label class="contact-field">
+                                <span>Full Name</span>
+                                <input type="text" name="name" placeholder="Your name" required>
+                            </label>
+
+                            <label class="contact-field">
+                                <span>Email Address</span>
+                                <input type="email" name="email" placeholder="you@example.com" required>
+                            </label>
+
+                            <label class="contact-field">
+                                <span>Expert Support</span>
+                                <input type="text" name="service" placeholder="Window service type" required>
+                            </label>
+
+                            <label class="contact-field">
+                                <span>Phone Number</span>
+                                <input type="tel" name="phone" placeholder="(000) 123-4567" required>
+                            </label>
+
+                            <label class="contact-field contact-field-wide">
+                                <span>How can we help?</span>
+                                <textarea name="message" placeholder="Tell us about your project..." required></textarea>
+                            </label>
+                        </div>
+                        <button class="contact-submit" type="submit">
+                            Send Message
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                        <p class="form-message" data-form-message></p>
+                    </form>
                 </div>
 
-                <form class="form-card contact-form reveal-up" data-lead-form>
-                    <span class="eyebrow">Quick request</span>
-                    <h2>Compare window providers</h2>
-
-                    <div class="form-grid">
-                        <label class="form-field">
-                            <input type="text" name="name" placeholder="Full name" required>
-                            <span class="field-check"></span>
-                        </label>
-
-                        <label class="form-field">
-                            <input type="email" name="email" placeholder="Email address" required>
-                            <span class="field-check"></span>
-                        </label>
-
-                        <label class="form-field">
-                            <input type="tel" name="phone" placeholder="Phone number" required>
-                            <span class="field-check"></span>
-                        </label>
-
-                        <label class="form-field">
-                            <input type="text" name="zip" placeholder="ZIP code" required>
-                            <span class="field-check"></span>
-                        </label>
-
-                        <label class="form-field">
-                            <select name="service" required>
-                                <option value="">Service category</option>
-                                <option>Window Installation</option>
-                                <option>Window Replacement</option>
-                                <option>Window Repair</option>
-                                <option>Custom Window Design</option>
-                                <option>Energy-Efficient Windows</option>
-                                <option>Window Consultation</option>
-                            </select>
-                        </label>
-
-                        <label class="form-field">
-                            <textarea name="message" placeholder="Short project note" required></textarea>
-                            <span class="field-check"></span>
-                        </label>
-
-                        <button class="btn btn-primary" type="submit">
-                            Submit Request
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </button>
-
-                        <p class="form-message" data-form-message></p>
+                <div class="contact-hero-strip reveal-up">
+                    <div>
+                        <i class="fa-solid fa-phone-volume" aria-hidden="true"></i>
+                        <p><span>Call Us</span><strong>(888) 123-4567</strong></p>
                     </div>
-                </form>
+                    <div>
+                        <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+                        <p><span>Email Us</span><strong>hello@paneo.com</strong></p>
+                    </div>
+                    <div>
+                        <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                        <p><span>Hours</span><strong>Mon - Fri: 8AM - 6PM</strong></p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                        <p><span>Location</span><strong>123 Window Way, Suite 100</strong></p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -202,11 +211,44 @@
             </div>
         </section>
 
+
+        <section class="contact-trust section">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <div class="section-header__main">
+                        <span class="eyebrow">Before submitting</span>
+                        <h2>A compact form with better project context.</h2>
+                    </div>
+                    <p class="lead">Small details help make the request more useful: ZIP code, service type, timeline, and a short project note.</p>
+                </div>
+                <div class="luxe-card-row">
+                    <div class="luxe-card reveal-up"><div class="luxe-card-body"><h3>Service category</h3><p>Choose the closest window need so provider options start in the right direction.</p></div><span class="luxe-arrow">01</span></div>
+                    <div class="luxe-card reveal-up"><div class="luxe-card-body"><h3>Location signal</h3><p>ZIP code helps identify whether providers may serve the project area.</p></div><span class="luxe-arrow">02</span></div>
+                    <div class="luxe-card reveal-up"><div class="luxe-card-body"><h3>Direct verification</h3><p>After contact, confirm license, insurance, estimate terms, and warranties directly.</p></div><span class="luxe-arrow">03</span></div>
+                </div>
+            </div>
+        </section>
+        <section class="contact-mini-faq section">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <div class="section-header__main"><span class="eyebrow">Quick answers</span><h2>Small questions before the first request.</h2></div>
+                    <p class="lead">Clear reminders keep the experience safe, simple, and aggregator-oriented.</p>
+                </div>
+                <div class="faq-list reveal-up">
+                    <details><summary>Does Paneo send a crew?</summary><p>No. Paneo is a matching platform and does not perform window work directly.</p></details>
+                    <details><summary>Can I compare more than one category?</summary><p>Yes. Choose the closest category first, then add extra context in the project note.</p></details>
+                    <details><summary>What should I verify before hiring?</summary><p>License, insurance, quote scope, payment terms, project timeline, and warranty details.</p></details>
+                </div>
+            </div>
+        </section>
+
         <section class="contact-process section">
             <div class="container">
                 <div class="section-header reveal-up">
-                    <span class="eyebrow">What happens next</span>
-                    <h2>A simple flow, without direct contractor promises.</h2>
+                    <div class="section-header__main">
+                        <span class="eyebrow">What happens next</span>
+                        <h2>A simple flow, without direct contractor promises.</h2>
+                    </div>
                 </div>
 
                 <div class="contact-process-grid">
@@ -258,6 +300,7 @@
     <script src="js/config.js"></script>
     <script src="js/services-data.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/premium-upgrades.js"></script>
     <script src="js/contact.js"></script>
 </body>
 

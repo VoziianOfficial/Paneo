@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
 </head>
 
 <body>
@@ -84,30 +85,59 @@
 
     <main id="main">
         <section class="about-hero">
-            <div class="container about-hero-grid">
-                <div class="about-hero-copy reveal-up">
-                    <span class="eyebrow">About Paneo</span>
-                    <h1>Built for homeowners who want clearer window provider options.</h1>
-                    <p class="lead">
-                        Paneo is an independent matching platform for window projects.
-                        The goal is simple: help homeowners start with organized categories,
-                        clear expectations, and relevant local provider options.
-                    </p>
+            <div class="container about-hero-shell">
+                <div class="about-hero-grid">
+                    <div class="about-hero-copy reveal-up">
+                        <span class="eyebrow">About Paneo</span>
+                        <h1>Built for homeowners who want clearer window provider options.</h1>
+                        <p class="lead">
+                            Paneo is an independent matching platform for window projects.
+                            We help homeowners start with organized categories, clear expectations,
+                            and relevant local provider options.
+                        </p>
 
-                    <div class="about-hero-actions">
-                        <a class="btn btn-primary" href="services.html">
-                            Explore Services
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                        <a class="btn btn-ghost" href="contact.html">Request Quotes</a>
+                        <div class="about-hero-points">
+                            <article class="about-hero-point">
+                                <i class="fa-regular fa-envelope-open" aria-hidden="true"></i>
+                                <h3>Independent and unbiased</h3>
+                                <p>Paneo does not sell windows directly. You compare providers first.</p>
+                            </article>
+                            <article class="about-hero-point">
+                                <i class="fa-solid fa-tags" aria-hidden="true"></i>
+                                <h3>Organized and transparent</h3>
+                                <p>Category-first structure keeps requests cleaner and easier to compare.</p>
+                            </article>
+                            <article class="about-hero-point">
+                                <i class="fa-regular fa-circle-check" aria-hidden="true"></i>
+                                <h3>Local and practical</h3>
+                                <p>Focus on providers that may match your area and project direction.</p>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="about-hero-visual reveal-up">
+                        <div class="about-hero-arch">
+                            <img src="images/about/about-architectural-windows.jpg" alt="Premium living room with large arched windows">
+                        </div>
                     </div>
                 </div>
 
-                <div class="about-hero-visual reveal-up">
-                    <img src="images/about/about-architectural-windows.jpg" alt="Premium architectural windows">
-                    <div class="about-hero-badge">
-                        <i class="fa-solid fa-circle-info"></i>
-                        <p>Paneo is not a direct window contractor or installer.</p>
+                <div class="about-hero-metrics reveal-up">
+                    <div class="about-hero-metric">
+                        <strong>10K+</strong>
+                        <span>Homeowners helped</span>
+                    </div>
+                    <div class="about-hero-metric">
+                        <strong>300+</strong>
+                        <span>Trusted providers</span>
+                    </div>
+                    <div class="about-hero-metric">
+                        <strong>50+</strong>
+                        <span>Cities covered</span>
+                    </div>
+                    <div class="about-hero-metric">
+                        <strong>4.9/5</strong>
+                        <span>Customer satisfaction</span>
                     </div>
                 </div>
             </div>
@@ -145,8 +175,10 @@
         <section class="about-model section">
             <div class="container">
                 <div class="section-header reveal-up">
-                    <span class="eyebrow">Aggregator model</span>
-                    <h2>How Paneo helps without pretending to be the provider.</h2>
+                    <div class="section-header__main">
+                        <span class="eyebrow">Aggregator model</span>
+                        <h2>How Paneo helps without pretending to be the provider.</h2>
+                    </div>
                     <p class="lead">
                         A clear separation matters. Paneo helps organize the request,
                         while independent providers remain responsible for their own work,
@@ -177,6 +209,24 @@
                         <h3>Compare provider options</h3>
                         <p>Homeowners can review options and decide who to contact, question, compare, or hire.</p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="about-proof section">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <div class="section-header__main">
+                        <span class="eyebrow">Operating principles</span>
+                        <h2>Transparent by design, not by accident.</h2>
+                    </div>
+                    <p class="lead">Paneo keeps the business model visible so the site feels premium without sounding like a fake contractor.</p>
+                </div>
+                <div class="luxe-card-row">
+                    <div class="luxe-card reveal-up"><div class="luxe-card-body"><h3>No direct service claims</h3><p>Copy avoids “our installers” and keeps the provider relationship clear.</p></div><span class="luxe-arrow"><i class="fa-solid fa-check"></i></span></div>
+                    <div class="luxe-card reveal-up"><div class="luxe-card-body"><h3>Verification reminders</h3><p>Homeowners are reminded to confirm license, insurance, pricing, and warranty terms.</p></div><span class="luxe-arrow"><i class="fa-solid fa-check"></i></span></div>
+                    <div class="luxe-card reveal-up"><div class="luxe-card-body"><h3>Category-first UX</h3><p>Services are organized around real window decisions, not generic marketing blocks.</p></div><span class="luxe-arrow"><i class="fa-solid fa-check"></i></span></div>
                 </div>
             </div>
         </section>
@@ -260,6 +310,7 @@
     <script src="js/config.js"></script>
     <script src="js/services-data.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/premium-upgrades.js"></script>
     <script src="js/about.js"></script>
 </body>
 

@@ -3,7 +3,7 @@
 ================================ */
 
 .services-hero {
-    padding: clamp(110px, 12vw, 190px) 0 clamp(70px, 8vw, 120px);
+    padding: clamp(110px, 12vw, 190px) 0 clamp(35px, 4vw, 60px);
     background:
         radial-gradient(circle at 82% 18%, rgba(194, 162, 127, 0.28), transparent 30%),
         linear-gradient(135deg, var(--color-bg), var(--color-bg-soft));

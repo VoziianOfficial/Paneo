@@ -7,7 +7,7 @@
     min-height: calc(100vh - var(--header-height));
     display: grid;
     align-items: end;
-    padding: clamp(90px, 10vw, 160px) 0 40px;
+    padding: clamp(90px, 10vw, 160px) 0 20px;
     overflow: hidden;
 }
 

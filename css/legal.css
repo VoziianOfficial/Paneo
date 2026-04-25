@@ -3,7 +3,7 @@
 ================================ */
 
 .legal-hero {
-    padding: clamp(110px, 12vw, 180px) 0 clamp(60px, 8vw, 100px);
+    padding: clamp(110px, 12vw, 180px) 0 clamp(30px, 4vw, 50px);
     background:
         radial-gradient(circle at 80% 15%, rgba(194, 162, 127, 0.25), transparent 30%),
         linear-gradient(135deg, var(--color-bg), var(--color-bg-soft));
