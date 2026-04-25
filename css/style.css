@@ -957,3 +957,48 @@ h3 {
     height: 1px;
     transform: translateY(-50%);
 }
+
+/* ===============================
+   PREMIUM SIMPLE LOGO
+================================ */
+
+.logo-premium-simple {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-display);
+    font-weight: 900;
+    letter-spacing: -0.045em;
+}
+
+/* сама иконка */
+.logo-premium-simple .logo-icon {
+    width: 38px;
+    height: 38px;
+    stroke: #1a1b1f;
+    stroke-width: 2.4;
+    /* жирнее */
+    border-radius: 12px;
+
+    /* subtle depth */
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.08));
+    transition: all 0.3s ease;
+}
+
+/* текст */
+.logo-premium-simple .logo-text {
+    font-size: 1.32rem;
+    color: #171b22;
+    transition: 0.3s ease;
+}
+
+/* hover — дорогой subtle */
+.logo-premium-simple:hover .logo-icon {
+    stroke: #b08a5e;
+    transform: translateY(-1px);
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.12));
+}
+
+.logo-premium-simple:hover .logo-text {
+    color: #b08a5e;
+}
