@@ -4,11 +4,11 @@
 
 .service-hero {
     position: relative;
-    min-height: calc(100vh - var(--header-height));
-    display: grid;
-    align-items: end;
-    padding: clamp(100px, 12vw, 180px) 0 20px;
+    display: block;
+    padding: calc(var(--header-height) + clamp(8px, 1.7vw, 24px)) 0 clamp(20px, 2.8vw, 34px);
     overflow: hidden;
+    background: linear-gradient(130deg, #0f1620 0%, #111926 46%, #151a24 100%);
+    border-bottom: 1px solid rgba(247, 245, 239, 0.1);
 }
 
 .service-hero-bg,
@@ -21,57 +21,127 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 1s ease;
+    transform: scale(1.04);
+    filter: saturate(0.88) contrast(1.02);
+    transition: transform 1.1s ease;
 }
 
 .service-hero:hover .service-hero-bg img {
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
 
 .service-hero-overlay {
     z-index: 1;
     background:
-        linear-gradient(90deg, rgba(30, 31, 34, 0.9), rgba(30, 31, 34, 0.5)),
-        linear-gradient(0deg, rgba(30, 31, 34, 0.9), transparent);
+        radial-gradient(circle at 82% 8%, rgba(194, 162, 127, 0.24), transparent 34%),
+        linear-gradient(92deg, rgba(10, 14, 20, 0.92), rgba(12, 16, 23, 0.72)),
+        linear-gradient(0deg, rgba(14, 18, 24, 0.82), rgba(14, 18, 24, 0.48));
 }
 
 .service-hero-grid {
     position: relative;
     z-index: 2;
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: clamp(40px, 6vw, 100px);
-    align-items: center;
+    grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.92fr);
+    grid-template-areas:
+        "copy card"
+        "rail rail";
+    gap: clamp(12px, 2vw, 22px);
+    align-items: start;
+    width: min(100% - 20px, var(--container-wide, 1460px));
+    margin-inline: auto;
+}
+
+.service-hero-copy {
+    grid-area: copy;
 }
 
 .service-hero-copy h1 {
-    color: white;
+    color: var(--color-white);
+    max-width: 620px;
+    font-size: clamp(2rem, 3.9vw, 3.6rem);
+    letter-spacing: -0.03em;
 }
 
 .service-hero-copy .lead {
-    color: rgba(255, 255, 255, 0.8);
+    max-width: 560px;
+    margin-top: 12px;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: clamp(0.95rem, 1.1vw, 1.06rem);
 }
 
 .service-hero-actions {
-    margin-top: 30px;
+    margin-top: 14px;
     display: flex;
-    gap: 14px;
+    gap: 10px;
     flex-wrap: wrap;
 }
 
 /* HERO CARD */
 
 .service-hero-card {
-    padding: 36px;
-    border-radius: var(--radius-xl);
-    background: rgba(247, 245, 239, 0.92);
-    box-shadow: var(--shadow-card);
+    grid-area: card;
+    padding: clamp(14px, 2vw, 20px);
+    border-radius: 16px;
+    border: 1px solid rgba(247, 245, 239, 0.18);
+    background: rgba(247, 245, 239, 0.86);
+    box-shadow: 0 12px 28px rgba(14, 18, 24, 0.24);
 }
 
 .service-hero-card i {
-    font-size: 2rem;
-    margin-bottom: 18px;
+    font-size: 1.35rem;
+    margin-bottom: 8px;
     color: var(--color-accent);
+}
+
+.service-hero-card h2 {
+    font-size: clamp(1.06rem, 1.8vw, 1.42rem);
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+}
+
+.service-hero-card p {
+    margin-top: 8px;
+    color: var(--color-muted);
+    font-size: 0.9rem;
+    line-height: 1.45;
+}
+
+.service-hero-rail {
+    grid-area: rail;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+    padding: 8px;
+    border: 1px solid rgba(247, 245, 239, 0.14);
+    border-radius: 14px;
+    background:
+        radial-gradient(circle at 98% 120%, rgba(194, 162, 127, 0.24), transparent 40%),
+        rgba(247, 245, 239, 0.06);
+    backdrop-filter: blur(8px);
+}
+
+.rail-item {
+    min-height: 82px;
+    display: grid;
+    align-content: start;
+    gap: 4px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(247, 245, 239, 0.12);
+    background: rgba(15, 20, 30, 0.52);
+}
+
+.rail-item strong {
+    color: var(--color-white);
+    font-size: 0.88rem;
+    letter-spacing: -0.01em;
+}
+
+.rail-item span {
+    color: rgba(247, 245, 239, 0.72);
+    font-size: 0.74rem;
+    line-height: 1.3;
 }
 
 /* ===============================
@@ -254,6 +324,17 @@
         grid-template-columns: 1fr;
     }
 
+    .service-hero-grid {
+        grid-template-areas:
+            "copy"
+            "card"
+            "rail";
+    }
+
+    .service-hero-rail {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .factor-grid {
         grid-template-columns: 1fr 1fr;
     }
@@ -265,6 +346,10 @@
     }
 
     .service-hero {
-        padding-top: 90px;
+        padding-top: calc(var(--header-height) + 10px);
+    }
+
+    .service-hero-rail {
+        grid-template-columns: 1fr;
     }
 }

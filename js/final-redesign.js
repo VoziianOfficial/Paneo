@@ -21,7 +21,7 @@ function initTextRevealWords() {
 }
 
 function initPointerGlow() {
-    const cards = document.querySelectorAll('.about-hero-point, .contact-highlights div, .rail-item, .service-example-card, .factor-card, .model-card, .process-card');
+    const cards = document.querySelectorAll('.about-hero-point, .contact-benefit, .rail-item, .service-example-card, .factor-card, .model-card, .process-card');
     cards.forEach(card => {
         card.addEventListener('pointermove', (e) => {
             const r = card.getBoundingClientRect();

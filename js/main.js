@@ -331,6 +331,8 @@ function showFormMessage(element, text, type) {
 // ===============================
 
 function initRevealAnimations() {
+    document.documentElement.classList.add("reveal-ready");
+
     const elements = document.querySelectorAll(".reveal-up");
 
     if (!elements.length) return;
