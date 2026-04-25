@@ -1185,3 +1185,88 @@
     font-size: 0.9rem !important;
     line-height: 1.5 !important;
 }
+
+/* ABOUT HERO BACKGROUND IMAGE */
+
+.about-hero-copy {
+    position: relative;
+    padding: 34px;
+    border-radius: 24px;
+    overflow: hidden;
+
+    background: url("../images/about/about-architectural-windows.jpg") center/cover no-repeat;
+}
+
+/* затемнение чтобы текст читался */
+.about-hero-copy::before,
+.contact-hero-copy::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(180deg, rgba(20, 22, 26, 0.25) 0%, rgba(20, 22, 26, 0.05) 60%);
+
+    z-index: 1;
+}
+
+/* поднимаем контент */
+.about-hero-copy>* {
+    position: relative;
+    z-index: 2;
+}
+
+/* делаем текст белым */
+.about-hero-copy h1,
+.about-hero-copy p,
+.about-hero-copy h3 {
+    color: #fff;
+}
+
+.about-hero-copy .lead {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.about-hero-copy,
+.contact-hero-copy {
+    position: relative;
+    min-height: 420px;
+    padding-bottom: 110px;
+    overflow: hidden;
+}
+
+.about-hero-media-overlay,
+.contact-hero-media-overlay {
+    position: absolute !important;
+    left: 24px !important;
+    right: 24px !important;
+    bottom: 24px !important;
+    z-index: 5 !important;
+
+    display: grid !important;
+    grid-template-columns: 1.4fr repeat(3, 0.7fr) !important;
+    border-radius: 18px !important;
+    overflow: hidden !important;
+
+    background: rgba(20, 22, 26, 0.68) !important;
+    backdrop-filter: blur(14px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.24);
+}
+
+.about-hero-copy>*,
+.contact-hero-copy>* {
+    position: relative;
+    z-index: 2;
+}
+
+.about-hero-copy::before,
+.contact-hero-copy::before {
+    z-index: 1;
+}
+
+.about-hero-media-brand,
+.contact-hero-media-brand,
+.about-hero-media-metric,
+.contact-hero-media-metric {
+    min-height: 68px;
+}
