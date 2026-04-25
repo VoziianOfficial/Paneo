@@ -36,6 +36,11 @@ function renderServicesGrid() {
             </a>
         `;
     }).join("");
+
+    // PANEO reveal safety: cards are injected after the global observer starts.
+    requestAnimationFrame(() => {
+        container.querySelectorAll(".reveal-up").forEach(card => card.classList.add("is-visible"));
+    });
 }
 
 // ===============================
