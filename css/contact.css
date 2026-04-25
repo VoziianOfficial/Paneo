@@ -797,3 +797,258 @@
 .contact-form {
     align-self: start;
 }
+
+/* ===============================
+   CONTACT HERO COMPACT
+================================ */
+
+.contact-hero {
+    padding-top: calc(var(--header-height) + 6px);
+}
+
+.contact-hero-grid {
+    gap: clamp(20px, 3vw, 36px);
+    padding: clamp(24px, 3vw, 38px);
+    align-items: start;
+}
+
+.contact-hero-copy h1 {
+    font-size: clamp(2.4rem, 3.2vw, 3.8rem);
+    line-height: 1.05;
+}
+
+.contact-hero-copy .lead {
+    margin-top: 14px;
+    font-size: 0.95rem;
+}
+
+.contact-benefits {
+    margin-top: 20px;
+    gap: 14px;
+}
+
+.contact-benefit i {
+    width: 44px;
+    height: 44px;
+}
+
+.contact-hero-media img {
+    height: 240px;
+}
+
+.contact-form {
+    padding: 24px;
+}
+
+.contact-form h2 {
+    font-size: 1.6rem;
+}
+
+.contact-field input,
+.contact-field select {
+    min-height: 52px;
+    font-size: 0.9rem;
+}
+
+.contact-field textarea {
+    min-height: 110px;
+}
+
+.contact-submit {
+    min-height: 52px;
+    font-size: 0.95rem;
+}
+
+/* нижняя полоска */
+.contact-hero-strip {
+    margin: 0 16px 16px;
+    border-radius: 16px;
+}
+
+.contact-hero-strip>div {
+    padding: 18px 20px;
+}
+
+/* CONTACT HERO EXTRA COMPACT */
+
+.contact-hero {
+    padding-top: calc(var(--header-height) + 4px);
+}
+
+.contact-hero-grid {
+    gap: 24px;
+    padding: 22px 28px 18px;
+}
+
+.contact-eyebrow {
+    margin-bottom: 12px;
+    font-size: 0.7rem;
+}
+
+.contact-hero-copy h1 {
+    max-width: 500px;
+    font-size: clamp(2rem, 2.8vw, 3.15rem);
+    line-height: 1;
+}
+
+.contact-hero-copy .lead {
+    max-width: 470px;
+    margin-top: 12px;
+    font-size: 0.88rem;
+    line-height: 1.45;
+}
+
+.contact-benefits {
+    margin-top: 16px;
+    gap: 10px;
+}
+
+.contact-benefit {
+    grid-template-columns: 38px 1fr;
+    gap: 9px;
+}
+
+.contact-benefit i {
+    width: 38px;
+    height: 38px;
+    font-size: 0.85rem;
+}
+
+.contact-benefit h3 {
+    font-size: 0.84rem;
+    margin-bottom: 3px;
+}
+
+.contact-benefit p {
+    font-size: 0.76rem;
+    line-height: 1.32;
+}
+
+.contact-hero-media {
+    margin-top: 18px;
+}
+
+.contact-hero-media img {
+    height: 195px;
+}
+
+.contact-hero-media-overlay {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+}
+
+.contact-hero-media-brand,
+.contact-hero-media-metric {
+    min-height: 56px;
+}
+
+.contact-hero-media-brand strong {
+    font-size: 0.78rem;
+}
+
+.contact-hero-media-brand i {
+    width: 30px;
+    height: 30px;
+}
+
+.contact-hero-media-metric strong {
+    font-size: 1.25rem;
+}
+
+.contact-hero-media-metric span {
+    font-size: 0.72rem;
+}
+
+.contact-form {
+    padding: 20px;
+}
+
+.contact-form-head {
+    margin-bottom: 14px;
+}
+
+.contact-form-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.contact-form h2 {
+    font-size: 1.35rem;
+}
+
+.contact-form h2::after {
+    margin-top: 7px;
+}
+
+.contact-form-grid {
+    gap: 10px 12px;
+}
+
+.contact-field span {
+    font-size: 0.74rem;
+}
+
+.contact-field input,
+.contact-field select {
+    min-height: 44px;
+    padding: 0 12px;
+    font-size: 0.84rem;
+    border-radius: 11px;
+}
+
+.contact-field textarea {
+    min-height: 88px;
+    padding: 12px;
+    font-size: 0.84rem;
+    border-radius: 11px;
+}
+
+.contact-select i {
+    bottom: 16px;
+    right: 14px;
+}
+
+.contact-form-trust {
+    margin-top: 16px;
+    gap: 8px;
+}
+
+.contact-form-trust i {
+    width: 28px;
+    height: 28px;
+    font-size: 0.75rem;
+}
+
+.contact-form-trust span {
+    font-size: 0.7rem;
+}
+
+.contact-submit {
+    min-height: 46px;
+    margin-top: 16px;
+    font-size: 0.86rem;
+}
+
+.contact-hero-strip {
+    margin: 0 12px 12px;
+}
+
+.contact-hero-strip>div {
+    grid-template-columns: 38px 1fr;
+    gap: 10px;
+    padding: 14px 18px;
+}
+
+.contact-hero-strip i {
+    width: 36px;
+    height: 36px;
+}
+
+.contact-hero-strip span {
+    font-size: 0.7rem;
+}
+
+.contact-hero-strip strong {
+    font-size: 0.82rem;
+}
