@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // ===============================
 
 function initContactFocusEffects() {
-    const fields = document.querySelectorAll(".form-field input, .form-field textarea, .form-field select");
+    const fields = document.querySelectorAll(".contact-field input, .contact-field textarea, .contact-field select");
 
     fields.forEach(field => {
         field.addEventListener("focus", () => {

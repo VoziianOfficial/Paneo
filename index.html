@@ -367,61 +367,48 @@
 
         <!-- MAP + FORM -->
         <section class="home-contact section">
-            <div class="container home-contact-layout">
-                <article class="home-service-area reveal-up">
-                    <div class="home-contact-pill"><i class="fa-solid fa-location-dot"></i> Our service area</div>
-                    <h2>Serving homeowners across the <span>United States.</span></h2>
-                    <p class="lead">Paneo helps you compare independent window providers in your area so you can choose with confidence.</p>
-
-                    <div class="home-area-stats">
-                        <div><i class="fa-regular fa-shield"></i><strong>50+</strong><span>States covered</span></div>
-                        <div><i class="fa-solid fa-building-shield"></i><strong>10,000+</strong><span>Verified providers</span></div>
-                        <div><i class="fa-regular fa-star"></i><strong>100%</strong><span>Independent</span></div>
+            <div class="container contact-grid">
+                <div class="map-card reveal-up">
+                    <div class="map-card-header">
+                        <span class="eyebrow">USA service area</span>
+                        <h2>Start from one simple request.</h2>
+                        <p>
+                            Paneo is built for homeowners across the United States who want
+                            to compare window provider options before committing.
+                        </p>
                     </div>
 
-                    <div class="home-area-map">
+                    <div class="map-frame">
                         <iframe title="Paneo map location"
                             src="https://www.google.com/maps?q=1200%20Brickell%20Avenue%20Miami%20FL%2033131%20USA&output=embed"
                             loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
-                        <div class="home-map-badge">
-                            <strong>1200 Brickell Ave</strong>
-                            <span>Miami, FL 33131</span>
-                            <a href="https://maps.google.com/?q=1200%20Brickell%20Avenue%20Miami%20FL%2033131%20USA" target="_blank" rel="noopener noreferrer">Get directions</a>
-                        </div>
                     </div>
+                </div>
 
-                    <a class="home-area-footer" href="contact.html">
-                        <div><strong>Not in the area?</strong><span>We may still be able to help.</span></div>
-                        <span>Contact Us <i class="fa-solid fa-arrow-right"></i></span>
-                    </a>
-                </article>
-
-                <form class="home-request-card reveal-up" data-lead-form>
-                    <div class="home-contact-pill"><i class="fa-regular fa-message"></i> Request quotes</div>
+                <form class="form-card reveal-up" data-lead-form>
+                    <span class="eyebrow">Request quotes</span>
                     <h2>Tell us what you want to compare.</h2>
-                    <p class="lead">Share a few details about your project and we will match you with the best local options.</p>
 
-                    <div class="home-request-grid">
-                        <label class="home-request-field">
-                            <span>Full Name</span>
+                    <div class="form-grid">
+                        <label class="form-field">
                             <input type="text" name="name" placeholder="Your name" required>
+                            <span class="field-check"></span>
                         </label>
 
-                        <label class="home-request-field">
-                            <span>Email Address</span>
-                            <input type="email" name="email" placeholder="you@example.com" required>
+                        <label class="form-field">
+                            <input type="email" name="email" placeholder="Email address" required>
+                            <span class="field-check"></span>
                         </label>
 
-                        <label class="home-request-field">
-                            <span>Phone Number</span>
-                            <input type="tel" name="phone" placeholder="(000) 123-4567" required>
+                        <label class="form-field">
+                            <input type="tel" name="phone" placeholder="Phone number" required>
+                            <span class="field-check"></span>
                         </label>
 
-                        <label class="home-request-field">
-                            <span>Service Type</span>
+                        <label class="form-field">
                             <select name="service" required>
-                                <option value="">Select a service</option>
+                                <option value="">Choose service</option>
                                 <option>Window Installation</option>
                                 <option>Window Replacement</option>
                                 <option>Window Repair</option>
@@ -431,23 +418,18 @@
                             </select>
                         </label>
 
-                        <label class="home-request-field home-request-wide">
-                            <span>Project Details</span>
-                            <textarea name="message" placeholder="Tell us about your project..." required></textarea>
+                        <label class="form-field">
+                            <textarea name="message" placeholder="Project details" required></textarea>
+                            <span class="field-check"></span>
                         </label>
-                    </div>
 
-                    <div class="home-request-trust">
-                        <div><i class="fa-solid fa-lock"></i><span>Your info is safe</span></div>
-                        <div><i class="fa-regular fa-clock"></i><span>Fast responses</span></div>
-                        <div><i class="fa-regular fa-circle-check"></i><span>No obligation</span></div>
-                    </div>
+                        <button class="btn btn-primary" type="submit">
+                            Submit Request
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
 
-                    <button class="home-request-submit" type="submit">
-                        Submit Request
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </button>
-                    <p class="form-message" data-form-message></p>
+                        <p class="form-message" data-form-message></p>
+                    </div>
                 </form>
             </div>
         </section>
