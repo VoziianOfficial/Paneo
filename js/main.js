@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initForms();
     initRevealAnimations();
     initMetricCounters();
+    initHomeProjectSwiper();
 });
 
 // ===============================
@@ -423,5 +424,31 @@ function initMetricCounters() {
     );
 
     counters.forEach((counter) => observer.observe(counter));
+}
+
+function initHomeProjectSwiper() {
+    const slider = document.querySelector(".homeProjectSwiper");
+
+    if (!slider || typeof Swiper === "undefined") return;
+
+    new Swiper(slider, {
+        slidesPerView: 1,
+        speed: 900,
+        loop: true,
+        grabCursor: true,
+        effect: "slide",
+        autoplay: {
+            delay: 5200,
+            disableOnInteraction: false
+        },
+        pagination: {
+            el: ".home-slider-pagination",
+            clickable: true
+        },
+        navigation: {
+            nextEl: ".home-slider-next",
+            prevEl: ".home-slider-prev"
+        }
+    });
 }
 
