@@ -89,103 +89,71 @@
     </a>
 
     <main id="main">
-<section class="contact-hero">
-    <div class="container contact-hero-shell">
-        <div class="contact-hero-grid">
+<section class="contact-hero contact-hero--split">
+    <div class="contact-hero-bg">
+        <img src="images/contact/contact-hero.jpg" alt="Modern window consultation interior">
+    </div>
 
-            <div class="contact-hero-copy reveal-up">
-                <span class="eyebrow contact-eyebrow">Contact us</span>
+    <div class="contact-hero-overlay"></div>
 
-                <h1>Let's find the right window solution together<span>.</span></h1>
+    <div class="container contact-hero-grid">
+        <div class="contact-hero-copy reveal-up">
+            <span class="contact-hero-kicker">Contact Paneo</span>
 
-                <p class="lead">
-                    Have questions or need help getting started? Our window experts
-                    are here to guide you every step of the way.
-                </p>
+            <h1>
+                Start your window comparison with a clearer request.
+            </h1>
 
-                <div class="contact-benefits">
-                    <article class="contact-benefit">
-                        <i class="fa-solid fa-bolt-lightning"></i>
-                        <div>
-                            <h3>Fast Response</h3>
-                            <p>Replies within<br>1 business day</p>
-                        </div>
-                    </article>
+            <p class="lead">
+                Tell us what kind of window project you are considering. Paneo helps organize
+                your request so you can compare independent provider options with less friction.
+            </p>
 
-                    <article class="contact-benefit">
-                        <i class="fa-solid fa-shield-halved"></i>
-                        <div>
-                            <h3>Expert Support</h3>
-                            <p>Get advice from<br>window specialists</p>
-                        </div>
-                    </article>
+            <div class="contact-hero-actions">
+                <a class="btn btn-primary" href="#contact-form">
+                    Send Request
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
 
-                    <article class="contact-benefit">
-                        <i class="fa-solid fa-gear"></i>
-                        <div>
-                            <h3>No Obligation</h3>
-                            <p>100% free quotes<br>with no pressure</p>
-                        </div>
-                    </article>
-                </div>
+                <a class="contact-hero-link" href="services.html">
+                    View Services
+                </a>
+            </div>
+        </div>
 
-        
+        <form class="contact-hero-form reveal-up" data-lead-form id="contact-form">
+            <div class="contact-form-head">
+                <span class="contact-form-icon">
+                    <i class="fa-regular fa-message"></i>
+                </span>
 
-                <div class="contact-hero-media-overlay">
-                    <div class="contact-hero-media-brand">
-                        <i class="fa-solid fa-check"></i>
-                        <strong>Trusted by homeowners<br>across the United States</strong>
-                    </div>
-                
-                    <div class="contact-hero-media-metric">
-                        <strong>10K+</strong>
-                        <span>Projects</span>
-                    </div>
-                
-                    <div class="contact-hero-media-metric">
-                        <strong>50</strong>
-                        <span>States</span>
-                    </div>
-                
-                    <div class="contact-hero-media-metric">
-                        <strong>4.9</strong>
-                        <span>Rating</span>
-                    </div>
+                <div>
+                    <span>Request options</span>
+                    <h2>Tell us what you want to compare.</h2>
                 </div>
             </div>
 
-            <form class="contact-form reveal-up" data-lead-form>
-                <div class="contact-form-head">
-                    <span class="contact-form-icon">
-                        <i class="fa-regular fa-message"></i>
-                    </span>
+            <div class="contact-form-grid">
+                <label class="contact-field">
+                    <span>Full Name</span>
+                    <input type="text" name="name" placeholder="Your name" required>
+                </label>
 
-                    <div>
-                        <h2>Send us a message</h2>
-                    </div>
-                </div>
+                <label class="contact-field">
+                    <span>Email</span>
+                    <input type="email" name="email" placeholder="you@example.com" required>
+                </label>
 
-                <div class="contact-form-grid">
-                    <label class="contact-field">
-                        <span>Full Name</span>
-                        <input type="text" name="name" placeholder="Your name" required>
-                    </label>
-
-                    <label class="contact-field">
-                        <span>Email Address</span>
-                        <input type="email" name="email" placeholder="you@example.com" required>
-                    </label>
-
-                    <label class="contact-field">
-                        <span>Phone Number</span>
-                        <input type="tel" name="phone" placeholder="(000) 123-4567" required>
-                    </label>
+                <label class="contact-field">
+                    <span>Phone</span>
+                    <input type="tel" name="phone" placeholder="(000) 123-4567" required>
+                </label>
 
                 <label class="contact-field contact-select">
-                    <span>Service Type</span>
-                
+                    <span>Service</span>
+
                     <select name="service" required>
-                        <option value="">Select a service</option>
+                        <option value="">Select service</option>
                         <option>Window Installation</option>
                         <option>Window Replacement</option>
                         <option>Window Repair</option>
@@ -193,55 +161,47 @@
                         <option>Energy-Efficient Windows</option>
                         <option>Window Consultation</option>
                     </select>
-                
+
                     <i class="fa-solid fa-chevron-down"></i>
                 </label>
 
-                    <label class="contact-field contact-field-wide">
-                        <span>How can we help?</span>
-                        <textarea name="message" maxlength="500" placeholder="Tell us about your project..."
-                            required></textarea>
-                        <small>0/500</small>
-                    </label>
+                <label class="contact-field contact-field-wide">
+                    <span>Project Details</span>
+                    <textarea name="message" maxlength="500" placeholder="Tell us about your project..."
+                        required></textarea>
+                    <small>0/500</small>
+                </label>
+            </div>
+
+            <div class="contact-form-trust">
+                <div>
+                    <i class="fa-solid fa-lock"></i>
+                    <span>Secure form</span>
                 </div>
 
-                <div class="contact-form-trust">
-                    <div><i class="fa-solid fa-lock"></i><span>Your information<br>is secure</span></div>
-                    <div><i class="fa-regular fa-clock"></i><span>Most quotes in<br>24-48 hrs</span></div>
-                    <div><i class="fa-regular fa-circle-check"></i><span>Compare local<br>providers</span></div>
-                    <div><i class="fa-regular fa-thumbs-up"></i><span>No pressure,<br>just options</span></div>
+                <div>
+                    <i class="fa-regular fa-clock"></i>
+                    <span>Fast response</span>
                 </div>
 
-                <button class="contact-submit" type="submit">
-                    Submit Request
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
-
-                <p class="form-message" data-form-message></p>
-            </form>
-        </div>
-
-        <div class="contact-hero-strip reveal-up">
-            <div>
-                <i class="fa-solid fa-phone"></i>
-                <p><span>Call Us</span><strong>(888) 123-4567</strong></p>
+                <div>
+                    <i class="fa-regular fa-circle-check"></i>
+                    <span>No obligation</span>
+                </div>
             </div>
 
-            <div>
-                <i class="fa-regular fa-envelope"></i>
-                <p><span>Email Us</span><strong>hello@paneo.com</strong></p>
-            </div>
+            <button class="contact-submit" type="submit">
+                Submit Request
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
 
-            <div>
-                <i class="fa-regular fa-clock"></i>
-                <p><span>Business Hours</span><strong>Mon - Fri: 8AM - 6PM</strong></p>
-            </div>
+            <p class="form-message" data-form-message></p>
 
-            <div>
-                <i class="fa-solid fa-location-dot"></i>
-                <p><span>Visit Us</span><strong>123 Window Way, Suite 100<br>Denver, CO 80202</strong></p>
-            </div>
-        </div>
+            <p class="contact-hero-disclaimer">
+                Paneo is a matching platform, not a contractor. Provider details, pricing,
+                licenses, insurance, timelines, and warranties should be verified directly.
+            </p>
+        </form>
     </div>
 </section>
 
