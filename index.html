@@ -583,120 +583,152 @@
         </section>
 
         <!-- MAP + FORM -->
-        <section class="home-contact section" id="contact">
-            <div class="container">
-                <div class="home-contact-grid">
+<section class="home-contact section" id="contact">
+    <div class="container">
+        <div class="home-contact-grid">
 
-                    <div class="home-contact-card home-contact-info">
-                        <span class="home-contact-pill">
-                            <i class="fa-solid fa-location-dot"></i>
-                            Our service area
+            <!-- LEFT: FORM -->
+            <div class="home-contact-card home-contact-form-card">
+                <div class="home-contact-card-inner">
+                    <div class="home-contact-top">
+                        <span class="home-contact-kicker">
+                            <i class="fa-regular fa-message"></i>
+                            Request quotes
                         </span>
 
-                        <h2>Serving homeowners across the <span>United States.</span></h2>
+                        <h2>Compare local window options with confidence.</h2>
 
-                        <p class="home-contact-lead">
-                            Paneo helps you compare independent window providers in your area
-                            so you can choose with confidence.
+                        <p class="home-contact-text">
+                            Tell us what kind of project you have and Paneo will help you
+                            explore matching independent providers in your area.
                         </p>
+                    </div>
 
-                        <div class="home-contact-stats">
+                    <form class="home-contact-form" data-lead-form>
+                        <div class="home-contact-form-grid">
+                            <label class="home-contact-field">
+                                <span>Full Name</span>
+                                <input type="text" name="name" placeholder="Your name" required>
+                            </label>
+
+                            <label class="home-contact-field">
+                                <span>Email</span>
+                                <input type="email" name="email" placeholder="you@example.com" required>
+                            </label>
+
+                            <label class="home-contact-field">
+                                <span>Phone</span>
+                                <input type="tel" name="phone" placeholder="(000) 123-4567" required>
+                            </label>
+
+                            <label class="home-contact-field home-contact-select">
+                                <span>Service</span>
+                                <select name="service" required>
+                                    <option value="">Select service</option>
+                                    <option>Window Installation</option>
+                                    <option>Window Replacement</option>
+                                    <option>Window Repair</option>
+                                    <option>Custom Window Design</option>
+                                    <option>Energy-Efficient Windows</option>
+                                    <option>Window Consultation</option>
+                                </select>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </label>
+
+                            <label class="home-contact-field home-contact-field-wide">
+                                <span>Project Details <em>(optional)</em></span>
+                                <textarea name="message" maxlength="500"
+                                    placeholder="Tell us about your project..."></textarea>
+                                <small>0/500</small>
+                            </label>
+                        </div>
+
+                        <div class="home-contact-bottom">
+                            <div class="home-contact-trust">
+                                <div>
+                                    <i class="fa-solid fa-lock"></i>
+                                    <span>Secure form</span>
+                                </div>
+                                <div>
+                                    <i class="fa-regular fa-clock"></i>
+                                    <span>Fast response</span>
+                                </div>
+                                <div>
+                                    <i class="fa-regular fa-circle-check"></i>
+                                    <span>No obligation</span>
+                                </div>
+                            </div>
+
+                            <button class="home-contact-submit" type="submit">
+                                Submit Request
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+
+                            <p class="form-message" data-form-message></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- RIGHT: MAP -->
+            <div class="home-contact-card home-contact-map-card-wrap">
+                <div class="home-contact-card-inner">
+                    <div class="home-contact-map-head">
+                        <span class="home-contact-kicker">
+                            <i class="fa-solid fa-location-dot"></i>
+                            Service area
+                        </span>
+
+                        <h3>Serving homeowners across the United States.</h3>
+
+                        <p>
+                            Paneo helps you compare independent window providers
+                            in your area with a more streamlined, design-first experience.
+                        </p>
+                    </div>
+
+                <div class="home-contact-map-box">
+                    <iframe src="https://www.google.com/maps?q=1200%20Brickell%20Avenue%20Miami%20FL%2033131%20USA&output=embed"
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Paneo location map">
+                    </iframe>
+                
+                    <div class="home-contact-map-overlay">
+                        <div class="home-contact-address">
+                            <strong>1200 Brickell Ave</strong>
+                            <span>Miami, FL 33131, USA</span>
+                        </div>
+                    </div>
+                </div>
+
+                    <div class="home-contact-map-footer">
+                        <div class="home-contact-mini-stats">
                             <div>
-                                <i class="fa-solid fa-shield-halved"></i>
                                 <strong>50+</strong>
-                                <span>States Covered</span>
+                                <span>States</span>
                             </div>
-
                             <div>
-                                <i class="fa-regular fa-building"></i>
-                                <strong>10,000+</strong>
-                                <span>Verified Providers</span>
+                                <strong>10k+</strong>
+                                <span>Providers</span>
                             </div>
-
                             <div>
-                                <i class="fa-regular fa-star"></i>
                                 <strong>100%</strong>
                                 <span>Independent</span>
                             </div>
                         </div>
 
-                        <div class="home-contact-map">
-                            <img src="images/home/contact-map.jpg" alt="Paneo service area map">
-
-                            <div class="home-contact-map-card">
-                                <strong>1200 Brickell Ave</strong>
-                                <span>1200 Brickell Ave, Miami, FL<br>33131, USA</span>
-
-                                <a href="https://www.google.com/maps?q=1200%20Brickell%20Avenue%20Miami%20FL%2033131%20USA"
-                                    target="_blank">
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                    Get Directions
-                                </a>
-                            </div>
-
-                            <span class="home-contact-pin">
-                                <i class="fa-solid fa-location-dot"></i>
-                            </span>
-                        </div>
-
-                        <div class="home-contact-note">
-                            <i class="fa-solid fa-globe"></i>
-
-                            <div>
-                                <strong>Not in the area?</strong>
-                                <span>We may still be able to help.</span>
-                            </div>
-
-                            <a href="contact.html">
-                                Contact Us
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                        </div>
+                        <a class="home-contact-map-link"
+                            href="https://www.google.com/maps?q=1200%20Brickell%20Avenue%20Miami%20FL%2033131%20USA"
+                            target="_blank">
+                            Open Directions
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
                     </div>
-
-                    <div class="home-contact-card home-contact-form-card">
-                        <div class="home-contact-form-top">
-                            <div>
-                                <span class="home-contact-pill">
-                                    <i class="fa-regular fa-message"></i>
-                                    Request quotes
-                                </span>
-
-                                <h2>Tell us what you want to compare.</h2>
-
-                                <p class="home-contact-lead">
-                                    Share a few details about your project and we'll match
-                                    you with the best local options.
-                                </p>
-                            </div>
-
-                            <div class="home-contact-window-icon">
-                                <i class="fa-regular fa-window-maximize"></i>
-                                <span><i class="fa-solid fa-check"></i></span>
-                            </div>
-                        </div>
-
-    <form class="home-contact-form" data-lead-form>
-        <div class="home-contact-form-grid">
-            ...
-        </div>
-    
-        <div class="home-contact-trust">
-            ...
-        </div>
-    
-        <button class="home-contact-submit" type="submit">
-            Submit Request
-            <i class="fa-solid fa-arrow-right"></i>
-        </button>
-    
-        <p class="form-message" data-form-message></p>
-    </form>
-                    </div>
-
                 </div>
             </div>
-        </section>
+
+        </div>
+    </div>
+</section>
 
         <!-- FAQ -->
         <section class="home-faq section">

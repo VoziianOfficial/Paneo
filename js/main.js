@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initRevealAnimations();
     initMetricCounters();
     initHomeProjectSwiper();
+    initTextareaCounter();
 });
 
 // ===============================
@@ -452,3 +453,18 @@ function initHomeProjectSwiper() {
     });
 }
 
+function initTextareaCounter() {
+    const textarea = document.querySelector(".home-contact-field-wide textarea");
+    const counter = document.querySelector(".home-contact-field-wide small");
+
+    if (!textarea || !counter) return;
+
+    const max = textarea.getAttribute("maxlength") || 500;
+
+    const updateCounter = () => {
+        counter.textContent = `${textarea.value.length}/${max}`;
+    };
+
+    updateCounter();
+    textarea.addEventListener("input", updateCounter);
+}
