@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initMetricCounters();
     initHomeProjectSwiper();
     initTextareaCounter();
+    initAboutPathTabs();
 });
 
 // ===============================
@@ -485,4 +486,38 @@ function initTextareaCounter() {
 
     updateCounter();
     textarea.addEventListener("input", updateCounter);
+}
+
+
+function initAboutPathTabs() {
+    const tabs = document.querySelectorAll(".about-path-tab");
+    const title = document.querySelector("#pathTitle");
+    const text = document.querySelector("#pathText");
+    const meta = document.querySelector("#pathMeta");
+    const number = document.querySelector("#pathNumber");
+    const image = document.querySelector("#pathImage");
+
+    if (!tabs.length) return;
+
+    tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+            tabs.forEach((item) => item.classList.remove("is-active"));
+            tab.classList.add("is-active");
+
+            title.textContent = tab.dataset.title;
+            text.textContent = tab.dataset.text;
+            meta.textContent = tab.dataset.meta;
+            number.textContent = tab.dataset.number;
+
+            // ✨ смена картинки
+            if (image && tab.dataset.image) {
+                image.style.opacity = "0";
+
+                setTimeout(() => {
+                    image.src = tab.dataset.image;
+                    image.style.opacity = "1";
+                }, 200);
+            }
+        });
+    });
 }
