@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initCookieBanner();
     initForms();
     initRevealAnimations();
+    initMetricCounters();
 });
 
 // ===============================
@@ -353,3 +354,74 @@ function initRevealAnimations() {
 
     elements.forEach((el) => observer.observe(el));
 }
+
+function initMetricCounters() {
+    const counters = document.querySelectorAll("[data-count-to]");
+
+    if (!counters.length) return;
+
+    const easeOutQuart = (value) => {
+        return 1 - Math.pow(1 - value, 4);
+    };
+
+    const formatNumber = (value, suffix) => {
+        return `${Math.round(value)}${suffix}`;
+    };
+
+    const animateCounter = (counter) => {
+        if (counter.dataset.counted === "true") return;
+
+        counter.dataset.counted = "true";
+
+        const target = Number(counter.dataset.countTo || 0);
+        const suffix = counter.dataset.countSuffix || "";
+        const duration = 1800;
+        const startTime = performance.now();
+
+        const update = (currentTime) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const easedProgress = easeOutQuart(progress);
+
+            let currentValue = target * easedProgress;
+
+            /*
+                Лёгкий random только в первой половине анимации.
+                Он маленький, поэтому цифра не прыгает резко.
+            */
+            if (progress < 0.45 && target > 5) {
+                const softNoise = Math.sin(progress * 22) * target * 0.025;
+                currentValue += softNoise;
+            }
+
+            currentValue = Math.min(Math.max(currentValue, 0), target);
+
+            counter.textContent = formatNumber(currentValue, suffix);
+
+            if (progress < 1) {
+                requestAnimationFrame(update);
+            } else {
+                counter.textContent = `${target}${suffix}`;
+            }
+        };
+
+        requestAnimationFrame(update);
+    };
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        {
+            threshold: 0.35
+        }
+    );
+
+    counters.forEach((counter) => observer.observe(counter));
+}
+

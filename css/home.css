@@ -1668,3 +1668,502 @@
         margin-top: 26px;
     }
 }
+
+/* ===============================
+   HOME USECASES — QUIET SPLIT
+================================ */
+
+.home-usecases {
+    position: relative;
+    background: #f4f1ec;
+    color: #171717;
+    overflow: hidden;
+}
+
+.home-usecases::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 10% 8%, rgba(255, 255, 255, 0.95), transparent 30%),
+        linear-gradient(180deg, #f4f1ec 0%, #ebe7df 100%);
+    pointer-events: none;
+}
+
+.home-usecases .container {
+    position: relative;
+    z-index: 1;
+}
+
+.home-usecases-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.92fr) minmax(360px, 1.08fr);
+    gap: clamp(32px, 5vw, 86px);
+    align-items: center;
+}
+
+.home-usecases-content {
+    max-width: 620px;
+}
+
+.home-usecases-kicker {
+    display: inline-flex;
+    margin-bottom: 18px;
+    color: rgba(23, 23, 23, 0.48);
+    font-size: 0.72rem;
+    font-weight: 650;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.home-usecases h2 {
+    margin: 0;
+    color: #171717;
+    font-size: clamp(2.25rem, 4.7vw, 5rem);
+    line-height: 0.98;
+    letter-spacing: -0.075em;
+    font-weight: 520;
+}
+
+.home-usecases-lead {
+    max-width: 540px;
+    margin: 24px 0 0;
+    color: rgba(23, 23, 23, 0.62);
+    font-size: 0.98rem;
+    line-height: 1.78;
+    font-weight: 350;
+}
+
+.home-usecases-list {
+    margin-top: clamp(34px, 5vw, 56px);
+    border-top: 1px solid rgba(23, 23, 23, 0.12);
+}
+
+.home-usecase-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr) 34px;
+    gap: 18px;
+    align-items: start;
+    padding: 24px 0;
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(23, 23, 23, 0.12);
+    transition: padding-left 0.3s ease;
+}
+
+.home-usecase-item:hover {
+    padding-left: 10px;
+}
+
+.home-usecase-icon {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(23, 23, 23, 0.14);
+    background: rgba(255, 255, 255, 0.42);
+    color: rgba(23, 23, 23, 0.78);
+}
+
+.home-usecase-icon i {
+    font-size: 0.92rem;
+}
+
+.home-usecase-item h3 {
+    margin: 0 0 8px;
+    color: #171717;
+    font-size: clamp(1.05rem, 1.35vw, 1.3rem);
+    line-height: 1.18;
+    letter-spacing: -0.035em;
+    font-weight: 520;
+}
+
+.home-usecase-item p {
+    max-width: 460px;
+    margin: 0;
+    color: rgba(23, 23, 23, 0.58);
+    font-size: 0.88rem;
+    line-height: 1.62;
+    font-weight: 350;
+}
+
+.home-usecase-arrow {
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    margin-top: 4px;
+    border: 1px solid rgba(23, 23, 23, 0.12);
+    color: rgba(23, 23, 23, 0.62);
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.home-usecase-item:hover .home-usecase-arrow {
+    transform: translateX(4px);
+    background: #171717;
+    color: #f4f1ec;
+}
+
+/* right image */
+
+.home-usecases-media {
+    position: relative;
+    min-height: clamp(460px, 54vw, 680px);
+    overflow: hidden;
+    background: #d8d2c8;
+}
+
+.home-usecases-media::before {
+    content: "";
+    position: absolute;
+    inset: 18px;
+    z-index: 2;
+    border: 1px solid rgba(255, 255, 255, 0.32);
+    pointer-events: none;
+}
+
+.home-usecases-media img {
+    width: 100%;
+    height: 100%;
+    min-height: clamp(460px, 54vw, 680px);
+    object-fit: cover;
+    filter: saturate(0.82) contrast(0.98);
+    transform: scale(1.01);
+    transition:
+        transform 0.6s ease,
+        filter 0.6s ease;
+}
+
+.home-usecases-media:hover img {
+    transform: scale(1.04);
+    filter: saturate(0.92) contrast(1.02);
+}
+
+.home-usecases-media-note {
+    position: absolute;
+    left: 28px;
+    right: 28px;
+    bottom: 28px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 18px 20px;
+    background: rgba(244, 241, 236, 0.74);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.42);
+}
+
+.home-usecases-media-note span {
+    color: rgba(23, 23, 23, 0.48);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.home-usecases-media-note strong {
+    max-width: 360px;
+    color: #171717;
+    font-size: 0.92rem;
+    line-height: 1.45;
+    font-weight: 520;
+    text-align: right;
+}
+
+/* responsive */
+
+@media (max-width: 1024px) {
+    .home-usecases-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-usecases-content {
+        max-width: 760px;
+    }
+
+    .home-usecases-media {
+        min-height: 430px;
+    }
+
+    .home-usecases-media img {
+        min-height: 430px;
+    }
+}
+
+@media (max-width: 640px) {
+    .home-usecase-item {
+        grid-template-columns: 40px minmax(0, 1fr);
+        gap: 14px;
+    }
+
+    .home-usecase-arrow {
+        grid-column: 2;
+        margin-top: 4px;
+    }
+
+    .home-usecases-media {
+        min-height: 340px;
+    }
+
+    .home-usecases-media img {
+        min-height: 340px;
+    }
+
+    .home-usecases-media::before {
+        inset: 12px;
+    }
+
+    .home-usecases-media-note {
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .home-usecases-media-note strong {
+        text-align: left;
+    }
+}
+
+/* ===============================
+   METRIC STRIP — QUIET LUXURY
+================================ */
+
+.metric-strip {
+    position: relative;
+    background:
+        radial-gradient(circle at 10% 0%, rgba(255, 255, 255, 0.92), transparent 30%),
+        linear-gradient(180deg, #f4f1ec 0%, #ebe7df 100%);
+    color: #171717;
+    overflow: hidden;
+}
+
+.metric-strip::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(23, 23, 23, 0.035) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(23, 23, 23, 0.03) 1px, transparent 1px);
+    background-size: 72px 72px;
+    opacity: 0.28;
+    pointer-events: none;
+}
+
+.metric-strip::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(23, 23, 23, 0.14),
+            transparent);
+    pointer-events: none;
+}
+
+.metric-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(320px, 1.05fr) repeat(2, minmax(160px, 0.55fr));
+    gap: 1px;
+    border: 1px solid rgba(23, 23, 23, 0.1);
+    background: rgba(23, 23, 23, 0.1);
+}
+
+.metric-copy {
+    grid-row: span 2;
+}
+
+.metric-copy,
+.metric-tile {
+    position: relative;
+    min-height: 215px;
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.66), rgba(255, 255, 255, 0.32));
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    overflow: hidden;
+}
+
+.metric-copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(28px, 3.6vw, 46px);
+}
+
+.metric-copy::before,
+.metric-tile::before {
+    content: "";
+    position: absolute;
+    inset: 14px;
+    border: 1px solid rgba(23, 23, 23, 0.07);
+    pointer-events: none;
+    transition:
+        inset 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.metric-copy::after,
+.metric-tile::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 86% 12%, rgba(255, 255, 255, 0.75), transparent 25%),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.45), transparent 42%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.metric-copy:hover::before,
+.metric-tile:hover::before {
+    inset: 10px;
+    border-color: rgba(23, 23, 23, 0.14);
+}
+
+.metric-copy:hover::after,
+.metric-tile:hover::after {
+    opacity: 1;
+}
+
+.metric-copy>*,
+.metric-tile>* {
+    position: relative;
+    z-index: 1;
+}
+
+.metric-copy .eyebrow {
+    display: inline-flex;
+    margin-bottom: 16px;
+    color: rgba(23, 23, 23, 0.48);
+    font-size: 0.72rem;
+    font-weight: 650;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.metric-copy h2 {
+    max-width: 520px;
+    margin: 0;
+    color: #171717;
+    font-size: clamp(1.9rem, 3.2vw, 3.6rem);
+    line-height: 1;
+    letter-spacing: -0.07em;
+    font-weight: 520;
+}
+
+.metric-copy p {
+    max-width: 520px;
+    margin: 18px 0 0;
+    color: rgba(23, 23, 23, 0.62);
+    font-size: 0.92rem;
+    line-height: 1.72;
+    font-weight: 350;
+}
+
+.metric-tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px;
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.metric-tile:hover {
+    transform: translateY(-3px);
+    background:
+        linear-gradient(145deg, rgba(238, 234, 226, 0.86), rgba(205, 199, 190, 0.46));
+    box-shadow: 0 18px 44px rgba(23, 23, 23, 0.1);
+}
+
+.metric-tile em {
+    align-self: flex-end;
+    color: rgba(23, 23, 23, 0.34);
+    font-style: normal;
+    font-size: 0.72rem;
+    font-weight: 650;
+    letter-spacing: 0.16em;
+}
+
+.metric-tile strong {
+    display: block;
+    margin-top: auto;
+    color: #171717;
+    font-size: clamp(2.6rem, 4.4vw, 5.2rem);
+    line-height: 0.82;
+    letter-spacing: -0.08em;
+    font-weight: 500;
+}
+
+.metric-tile span {
+    display: block;
+    max-width: 150px;
+    margin-top: 18px;
+    color: rgba(23, 23, 23, 0.6);
+    font-size: 0.82rem;
+    line-height: 1.45;
+    font-weight: 420;
+}
+
+/* responsive */
+@media (max-width: 1100px) {
+    .metric-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .metric-copy {
+        grid-column: 1 / -1;
+        grid-row: auto;
+    }
+
+    .metric-copy,
+    .metric-tile {
+        min-height: 205px;
+    }
+}
+
+@media (max-width: 640px) {
+    .metric-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .metric-copy,
+    .metric-tile {
+        min-height: 175px;
+    }
+
+    .metric-copy {
+        padding: 26px 22px;
+    }
+
+    .metric-tile {
+        padding: 22px;
+    }
+
+    .metric-copy h2 {
+        font-size: clamp(2rem, 11vw, 3.2rem);
+    }
+
+    .metric-tile strong {
+        font-size: clamp(3rem, 16vw, 4.8rem);
+    }
+
+    .metric-tile span {
+        max-width: 100%;
+    }
+}
