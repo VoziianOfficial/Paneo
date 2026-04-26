@@ -76,3 +76,24 @@ function initServicesSwiper() {
         }
     });
 }
+
+function initDecisionCards() {
+    const wrapper = document.querySelector("[data-decision-cards]");
+    if (!wrapper) return;
+
+    const cards = wrapper.querySelectorAll(".decision-card");
+
+    cards.forEach((card) => {
+        card.addEventListener("mouseenter", () => {
+            cards.forEach((item) => item.classList.remove("is-active"));
+            card.classList.add("is-active");
+        });
+
+        card.addEventListener("focus", () => {
+            cards.forEach((item) => item.classList.remove("is-active"));
+            card.classList.add("is-active");
+        });
+    });
+}
+
+document.addEventListener("DOMContentLoaded", initDecisionCards);
