@@ -2989,3 +2989,56 @@
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
+
+/* ===============================
+   TABLET — CENTER CONTACT HERO GRID
+================================ */
+
+@media (min-width: 641px) and (max-width: 980px) {
+    .contact-hero.contact-hero--split {
+        display: flex;
+        align-items: center !important;
+        justify-content: center;
+        min-height: calc(100vh - var(--header-height, 82px));
+        padding-top: 92px !important;
+        padding-bottom: 32px !important;
+    }
+
+    .container.contact-hero-grid,
+    .contact-hero--split .contact-hero-grid {
+        width: min(100% - 40px, 760px);
+        min-height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        grid-template-columns: 1fr !important;
+        justify-items: center;
+        align-items: center !important;
+        gap: 28px !important;
+    }
+
+    .contact-hero-copy {
+        max-width: 720px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contact-hero-copy h1,
+    .contact-hero-copy .lead {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .contact-hero-actions {
+        justify-content: center;
+    }
+
+    .contact-hero-form {
+        width: 100%;
+        max-width: 620px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
