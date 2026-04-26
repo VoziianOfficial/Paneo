@@ -1563,3 +1563,186 @@
         height: 110px;
     }
 }
+
+/* ===============================
+   CONTACT HERO — COMPACT ONE SCREEN
+================================ */
+
+.contact-hero.contact-hero--split {
+    min-height: calc(100vh - var(--header-height, 82px));
+    padding-top: clamp(88px, 8vw, 118px) !important;
+    padding-bottom: clamp(24px, 3vw, 40px) !important;
+}
+
+.contact-hero--split .contact-hero-grid {
+    align-items: center;
+    gap: clamp(24px, 4vw, 56px);
+}
+
+.contact-hero--split h1 {
+    font-size: clamp(2.4rem, 5vw, 5rem);
+    line-height: 0.98;
+    letter-spacing: -0.07em;
+}
+
+.contact-hero--split .lead {
+    margin-top: 16px;
+    font-size: clamp(0.95rem, 1vw, 1.05rem);
+    line-height: 1.6;
+}
+
+.contact-hero--split .contact-hero-note,
+.contact-hero--split .hero-subtext {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    line-height: 1.55;
+}
+
+.contact-hero--split .contact-hero-actions {
+    margin-top: 22px;
+}
+
+.contact-hero--split .contact-hero-card,
+.contact-hero--split .contact-form-card,
+.contact-hero--split .form-card {
+    padding: clamp(20px, 3vw, 34px) !important;
+}
+
+.contact-hero--split input,
+.contact-hero--split select,
+.contact-hero--split textarea {
+    min-height: 44px;
+}
+
+.contact-hero--split textarea {
+    min-height: 104px;
+}
+
+/* tablet */
+@media (max-width: 980px) {
+    .contact-hero.contact-hero--split {
+        min-height: auto;
+        padding-top: 92px !important;
+        padding-bottom: 28px !important;
+    }
+
+    .contact-hero--split h1 {
+        font-size: clamp(2.2rem, 7vw, 3.8rem);
+    }
+
+    .contact-hero--split .lead {
+        font-size: 0.95rem;
+        line-height: 1.55;
+    }
+}
+
+/* mobile */
+@media (max-width: 640px) {
+    .contact-hero.contact-hero--split {
+        padding-top: 82px !important;
+        padding-bottom: 22px !important;
+    }
+
+    .contact-hero--split h1 {
+        font-size: clamp(2rem, 9vw, 2.85rem);
+        line-height: 1.03;
+    }
+
+    .contact-hero--split .lead {
+        font-size: 0.88rem;
+        line-height: 1.5;
+    }
+
+    .contact-hero--split .contact-hero-note,
+    .contact-hero--split .hero-subtext {
+        display: none;
+    }
+
+    .contact-hero--split .contact-hero-actions {
+        margin-top: 16px;
+    }
+
+    .contact-hero--split .contact-hero-card,
+    .contact-hero--split .contact-form-card,
+    .contact-hero--split .form-card {
+        padding: 18px !important;
+    }
+}
+
+/* CONTACT MAIN — compact after hero */
+
+.contact-main.section {
+    padding-top: clamp(36px, 5vw, 64px);
+}
+
+@media (max-width: 640px) {
+    .contact-main.section {
+        padding-top: 32px;
+    }
+}
+
+/* ===============================
+   CONTACT FORM TRUST ICONS FIX
+================================ */
+
+.contact-hero-form .contact-form-trust {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.contact-hero-form .contact-form-trust div,
+.contact-hero-form .contact-form-trust span,
+.contact-hero-form .contact-form-trust li {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(244, 241, 236, 0.76);
+    font-size: 0.82rem;
+    line-height: 1.2;
+}
+
+.contact-hero-form .contact-form-trust i {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    display: grid !important;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(244, 241, 236, 0.12);
+    border: 1px solid rgba(244, 241, 236, 0.18);
+    color: #f4f1ec !important;
+    font-size: 0.78rem;
+    line-height: 1;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* если Font Awesome где-то перебит */
+.contact-hero-form .contact-form-trust i::before {
+    display: inline-block !important;
+    opacity: 1 !important;
+}
+
+/* mobile */
+@media (max-width: 640px) {
+    .contact-hero-form .contact-form-trust {
+        justify-content: center;
+        gap: 8px;
+        margin-top: 14px;
+    }
+
+    .contact-hero-form .contact-form-trust div,
+    .contact-hero-form .contact-form-trust span,
+    .contact-hero-form .contact-form-trust li {
+        font-size: 0.76rem;
+    }
+
+    .contact-hero-form .contact-form-trust i {
+        width: 26px;
+        height: 26px;
+        min-width: 26px;
+        font-size: 0.72rem;
+    }
+}
