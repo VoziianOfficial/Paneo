@@ -27,16 +27,16 @@ window.SITE_CONFIG = {
         full: "1200 Brickell Avenue, Miami, FL 33131, USA"
     },
 
-    serviceArea: "Serving homeowners across the United States",
+    serviceArea: "Independent window provider matching across the United States",
 
     // ===============================
     // FOOTER CONTENT
     // ===============================
     footerText:
-        "Paneo is an independent window provider matching platform that helps homeowners compare local companies for installation, replacement, repair, custom design, and consultation requests.",
+        "Paneo is an independent window provider matching platform that helps homeowners compare local provider options for installation, replacement, repair, custom design, energy-efficient windows, and consultation requests.",
 
     disclaimer:
-        "Disclaimer: This site is a free service to assist homeowners in connecting with local service providers. All contractors/providers are independent and this site does not warrant or guarantee any work performed. It is the responsibility of the homeowner to verify that the hired contractor furnishes the necessary license and insurance required for the work being performed. All persons depicted in a photo or video are actors or models and not contractors listed on this site.",
+        "Disclaimer: Paneo is a free matching platform created to help homeowners connect with independent local service providers. Paneo does not perform window installation, replacement, repair, inspection, consultation, design, or contracting work directly. All contractors and providers are independent. Paneo does not warrant, guarantee, or control any work performed by providers. Homeowners are responsible for verifying license, insurance, qualifications, estimate details, pricing, warranty terms, project scope, and final agreements directly with any provider before hiring. Any persons shown in photos or videos may be actors or models and are not contractors listed on this site.",
 
     // ===============================
     // LEGAL
@@ -82,7 +82,7 @@ window.SITE_CONFIG = {
     // ===============================
     cookieBanner: {
         title: "Privacy preferences",
-        text: "This site uses cookies and similar technologies to improve browsing, support form functionality, and understand general site usage. Please review our policies before continuing.",
+        text: "This site uses cookies and similar technologies to support form functionality, improve browsing, and understand general site usage. Please review our policies before continuing.",
         acceptText: "Accept",
         declineText: "Decline"
     },

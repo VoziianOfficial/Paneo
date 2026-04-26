@@ -11,16 +11,16 @@ window.SERVICES_DATA = [
         icon: "fa-solid fa-window-maximize",
 
         short:
-            "Compare local providers for new window installation projects.",
+            "Compare independent providers for planned window installation projects.",
 
         description:
-            "Explore available installation options and connect with independent window companies based on your project scope, style preferences, and property type.",
+            "Compare independent providers for new window installation projects, planned openings, home additions, remodels, and window upgrades that need clear scope, measurements, materials, and installation planning.",
 
         features: [
-            "New construction window options",
-            "Frame material comparisons",
-            "Modern and traditional styles",
-            "Provider availability by region"
+            "New construction and remodel installation",
+            "Opening measurement and product planning",
+            "Frame, glass, hardware, and finish options",
+            "Provider availability, timeline, and written scope"
         ]
     },
 
@@ -32,16 +32,16 @@ window.SERVICES_DATA = [
         icon: "fa-solid fa-repeat",
 
         short:
-            "Review replacement options for outdated or damaged windows.",
+            "Compare replacement options for aging, damaged, or inefficient windows.",
 
         description:
-            "Compare providers offering replacement solutions based on performance, insulation needs, and visual upgrades.",
+            "Compare independent providers for replacing aging, damaged, drafty, inefficient, outdated, or hard-to-use windows with clearer product options, installation expectations, warranty details, and provider verification steps.",
 
         features: [
-            "Energy upgrade considerations",
-            "Noise reduction improvements",
-            "Glass and frame options",
-            "Project timelines"
+            "Insert and full-frame replacement options",
+            "Old window removal and disposal questions",
+            "Glass packages, frame materials, and finish choices",
+            "Warranty, installation scope, and provider verification"
         ]
     },
 
@@ -53,16 +53,16 @@ window.SERVICES_DATA = [
         icon: "fa-solid fa-screwdriver-wrench",
 
         short:
-            "Connect with providers who may help evaluate repair needs.",
+            "Compare providers for drafts, broken glass, hardware, seals, and frame issues.",
 
         description:
-            "Review repair-focused providers and understand whether restoration or replacement may be more suitable.",
+            "Compare independent providers for window repair needs such as drafts, broken glass, damaged seals, stuck windows, hardware issues, frame problems, leaks, or unclear repair-versus-replacement decisions.",
 
         features: [
-            "Seal and insulation issues",
-            "Glass cracks and fixes",
-            "Frame damage evaluation",
-            "Hardware adjustments"
+            "Drafts, leaks, foggy panes, and seal issues",
+            "Broken glass, locks, cranks, tracks, and hardware",
+            "Frame condition and repair feasibility review",
+            "Repair scope, parts, warranty, and replacement alternatives"
         ]
     },
 
@@ -74,16 +74,16 @@ window.SERVICES_DATA = [
         icon: "fa-solid fa-pen-ruler",
 
         short:
-            "Explore custom shapes, sizes, and architectural window styles.",
+            "Compare providers for custom shapes, premium finishes, and unique openings.",
 
         description:
-            "Compare providers offering tailored solutions for unique window designs and non-standard openings.",
+            "Compare independent providers for custom window design projects involving unusual dimensions, architectural shapes, oversized glass, black frames, specialty finishes, premium materials, and non-standard installation requirements.",
 
         features: [
-            "Architectural windows",
-            "Panoramic glass solutions",
-            "Minimal frame styles",
-            "Premium materials"
+            "Arched, oversized, panoramic, and specialty window ideas",
+            "Custom frame colors, grids, hardware, and finish details",
+            "Design drawings, measurement process, and production timelines",
+            "Provider fit for unusual openings and premium materials"
         ]
     },
 
@@ -92,19 +92,19 @@ window.SERVICES_DATA = [
         title: "Energy-Efficient Windows",
         slug: "energy-efficient-windows.html",
         image: "images/services/energy-efficient-windows.jpg",
-        icon: "fa-solid fa-leaf",
+        icon: "fa-solid fa-temperature-half",
 
         short:
-            "Compare energy-conscious window options for better efficiency.",
+            "Compare energy-focused window options for comfort, insulation, and performance.",
 
         description:
-            "Review providers offering solutions focused on insulation performance, climate adaptation, and energy savings.",
+            "Compare independent providers for energy-efficient window projects focused on insulation, comfort, Low-E glass, double or triple glazing, climate needs, drafts, heat gain, sound reduction, and documented product performance.",
 
         features: [
-            "Double and triple glazing",
-            "Thermal performance ratings",
-            "Low-E coatings",
-            "Climate-based recommendations"
+            "Double-pane, triple-pane, Low-E, and insulated glass options",
+            "U-factor, SHGC, climate zone, and performance rating questions",
+            "Comfort goals around drafts, heat gain, cold spots, and noise",
+            "Provider explanations without guaranteed savings claims"
         ]
     },
 
@@ -116,16 +116,16 @@ window.SERVICES_DATA = [
         icon: "fa-solid fa-comments",
 
         short:
-            "Request provider input before starting your window project.",
+            "Compare provider guidance before choosing repair, replacement, custom, or efficiency work.",
 
         description:
-            "Connect with providers to discuss options, costs, and project planning before making a decision.",
+            "Compare independent provider consultation options when you are unsure which window service fits best, need help planning budget direction, want to understand repair versus replacement, or need clearer next steps before requesting a full estimate.",
 
         features: [
-            "Project evaluation",
-            "Budget considerations",
-            "Style recommendations",
-            "Timeline overview"
+            "Repair, replacement, custom, or efficiency path discussion",
+            "Budget direction, project timing, and scope clarification",
+            "Photos, measurements, visit needs, and next-step planning",
+            "Provider questions before committing to a larger project"
         ]
     }
 ];

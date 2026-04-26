@@ -54,6 +54,12 @@ function applyGlobalData() {
 
     document.querySelectorAll("[data-phone]").forEach((el) => {
         el.href = `tel:${cfg.phoneHref}`;
+
+        /*
+            Важно:
+            Не вставляем сюда иконку через HTML.
+            На мобилке иконка телефона рисуется через CSS ::before.
+        */
         el.textContent = cfg.phoneLabel;
     });
 
@@ -136,6 +142,7 @@ function renderFooter() {
                         <span class="logo-mark" aria-hidden="true"></span>
                         <span>${cfg.companyName}</span>
                     </a>
+
                     <p>${cfg.footerText}</p>
                 </div>
 
@@ -186,6 +193,14 @@ function initMobileMenu() {
 
     if (!toggle || !menu) return;
 
+    const closeMenu = () => {
+        menu.classList.remove("is-open");
+        toggle.classList.remove("is-active");
+        toggle.setAttribute("aria-expanded", "false");
+        menu.setAttribute("aria-hidden", "true");
+        body.style.overflow = "";
+    };
+
     toggle.addEventListener("click", () => {
         const isOpen = menu.classList.toggle("is-open");
 
@@ -196,13 +211,7 @@ function initMobileMenu() {
     });
 
     menu.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => {
-            menu.classList.remove("is-open");
-            toggle.classList.remove("is-active");
-            toggle.setAttribute("aria-expanded", "false");
-            menu.setAttribute("aria-hidden", "true");
-            body.style.overflow = "";
-        });
+        link.addEventListener("click", closeMenu);
     });
 
     const servicesToggle = menu.querySelector("[data-mobile-services-toggle]");
@@ -217,11 +226,7 @@ function initMobileMenu() {
 
     document.addEventListener("keydown", (e) => {
         if (e.key === "Escape" && menu.classList.contains("is-open")) {
-            menu.classList.remove("is-open");
-            toggle.classList.remove("is-active");
-            toggle.setAttribute("aria-expanded", "false");
-            menu.setAttribute("aria-hidden", "true");
-            body.style.overflow = "";
+            closeMenu();
         }
     });
 }
@@ -236,7 +241,9 @@ function initHeaderDropdown() {
 
     if (!dropdown || !button) return;
 
-    button.addEventListener("click", () => {
+    button.addEventListener("click", (e) => {
+        e.stopPropagation();
+
         const isOpen = dropdown.classList.toggle("is-open");
         button.setAttribute("aria-expanded", String(isOpen));
     });
@@ -377,6 +384,10 @@ function initRevealAnimations() {
     elements.forEach((el) => observer.observe(el));
 }
 
+// ===============================
+// METRIC COUNTERS
+// ===============================
+
 function initMetricCounters() {
     const counters = document.querySelectorAll("[data-count-to]");
 
@@ -407,10 +418,6 @@ function initMetricCounters() {
 
             let currentValue = target * easedProgress;
 
-            /*
-                Лёгкий random только в первой половине анимации.
-                Он маленький, поэтому цифра не прыгает резко.
-            */
             if (progress < 0.45 && target > 5) {
                 const softNoise = Math.sin(progress * 22) * target * 0.025;
                 currentValue += softNoise;
@@ -447,10 +454,17 @@ function initMetricCounters() {
     counters.forEach((counter) => observer.observe(counter));
 }
 
+// ===============================
+// HOME PROJECT SWIPER
+// ===============================
+
 function initHomeProjectSwiper() {
     const slider = document.querySelector(".homeProjectSwiper");
 
     if (!slider || typeof Swiper === "undefined") return;
+
+    if (slider.dataset.swiperInitialized === "true") return;
+    slider.dataset.swiperInitialized = "true";
 
     new Swiper(slider, {
         slidesPerView: 1,
@@ -473,6 +487,10 @@ function initHomeProjectSwiper() {
     });
 }
 
+// ===============================
+// TEXTAREA COUNTER
+// ===============================
+
 function initTextareaCounter() {
     const textarea = document.querySelector(".home-contact-field-wide textarea");
     const counter = document.querySelector(".home-contact-field-wide small");
@@ -489,6 +507,9 @@ function initTextareaCounter() {
     textarea.addEventListener("input", updateCounter);
 }
 
+// ===============================
+// ABOUT PATH TABS
+// ===============================
 
 function initAboutPathTabs() {
     const tabs = document.querySelectorAll(".about-path-tab");
@@ -498,19 +519,18 @@ function initAboutPathTabs() {
     const number = document.querySelector("#pathNumber");
     const image = document.querySelector("#pathImage");
 
-    if (!tabs.length) return;
+    if (!tabs.length || !title || !text || !meta || !number) return;
 
     tabs.forEach((tab) => {
         tab.addEventListener("click", () => {
             tabs.forEach((item) => item.classList.remove("is-active"));
             tab.classList.add("is-active");
 
-            title.textContent = tab.dataset.title;
-            text.textContent = tab.dataset.text;
-            meta.textContent = tab.dataset.meta;
-            number.textContent = tab.dataset.number;
+            title.textContent = tab.dataset.title || "";
+            text.textContent = tab.dataset.text || "";
+            meta.textContent = tab.dataset.meta || "";
+            number.textContent = tab.dataset.number || "";
 
-            // ✨ смена картинки
             if (image && tab.dataset.image) {
                 image.style.opacity = "0";
 
@@ -523,6 +543,10 @@ function initAboutPathTabs() {
     });
 }
 
+// ===============================
+// ACCORDION
+// ===============================
+
 function initAccordion() {
     const items = document.querySelectorAll(".accordion-item");
 
@@ -531,13 +555,13 @@ function initAccordion() {
     items.forEach((item) => {
         const header = item.querySelector(".accordion-header");
 
+        if (!header) return;
+
         header.addEventListener("click", () => {
             const isOpen = item.classList.contains("active");
 
-            // закрыть все
             items.forEach((i) => i.classList.remove("active"));
 
-            // открыть текущий
             if (!isOpen) {
                 item.classList.add("active");
             }

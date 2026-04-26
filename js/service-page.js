@@ -1,6 +1,7 @@
 // ===============================
 // Paneo Service Page JS
-// Dynamic service page content
+// Safe dynamic service page content
+// Does NOT overwrite manually written page content
 // ===============================
 
 const SERVICE_PAGE_COPY = {
@@ -16,43 +17,72 @@ const SERVICE_PAGE_COPY = {
             ["Warranty", "Review product and labor warranty details directly."]
         ]
     },
+
     replacement: {
         extraTitle: "Replacement choices that change the outcome.",
         extraLead: "Replacement projects may involve energy goals, frame condition, glass upgrades, noise reduction, and finish expectations.",
         panelTitle: "Ask before replacement",
         panelCopy: "Compare whether the provider recommends insert replacement, full-frame replacement, or another approach based on the existing condition.",
-        stats: [["Condition","Check whether frames, seals, and trim need attention."],["Efficiency","Compare glass packages, coatings, and insulation goals."],["Finish","Ask what interior and exterior finishing is included."],["Disposal","Confirm old-window removal and cleanup terms."]]
+        stats: [
+            ["Condition", "Check whether frames, seals, and trim need attention."],
+            ["Efficiency", "Compare glass packages, coatings, and insulation goals."],
+            ["Finish", "Ask what interior and exterior finishing is included."],
+            ["Disposal", "Confirm old-window removal and cleanup terms."]
+        ]
     },
+
     repair: {
         extraTitle: "Repair questions that prevent confusion.",
         extraLead: "Repair fit depends on the glass, frame, hardware, seal condition, availability of parts, and whether replacement would be more practical.",
         panelTitle: "Ask before repair",
         panelCopy: "Request clarity on whether the provider can diagnose the issue, source parts, and explain when repair may not be cost-effective.",
-        stats: [["Issue","Describe drafts, cracks, fogging, leaks, or hardware failure."],["Parts","Ask whether parts are available for the window type."],["Scope","Confirm what is repaired and what is excluded."],["Alternative","Ask when replacement may be the better option."]]
+        stats: [
+            ["Issue", "Describe drafts, cracks, fogging, leaks, or hardware failure."],
+            ["Parts", "Ask whether parts are available for the window type."],
+            ["Scope", "Confirm what is repaired and what is excluded."],
+            ["Alternative", "Ask when replacement may be the better option."]
+        ]
     },
+
     custom: {
         extraTitle: "Custom design needs sharper provider fit.",
         extraLead: "Custom windows involve dimensions, architecture, specialty glass, finish details, lead times, and installation constraints.",
         panelTitle: "Ask before custom design",
         panelCopy: "Compare providers by design process, product sourcing, engineering needs, and how they handle unusual openings or premium finishes.",
-        stats: [["Shape","Clarify arched, oversized, panoramic, or specialty openings."],["Finish","Compare color, hardware, grid, and frame options."],["Timeline","Ask about production lead time and installation windows."],["Documentation","Confirm drawings, measurements, and written scope."]]
+        stats: [
+            ["Shape", "Clarify arched, oversized, panoramic, or specialty openings."],
+            ["Finish", "Compare color, hardware, grid, and frame options."],
+            ["Timeline", "Ask about production lead time and installation windows."],
+            ["Documentation", "Confirm drawings, measurements, and written scope."]
+        ]
     },
+
     energy: {
         extraTitle: "Efficiency is more than one label.",
         extraLead: "Energy-focused projects may involve climate zone, glazing, Low-E coatings, frame material, installation quality, and comfort goals.",
         panelTitle: "Ask before efficiency upgrades",
         panelCopy: "Compare how providers explain performance ratings, glass packages, installation details, and what savings claims are or are not guaranteed.",
-        stats: [["Ratings","Ask about U-factor, SHGC, and product labels."],["Climate","Compare options suited to local weather and sun exposure."],["Comfort","Discuss drafts, heat gain, and sound reduction goals."],["Claims","Confirm what performance expectations are documented."]]
+        stats: [
+            ["Ratings", "Ask about U-factor, SHGC, and product labels."],
+            ["Climate", "Compare options suited to local weather and sun exposure."],
+            ["Comfort", "Discuss drafts, heat gain, and sound reduction goals."],
+            ["Claims", "Confirm what performance expectations are documented."]
+        ]
     },
+
     consultation: {
         extraTitle: "Planning support before a bigger decision.",
         extraLead: "Consultation requests are useful when you are unsure about service type, budget direction, timing, or whether repair, replacement, or custom work fits best.",
         panelTitle: "Ask during consultation",
         panelCopy: "Use the conversation to clarify project path, likely constraints, next steps, and what information providers need for a meaningful estimate.",
-        stats: [["Goal","Explain what you want to improve or solve."],["Budget","Ask how scope changes may affect pricing."],["Path","Compare repair, replacement, custom, or efficiency routes."],["Next step","Confirm what photos, measurements, or visits are needed."]]
+        stats: [
+            ["Goal", "Explain what you want to improve or solve."],
+            ["Budget", "Ask how scope changes may affect pricing."],
+            ["Path", "Compare repair, replacement, custom, or efficiency routes."],
+            ["Next step", "Confirm what photos, measurements, or visits are needed."]
+        ]
     }
 };
-
 
 document.addEventListener("DOMContentLoaded", () => {
     renderServicePage();
@@ -62,83 +92,53 @@ document.addEventListener("DOMContentLoaded", () => {
 function renderServicePage() {
     const serviceId = document.documentElement.dataset.serviceId;
 
-    if (!serviceId || !window.SERVICES_DATA) return;
+    if (!serviceId) return;
 
-    const service = window.SERVICES_DATA.find(item => item.id === serviceId);
+    const service = window.SERVICES_DATA?.find((item) => item.id === serviceId);
+    const copy = SERVICE_PAGE_COPY[serviceId];
 
-    if (!service) {
-        console.warn(`Service with id "${serviceId}" not found`);
-        return;
+    /*
+        IMPORTANT:
+        This file is safe for manually written service pages.
+        It does NOT overwrite headings, descriptions, images, icons, or CTA text.
+    */
+
+    if (service) {
+        updateContactLinks(service);
+        renderServiceFeaturesOnlyIfEmpty(service);
     }
 
-    document.title = `${service.title} | Paneo`;
-
-    updateText("[data-service-heading]", service.title);
-    updateText("[data-service-description]", service.description);
-    updateText("[data-service-cta]", `Compare ${service.title} providers.`);
-
-    updateServiceImage(service);
-    updateServiceIcon(service);
-    updateContactLinks(service);
-    renderServiceFeatures(service);
-    renderServiceSpecificCopy(service);
+    if (copy) {
+        renderServiceSpecificCopyOnlyIfEmpty(copy);
+    }
 }
 
+/* ===============================
+   SAFE HELPERS
+================================ */
 
-function renderServiceSpecificCopy(service) {
-    const copy = SERVICE_PAGE_COPY[service.id];
-    if (!copy) return;
-
-    updateText('[data-service-extra-title]', copy.extraTitle);
-    updateText('[data-service-extra-lead]', copy.extraLead);
-    updateText('[data-service-panel-title]', copy.panelTitle);
-    updateText('[data-service-panel-copy]', copy.panelCopy);
-
-    const statSelectors = [
-        ['[data-hero-stat-one]', '[data-hero-stat-one-text]'],
-        ['[data-hero-stat-two]', '[data-hero-stat-two-text]'],
-        ['[data-hero-stat-three]', '[data-hero-stat-three-text]'],
-        ['[data-hero-stat-four]', '[data-hero-stat-four-text]']
-    ];
-
-    statSelectors.forEach(([titleSelector, textSelector], index) => {
-        const item = copy.stats[index];
-        if (!item) return;
-        updateText(titleSelector, item[0]);
-        updateText(textSelector, item[1]);
-    });
-}
-
-function updateText(selector, text) {
-    document.querySelectorAll(selector).forEach(el => {
-        el.textContent = text;
-    });
-}
-
-function updateServiceImage(service) {
-    document.querySelectorAll("[data-service-image]").forEach(img => {
-        img.src = service.image;
-        img.alt = service.title;
-    });
-}
-
-function updateServiceIcon(service) {
-    document.querySelectorAll("[data-service-icon]").forEach(icon => {
-        icon.className = service.icon;
+function updateTextOnlyIfEmpty(selector, text) {
+    document.querySelectorAll(selector).forEach((el) => {
+        if (!el.textContent.trim()) {
+            el.textContent = text;
+        }
     });
 }
 
 function updateContactLinks(service) {
-    document.querySelectorAll("[data-service-contact-link]").forEach(link => {
+    document.querySelectorAll("[data-service-contact-link]").forEach((link) => {
         link.href = `contact.html?service=${service.id}`;
     });
 }
 
-function renderServiceFeatures(service) {
+function renderServiceFeaturesOnlyIfEmpty(service) {
     const container = document.querySelector("[data-service-features]");
-    if (!container) return;
 
-    container.innerHTML = service.features.map(feature => {
+    if (!container) return;
+    if (container.children.length > 0) return;
+    if (!service.features || !service.features.length) return;
+
+    container.innerHTML = service.features.map((feature) => {
         return `
             <div class="service-feature">
                 <i class="fa-solid fa-check" aria-hidden="true"></i>
@@ -147,6 +147,33 @@ function renderServiceFeatures(service) {
         `;
     }).join("");
 }
+
+function renderServiceSpecificCopyOnlyIfEmpty(copy) {
+    updateTextOnlyIfEmpty("[data-service-extra-title]", copy.extraTitle);
+    updateTextOnlyIfEmpty("[data-service-extra-lead]", copy.extraLead);
+    updateTextOnlyIfEmpty("[data-service-panel-title]", copy.panelTitle);
+    updateTextOnlyIfEmpty("[data-service-panel-copy]", copy.panelCopy);
+
+    const statSelectors = [
+        ["[data-hero-stat-one]", "[data-hero-stat-one-text]"],
+        ["[data-hero-stat-two]", "[data-hero-stat-two-text]"],
+        ["[data-hero-stat-three]", "[data-hero-stat-three-text]"],
+        ["[data-hero-stat-four]", "[data-hero-stat-four-text]"]
+    ];
+
+    statSelectors.forEach(([titleSelector, textSelector], index) => {
+        const item = copy.stats[index];
+
+        if (!item) return;
+
+        updateTextOnlyIfEmpty(titleSelector, item[0]);
+        updateTextOnlyIfEmpty(textSelector, item[1]);
+    });
+}
+
+/* ===============================
+   PARALLAX
+================================ */
 
 function initServiceParallax() {
     const heroImage = document.querySelector(".service-hero-bg img");
