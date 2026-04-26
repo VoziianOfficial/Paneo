@@ -546,7 +546,7 @@
                             </div>
 
                             <div class="swiper-slide project-slide">
-                                <img src="images/home/slider-privacy-window.jpg" alt="Privacy window detail">
+                                <img src="images/home/slider-till-window.jpg" alt="Privacy window detail">
 
                                 <div class="project-slide-overlay"></div>
 
@@ -676,69 +676,22 @@
                             </div>
                         </div>
 
-                        <form class="home-contact-form">
-                            <div class="home-contact-form-grid">
-                                <label class="home-contact-field">
-                                    <span>Full Name</span>
-                                    <input type="text" name="name" placeholder="Your name" required>
-                                </label>
-
-                                <label class="home-contact-field">
-                                    <span>Email Address</span>
-                                    <input type="email" name="email" placeholder="you@example.com" required>
-                                </label>
-
-                                <label class="home-contact-field">
-                                    <span>Phone Number</span>
-                                    <input type="tel" name="phone" placeholder="(000) 123-4567" required>
-                                </label>
-
-                                <label class="home-contact-field home-contact-select">
-                                    <span>Service Type</span>
-
-                                    <select name="service" required>
-                                        <option value="">Select a service</option>
-                                        <option>Window Installation</option>
-                                        <option>Window Replacement</option>
-                                        <option>Window Repair</option>
-                                        <option>Custom Window Design</option>
-                                        <option>Energy-Efficient Windows</option>
-                                        <option>Window Consultation</option>
-                                    </select>
-
-                                    <i class="fa-solid fa-chevron-down"></i>
-                                </label>
-
-                                <label class="home-contact-field home-contact-field-wide">
-                                    <span>Project Details <em>(optional)</em></span>
-                                    <textarea name="message" maxlength="500"
-                                        placeholder="Tell us about your project..."></textarea>
-                                    <small>0/500</small>
-                                </label>
-                            </div>
-
-                            <div class="home-contact-trust">
-                                <div>
-                                    <i class="fa-solid fa-lock"></i>
-                                    <p><strong>Your info is safe</strong><span>We never share your data.</span></p>
-                                </div>
-
-                                <div>
-                                    <i class="fa-regular fa-clock"></i>
-                                    <p><strong>Fast responses</strong><span>Most quotes in 24–48 hrs.</span></p>
-                                </div>
-
-                                <div>
-                                    <i class="fa-solid fa-badge-check"></i>
-                                    <p><strong>No obligation</strong><span>Compare at your pace.</span></p>
-                                </div>
-                            </div>
-
-                            <button class="home-contact-submit" type="submit">
-                                Submit Request
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </button>
-                        </form>
+    <form class="home-contact-form" data-lead-form>
+        <div class="home-contact-form-grid">
+            ...
+        </div>
+    
+        <div class="home-contact-trust">
+            ...
+        </div>
+    
+        <button class="home-contact-submit" type="submit">
+            Submit Request
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+    
+        <p class="form-message" data-form-message></p>
+    </form>
                     </div>
 
                 </div>
