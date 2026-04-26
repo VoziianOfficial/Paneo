@@ -76,7 +76,7 @@ function renderServicesDropdowns() {
     const mobileLists = document.querySelectorAll("[data-mobile-services-list]");
 
     dropdowns.forEach((dropdown) => {
-        dropdown.innerHTML = window.SERVICES_DATA.map((service) => {
+        const servicesLinks = window.SERVICES_DATA.map((service) => {
             return `
                 <a href="${service.slug}">
                     <i class="${service.icon}" aria-hidden="true"></i>
@@ -84,10 +84,19 @@ function renderServicesDropdowns() {
                 </a>
             `;
         }).join("");
+
+        dropdown.innerHTML = `
+            <a class="services-dropdown-all" href="services.html">
+                <i class="fa-solid fa-table-cells-large" aria-hidden="true"></i>
+                <span>All Services</span>
+            </a>
+
+            ${servicesLinks}
+        `;
     });
 
     mobileLists.forEach((list) => {
-        list.innerHTML = window.SERVICES_DATA.map((service) => {
+        const servicesLinks = window.SERVICES_DATA.map((service) => {
             return `
                 <a href="${service.slug}">
                     <span>${service.title}</span>
@@ -95,6 +104,15 @@ function renderServicesDropdowns() {
                 </a>
             `;
         }).join("");
+
+        list.innerHTML = `
+            <a class="mobile-services-all" href="services.html">
+                <span>All Services</span>
+                <i class="fa-solid fa-table-cells-large" aria-hidden="true"></i>
+            </a>
+
+            ${servicesLinks}
+        `;
     });
 }
 

@@ -1002,3 +1002,19 @@ h3 {
 .logo-premium-simple:hover .logo-text {
     color: #b08a5e;
 }
+
+.services-dropdown-all {
+    border-bottom: 1px solid rgba(23, 23, 23, 0.08);
+    background: rgba(23, 23, 23, 0.04);
+    font-weight: 800;
+}
+
+.services-dropdown-all i {
+    color: #171717;
+}
+
+.mobile-services-all {
+    border-bottom: 1px solid rgba(23, 23, 23, 0.1);
+    background: rgba(23, 23, 23, 0.04);
+    font-weight: 850;
+}
