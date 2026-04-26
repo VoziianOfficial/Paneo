@@ -1716,3 +1716,181 @@
         text-align: center;
     }
 }
+
+/* ===============================
+   SERVICE PAGES — EXTRA POLISH
+================================ */
+
+.service-hero-card,
+.service-hero-rail,
+.service-snapshot-media,
+.snapshot-media-badge,
+.snapshot-line-list article,
+.service-fit-compact-list article,
+.service-option-card,
+.factor-card,
+.service-verify-grid article,
+.service-question-list details,
+.service-related-card,
+.service-cta-card {
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        color 0.3s ease;
+}
+
+/* Hero card */
+.service-hero-card:hover {
+    transform: translateY(-5px);
+    background: rgba(244, 241, 236, 0.12);
+    border-color: rgba(244, 241, 236, 0.28);
+}
+
+/* Hero rail */
+.rail-item:hover {
+    transform: translateY(-3px);
+    border-color: rgba(244, 241, 236, 0.26);
+}
+
+/* Snapshot lines */
+.snapshot-line-list article:hover,
+.service-fit-compact-list article:hover {
+    background: rgba(255, 255, 255, 0.22);
+}
+
+/* Option cards */
+.service-option-card:hover,
+.factor-card:hover {
+    background: #171717;
+    color: #f4f1ec;
+    border-color: #171717;
+}
+
+.service-option-card:hover h3,
+.factor-card:hover h3,
+.service-option-card:hover p,
+.factor-card:hover p {
+    color: #f4f1ec;
+}
+
+.service-option-card:hover span,
+.factor-card:hover>span {
+    color: rgba(244, 241, 236, 0.2);
+}
+
+.service-option-card:hover i,
+.factor-card:hover i {
+    background: #f4f1ec;
+    color: #171717;
+}
+
+/* Verify cards */
+.service-verify-grid article:hover {
+    transform: translateY(-4px);
+    border-color: rgba(244, 241, 236, 0.26);
+}
+
+/* Questions */
+.service-question-list details:hover {
+    transform: translateX(4px);
+}
+
+/* Related */
+.service-related-card:hover {
+    transform: translateY(-5px);
+}
+
+/* CTA */
+.service-cta-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(244, 241, 236, 0.24);
+}
+
+/* Better mobile service pages */
+@media (max-width: 760px) {
+    .service-hero {
+        min-height: auto;
+    }
+
+    .service-hero-copy,
+    .service-snapshot-content,
+    .service-fit-compact-copy,
+    .service-split-copy,
+    .service-verify-head,
+    .service-questions-copy {
+        text-align: center;
+    }
+
+    .service-hero-copy .eyebrow,
+    .service-snapshot-content .eyebrow,
+    .service-fit-compact-copy .eyebrow,
+    .service-split-copy .eyebrow,
+    .service-verify-head .eyebrow,
+    .service-questions-copy .eyebrow {
+        justify-content: center;
+    }
+
+    .service-hero-actions {
+        justify-content: center;
+    }
+
+    .service-hero-card,
+    .service-cta-card {
+        text-align: center;
+    }
+
+    .service-hero-card i,
+    .service-option-card i,
+    .factor-card i,
+    .service-verify-grid i,
+    .service-related-card i {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .service-option-card,
+    .factor-card,
+    .service-verify-grid article,
+    .service-related-card {
+        text-align: center;
+    }
+
+    .service-question-list details:hover {
+        transform: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-hero-copy h1 {
+        font-size: clamp(2.2rem, 12vw, 3rem);
+    }
+
+    .service-hero-copy .lead {
+        font-size: 0.86rem;
+        line-height: 1.5;
+    }
+
+    .service-hero-rail {
+        gap: 0;
+    }
+
+    .rail-item {
+        padding: 15px;
+    }
+
+    .service-snapshot-media,
+    .service-snapshot-media img {
+        min-height: 240px;
+    }
+
+    .snapshot-media-badge {
+        padding: 12px;
+    }
+
+    .service-fit-compact-list article,
+    .snapshot-line-list article {
+        padding: 15px 0;
+    }
+}

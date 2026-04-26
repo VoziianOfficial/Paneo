@@ -1655,3 +1655,362 @@ h3 {
         line-height: 1 !important;
     }
 }
+
+/* ===============================
+   GLOBAL SITE POLISH
+   adaptive / hovers / color shifts
+================================ */
+
+/* Smooth transitions for main interactive elements */
+a,
+button,
+.btn,
+.logo,
+.logo-icon,
+.logo-text,
+.premium-card,
+.image-card,
+.factor-card,
+.service-option-card,
+.service-related-card,
+.service-feature,
+.process-card,
+.luxe-card,
+.review-card,
+.strip-item,
+.home-service-card,
+.home-usecase-item,
+.metric-tile,
+.contact-info-list a,
+.contact-info-list span,
+.faq-list details,
+.mobile-nav a,
+.mobile-services-toggle,
+.services-dropdown a,
+input,
+textarea,
+select {
+    transition:
+        color 0.28s ease,
+        background 0.28s ease,
+        border-color 0.28s ease,
+        box-shadow 0.28s ease,
+        transform 0.28s ease,
+        opacity 0.28s ease;
+}
+
+/* Better focus */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 2px solid rgba(194, 162, 127, 0.75);
+    outline-offset: 4px;
+}
+
+/* Better image hover */
+img {
+    transition: transform 0.7s ease, filter 0.7s ease;
+}
+
+a:hover img,
+.image-card:hover img,
+.home-service-card:hover img,
+.service-split-image:hover img,
+.service-snapshot-media:hover img {
+    transform: scale(1.045);
+}
+
+/* Buttons polish */
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.18) 45%,
+            transparent 70%);
+    transform: translateX(-120%);
+    transition: transform 0.6s ease;
+}
+
+.btn:hover::after {
+    transform: translateX(120%);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-primary:hover {
+    background: #000;
+    color: #f7f5ef;
+}
+
+.btn-ghost:hover,
+.btn-outline:hover {
+    background: #171717;
+    border-color: #171717;
+    color: #f7f5ef;
+}
+
+/* Header polish */
+.site-header {
+    transition:
+        background 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.site-header.is-scrolled {
+    background: rgba(247, 245, 239, 0.92);
+    border-color: rgba(23, 23, 23, 0.1);
+    box-shadow: 0 16px 40px rgba(17, 20, 26, 0.08);
+}
+
+/* Desktop nav hover */
+.desktop-nav a,
+.nav-dropdown-toggle {
+    position: relative;
+}
+
+.desktop-nav a::after,
+.nav-dropdown-toggle::after {
+    content: "";
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    bottom: 7px;
+    height: 1px;
+    background: #171717;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.28s ease;
+}
+
+.desktop-nav a:hover::after,
+.nav-dropdown-toggle:hover::after {
+    transform: scaleX(1);
+}
+
+/* Dropdown better hover */
+.services-dropdown a:hover {
+    background: rgba(23, 23, 23, 0.08);
+    transform: translateX(4px);
+}
+
+.services-dropdown a:hover i {
+    color: #171717;
+}
+
+/* Cards hover */
+.premium-card:hover,
+.factor-card:hover,
+.service-option-card:hover,
+.service-related-card:hover,
+.service-feature:hover,
+.process-card:hover,
+.luxe-card:hover,
+.review-card:hover,
+.strip-item:hover,
+.metric-tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 24px 58px rgba(17, 20, 26, 0.14);
+}
+
+/* Light cards color shift */
+.service-feature:hover,
+.factor-card:hover,
+.service-option-card:hover,
+.strip-item:hover,
+.metric-tile:hover,
+.review-card:hover {
+    background: rgba(255, 255, 255, 0.64);
+    border-color: rgba(23, 23, 23, 0.16);
+}
+
+/* Icon hover */
+.factor-card:hover i,
+.service-option-card:hover i,
+.service-feature:hover i,
+.process-card:hover i,
+.strip-item:hover i,
+.metric-tile:hover i {
+    background: #171717;
+    color: #f7f5ef;
+}
+
+/* Dark sections card hover */
+.service-verify-grid article:hover,
+.rail-item:hover,
+.contact-next-card:hover,
+.contact-note-card:hover {
+    background: rgba(244, 241, 236, 0.1);
+}
+
+/* FAQ hover */
+.faq-list details {
+    overflow: hidden;
+}
+
+.faq-list details:hover {
+    background: rgba(255, 255, 255, 0.58);
+    border-color: rgba(23, 23, 23, 0.16);
+}
+
+.faq-list summary:hover {
+    color: #000;
+}
+
+/* Forms polish */
+input:hover,
+textarea:hover,
+select:hover {
+    border-color: rgba(23, 23, 23, 0.24);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: rgba(194, 162, 127, 0.9);
+    box-shadow: 0 0 0 4px rgba(194, 162, 127, 0.14);
+}
+
+/* Logo hover */
+.logo-premium-simple:hover .logo-icon {
+    stroke: #b08a5e;
+    transform: translateY(-1px) scale(1.03);
+}
+
+.logo-premium-simple:hover .logo-text {
+    color: #b08a5e;
+}
+
+/* Mobile menu polish */
+.mobile-nav a:hover,
+.mobile-services-toggle:hover {
+    background: rgba(23, 23, 23, 0.08);
+    transform: translateX(3px);
+}
+
+.mobile-services-list a:hover {
+    background: rgba(23, 23, 23, 0.08);
+    color: #171717;
+}
+
+/* Sticky service button */
+.sticky-service-btn:hover {
+    transform: translateY(-50%) translateX(4px);
+    background: #f4f1ec;
+    color: #171717;
+}
+
+/* ===============================
+   GLOBAL RESPONSIVE IMPROVEMENTS
+================================ */
+
+@media (max-width: 1100px) {
+    .section {
+        padding: clamp(34px, 5vw, 56px) 0;
+    }
+
+    h1 {
+        font-size: clamp(2.8rem, 8vw, 5.5rem);
+    }
+
+    h2 {
+        font-size: clamp(2rem, 6vw, 4.2rem);
+    }
+
+    .desktop-nav {
+        display: none !important;
+    }
+
+    .mobile-menu-toggle {
+        display: grid !important;
+    }
+}
+
+@media (max-width: 760px) {
+    .section {
+        padding: 32px 0;
+    }
+
+    .container,
+    .footer-container {
+        width: min(100% - 28px, var(--container));
+    }
+
+    h1,
+    h2,
+    h3,
+    p,
+    .lead {
+        overflow-wrap: break-word;
+    }
+
+    .lead {
+        font-size: 0.92rem;
+        line-height: 1.55;
+    }
+
+    .btn {
+        min-height: 48px;
+        padding: 13px 18px;
+        font-size: 0.88rem;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .section-header .eyebrow {
+        justify-content: center;
+    }
+
+    .section-header .lead {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sticky-service-btn {
+        display: none;
+    }
+
+    .footer-top {
+        gap: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: clamp(2.45rem, 14vw, 3.8rem);
+        line-height: 1.02;
+    }
+
+    h2 {
+        font-size: clamp(1.8rem, 9vw, 2.55rem);
+        line-height: 1.05;
+    }
+
+    h3 {
+        font-size: 1.18rem;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .cookie-banner {
+        width: calc(100% - 20px);
+        padding: 14px;
+    }
+}
