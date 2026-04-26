@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initHomeProjectSwiper();
     initTextareaCounter();
     initAboutPathTabs();
+    initAccordion();
 });
 
 // ===============================
@@ -517,6 +518,28 @@ function initAboutPathTabs() {
                     image.src = tab.dataset.image;
                     image.style.opacity = "1";
                 }, 200);
+            }
+        });
+    });
+}
+
+function initAccordion() {
+    const items = document.querySelectorAll(".accordion-item");
+
+    if (!items.length) return;
+
+    items.forEach((item) => {
+        const header = item.querySelector(".accordion-header");
+
+        header.addEventListener("click", () => {
+            const isOpen = item.classList.contains("active");
+
+            // закрыть все
+            items.forEach((i) => i.classList.remove("active"));
+
+            // открыть текущий
+            if (!isOpen) {
+                item.classList.add("active");
             }
         });
     });
