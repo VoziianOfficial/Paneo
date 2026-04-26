@@ -1917,3 +1917,119 @@
 .contact-map-card iframe {
     border-radius: 0 !important;
 }
+
+/* ===============================
+   MOBILE — CONTACT HERO FORM COMPACT
+================================ */
+
+@media (max-width: 640px) {
+
+    /* весь hero-контент по центру секции */
+    .contact-hero .contact-hero-grid,
+    .contact-hero--split .contact-hero-grid,
+    .container.contact-hero-grid {
+        min-height: auto;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        gap: 20px;
+    }
+
+    /* форма компактнее */
+    .contact-hero-form {
+        width: 100%;
+        max-width: 420px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 16px !important;
+    }
+
+    /* верх формы по центру */
+    .contact-form-head {
+        text-align: center;
+        display: grid;
+        justify-items: center;
+        gap: 8px;
+        margin-bottom: 14px;
+    }
+
+    .contact-form-head h2,
+    .contact-form-head h3,
+    .contact-form-head p {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contact-form-head h2,
+    .contact-form-head h3 {
+        font-size: clamp(1.35rem, 6vw, 1.8rem);
+        line-height: 1.12;
+        letter-spacing: -0.04em;
+    }
+
+    .contact-form-head p {
+        max-width: 300px;
+        font-size: 0.82rem;
+        line-height: 1.45;
+        color: rgba(23, 23, 23, 0.58);
+    }
+
+    /* поля компактнее */
+    .contact-hero-form form,
+    .contact-hero-form .contact-form,
+    .contact-form-grid {
+        gap: 10px !important;
+    }
+
+    .contact-hero-form label {
+        gap: 5px;
+    }
+
+    .contact-hero-form input,
+    .contact-hero-form select,
+    .contact-hero-form textarea {
+        min-height: 40px !important;
+        padding: 10px 12px !important;
+        font-size: 0.84rem !important;
+    }
+
+    .contact-hero-form textarea {
+        min-height: 82px !important;
+        resize: vertical;
+    }
+
+    /* trust icons компактно */
+    .contact-form-trust {
+        justify-content: center;
+        gap: 8px !important;
+        margin-top: 10px !important;
+        text-align: center;
+    }
+
+    .contact-form-trust div,
+    .contact-form-trust span,
+    .contact-form-trust li {
+        font-size: 0.72rem !important;
+    }
+
+    .contact-form-trust i {
+        width: 24px !important;
+        height: 24px !important;
+        min-width: 24px !important;
+        font-size: 0.68rem !important;
+    }
+
+    /* убрать кнопку submit на мобилке */
+    .contact-submit,
+    .contact-hero-form .contact-submit,
+    .contact-hero-form button[type="submit"] {
+        display: none !important;
+    }
+
+    /* убрать disclaimer на мобилке */
+    .contact-hero-disclaimer,
+    .contact-hero-form .contact-hero-disclaimer {
+        display: none !important;
+    }
+}
