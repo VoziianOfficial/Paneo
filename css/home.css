@@ -1191,3 +1191,300 @@
         font-size: 0.96rem;
     }
 }
+
+/* ===============================
+   HOME SERVICES — QUIET LUXURY
+================================ */
+
+.home-services {
+    position: relative;
+    background: #171717;
+    color: #f4f1ec;
+    overflow: hidden;
+}
+
+.home-services::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 12% 0%, rgba(255, 255, 255, 0.05), transparent 28%),
+        linear-gradient(180deg, #171717 0%, #1a1a1a 100%);
+    pointer-events: none;
+}
+
+.home-services .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* head */
+
+.home-services-head {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+    gap: clamp(28px, 4vw, 72px);
+    align-items: end;
+    margin-bottom: clamp(34px, 5vw, 64px);
+}
+
+.home-services-head__left h2 {
+    max-width: 760px;
+    margin: 14px 0 0;
+    color: #f8f6f0;
+    font-size: clamp(2.3rem, 4.8vw, 5.2rem);
+    line-height: 0.98;
+    letter-spacing: -0.075em;
+    font-weight: 520;
+}
+
+.home-services-kicker {
+    display: inline-flex;
+    color: rgba(244, 241, 236, 0.46);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.home-services-lead {
+    max-width: 420px;
+    margin: 0;
+    color: rgba(244, 241, 236, 0.62);
+    font-size: 0.96rem;
+    line-height: 1.8;
+    font-weight: 350;
+}
+
+.home-services-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 14px;
+    margin-top: 24px;
+}
+
+.home-services-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 34px;
+    padding: 0 14px;
+    border: 1px solid rgba(244, 241, 236, 0.12);
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.03);
+    color: rgba(244, 241, 236, 0.68);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
+
+.home-services-meta i {
+    color: rgba(244, 241, 236, 0.82);
+    font-size: 0.8rem;
+}
+
+/* grid */
+
+.home-services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1px;
+    border: 1px solid rgba(244, 241, 236, 0.14);
+    background: rgba(244, 241, 236, 0.14);
+}
+
+/* card */
+
+.home-service-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 540px;
+    background: #171717;
+    color: inherit;
+    text-decoration: none;
+    overflow: hidden;
+    isolation: isolate;
+    transition: background 0.35s ease, transform 0.35s ease;
+}
+
+.home-service-card::before {
+    content: "";
+    position: absolute;
+    inset: 18px;
+    border: 1px solid rgba(244, 241, 236, 0.08);
+    pointer-events: none;
+    transition: inset 0.35s ease, border-color 0.35s ease;
+    z-index: 2;
+}
+
+.home-service-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent 32%),
+        radial-gradient(circle at 82% 14%, rgba(255, 255, 255, 0.08), transparent 28%);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.home-service-card:hover {
+    background: #1d1d1d;
+}
+
+.home-service-card:hover::before {
+    inset: 14px;
+    border-color: rgba(244, 241, 236, 0.18);
+}
+
+.home-service-card:hover::after {
+    opacity: 1;
+}
+
+.home-service-card__image {
+    position: relative;
+    height: 290px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.home-service-card__image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(180deg, rgba(18, 18, 18, 0.08) 0%, rgba(18, 18, 18, 0.18) 100%);
+    pointer-events: none;
+}
+
+.home-service-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(8%) saturate(0.88) contrast(1.02);
+    transform: scale(1.01);
+    transition: transform 0.45s ease, filter 0.45s ease;
+}
+
+.home-service-card:hover .home-service-card__image img {
+    transform: scale(1.04);
+    filter: grayscale(4%) saturate(0.95) contrast(1.04);
+}
+
+.home-service-card__content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 26px 26px 30px;
+}
+
+.home-service-card__number {
+    display: block;
+    margin-bottom: 26px;
+    color: rgba(244, 241, 236, 0.36);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.home-service-card__content i {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 20px;
+    border: 1px solid rgba(244, 241, 236, 0.16);
+    background: rgba(255, 255, 255, 0.03);
+    color: rgba(244, 241, 236, 0.84);
+    font-size: 0.92rem;
+}
+
+.home-service-card__content h3 {
+    margin: 0 0 12px;
+    color: #f8f6f0;
+    font-size: clamp(1.22rem, 1.55vw, 1.65rem);
+    line-height: 1.12;
+    letter-spacing: -0.04em;
+    font-weight: 520;
+}
+
+.home-service-card__content p {
+    max-width: 290px;
+    margin: 0;
+    color: rgba(244, 241, 236, 0.56);
+    font-size: 0.9rem;
+    line-height: 1.72;
+    font-weight: 350;
+}
+
+/* responsive */
+
+@media (max-width: 1100px) {
+    .home-services-head {
+        grid-template-columns: 1fr;
+        align-items: start;
+    }
+
+    .home-services-lead {
+        max-width: 620px;
+    }
+
+    .home-services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-service-card {
+        min-height: 420px;
+    }
+
+    .home-service-card__image {
+        height: 240px;
+    }
+
+    .home-service-card__content p {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .home-services-head {
+        margin-bottom: 34px;
+    }
+
+    .home-services-head__left h2 {
+        font-size: clamp(2rem, 11vw, 3.3rem);
+    }
+
+    .home-services-meta {
+        gap: 10px;
+    }
+
+    .home-services-meta span {
+        width: 100%;
+        justify-content: flex-start;
+        min-height: 38px;
+        padding: 0 12px;
+    }
+
+    .home-service-card {
+        min-height: auto;
+    }
+
+    .home-service-card::before {
+        inset: 12px;
+    }
+
+    .home-service-card__image {
+        height: 220px;
+    }
+
+    .home-service-card__content {
+        padding: 22px 20px 24px;
+    }
+}
