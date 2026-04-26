@@ -542,3 +542,166 @@
         padding-top: calc(var(--header-height) + 10px);
     }
 }
+
+.marquee-band--light {
+    overflow: hidden;
+    padding: 20px 0;
+    background: #f4f1ec;
+    border-top: 1px solid rgba(23, 23, 23, 0.1);
+    border-bottom: 1px solid rgba(23, 23, 23, 0.1);
+}
+
+.marquee-band--light .marquee-track {
+    width: max-content;
+    display: flex;
+    gap: 42px;
+    animation: marqueeMove 26s linear infinite;
+}
+
+.marquee-band--light span {
+    position: relative;
+    color: rgba(23, 23, 23, 0.64);
+    font-size: clamp(1.1rem, 2vw, 2rem);
+    line-height: 1;
+    font-weight: 360;
+    letter-spacing: -0.04em;
+    white-space: nowrap;
+}
+
+.marquee-band--light span::after {
+    content: "/";
+    position: absolute;
+    right: -28px;
+    top: 50%;
+    color: rgba(23, 23, 23, 0.22);
+    transform: translateY(-50%);
+}
+
+@keyframes marqueeMove {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* ===============================
+   INFINITE MARQUEE — LIGHT CLICKABLE
+================================ */
+
+.marquee-band {
+    position: relative;
+    overflow: hidden;
+    padding: 18px 0;
+    background:
+        radial-gradient(circle at 15% 0%, rgba(255, 255, 255, 0.95), transparent 32%),
+        linear-gradient(180deg, #f7f4ee 0%, #ede7dc 100%);
+    border-top: 1px solid rgba(23, 23, 23, 0.08);
+    border-bottom: 1px solid rgba(23, 23, 23, 0.08);
+}
+
+.marquee-band::before,
+.marquee-band::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 120px;
+    pointer-events: none;
+}
+
+.marquee-band::before {
+    left: 0;
+    background: linear-gradient(90deg, #f7f4ee, transparent);
+}
+
+.marquee-band::after {
+    right: 0;
+    background: linear-gradient(270deg, #ede7dc, transparent);
+}
+
+.marquee-track {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    animation: marqueeInfinite 24s linear infinite;
+    will-change: transform;
+}
+
+.marquee-group {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding-right: 18px;
+}
+
+.marquee-group a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    min-height: 42px;
+    padding: 0 18px;
+    border: 1px solid rgba(23, 23, 23, 0.09);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.52);
+    color: rgba(23, 23, 23, 0.74);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    backdrop-filter: blur(12px);
+    transition: 0.25s ease;
+}
+
+.marquee-group a:hover {
+    transform: translateY(-2px);
+    background: #171717;
+    color: #f7f4ee;
+    border-color: #171717;
+}
+
+.marquee-band:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+@keyframes marqueeInfinite {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 640px) {
+    .marquee-band {
+        padding: 14px 0;
+    }
+
+    .marquee-band::before,
+    .marquee-band::after {
+        width: 54px;
+    }
+
+    .marquee-track {
+        animation-duration: 18s;
+    }
+
+    .marquee-group {
+        gap: 12px;
+        padding-right: 12px;
+    }
+
+    .marquee-group a {
+        min-height: 38px;
+        padding: 0 14px;
+        font-size: 0.68rem;
+        letter-spacing: 0.1em;
+    }
+}
