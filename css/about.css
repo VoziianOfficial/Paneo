@@ -721,3 +721,86 @@
 .about-page .about-cta-actions {
     margin-top: clamp(20px, 2.5vw, 32px);
 }
+
+/* ===============================
+   TABLET + MOBILE — COMPACT ABOUT PATH TABS
+================================ */
+
+@media (max-width: 980px) {
+    .about-path-tab {
+        min-height: 48px !important;
+        padding: 8px 14px !important;
+        gap: 10px !important;
+        grid-template-columns: 32px minmax(0, 1fr) !important;
+    }
+
+    .about-path-tab span {
+        font-size: 0.58rem !important;
+        letter-spacing: 0.1em !important;
+    }
+
+    .about-path-tab strong {
+        font-size: 0.82rem !important;
+        line-height: 1.1 !important;
+    }
+
+    .about-path-tab small {
+        margin-top: 2px !important;
+        font-size: 0.64rem !important;
+        line-height: 1.15 !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .about-path-tab {
+        min-height: 38px !important;
+        padding: 7px 12px !important;
+        border-radius: 0 !important;
+    }
+}
+
+/* ===============================
+   ABOUT PATH TABS — HORIZONTAL TEXT
+================================ */
+
+.about-path-tab {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 12px !important;
+}
+
+.about-path-tab span,
+.about-path-tab strong,
+.about-path-tab small {
+    display: inline-flex !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    white-space: nowrap !important;
+    text-align: left !important;
+}
+
+.about-path-tab span {
+    flex: 0 0 auto;
+}
+
+.about-path-tab strong {
+    flex: 0 0 auto;
+}
+
+.about-path-tab small {
+    flex: 0 1 auto;
+    opacity: 0.72;
+}
+
+@media (max-width: 980px) {
+    .about-path-tab {
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .about-path-tab::-webkit-scrollbar {
+        display: none;
+    }
+}

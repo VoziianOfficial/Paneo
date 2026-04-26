@@ -1557,3 +1557,11 @@ h3 {
         display: none !important;
     }
 }
+
+/* MOBILE — hide home slider heading */
+@media (max-width: 640px) {
+    .home-slider-head {
+        display: none !important;
+    }
+}
+
