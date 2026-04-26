@@ -669,52 +669,55 @@
     margin-top: clamp(24px, 3vw, 36px);
 }
 
-/* ABOUT PAGE SECTION FLOW */
+/* ===============================
+   ABOUT PAGE — COMPACT SECTION FLOW
+================================ */
 
 .about-page .section {
     margin: 0 !important;
 }
 
 .about-page main>section {
-    margin-top: 0 !important;
-    margin-bottom: clamp(22px, 3vw, 42px) !important;
-}
-
-.about-page main>section:last-child {
-    margin-bottom: 0 !important;
-}
-
-/* ===============================
-   ABOUT FIXES (NO EXTRA SPACING)
-================================ */
-
-/* 1. HERO — убрать нижний padding + margin */
-.about-page .about-hero--gallery {
-    padding-bottom: 0 !important;
-    margin-bottom: 0 !important;
-}
-
-/* 2. STORY — убрать верхний padding */
-.about-page .about-story-split-shell {
-    padding-top: 0 !important;
-}
-
-/* 3. PATH — убрать нижний padding */
-/* у тебя класс .about-path (не about-model) */
-.about-page .about-path {
-    padding-bottom: 0 !important;
-}
-
-/* 4. PROOF — убрать нижний margin */
-.about-page .about-proof {
-    margin-bottom: 0 !important;
-}
-
-/* ДОП: если всё ещё есть зазор — это из-за section */
-.about-page main>section {
     margin: 0 !important;
 }
-/* PATH (about-model) — убрать верхний padding */
-.about-page .about-model.about-path {
-    padding-top: 0 !important;
+
+/* HERO — чуть компактнее снизу */
+.about-page .about-hero--gallery {
+    padding-bottom: clamp(18px, 2vw, 28px) !important;
+}
+
+/* STORY — меньше воздуха внутри */
+.about-page .about-story-split-shell {
+    padding-top: clamp(36px, 4vw, 58px) !important;
+    padding-bottom: clamp(34px, 4vw, 54px) !important;
+}
+
+/* PATH — одна секция = один экран, компактнее */
+.about-page .about-path {
+    padding-top: clamp(34px, 4vw, 54px) !important;
+    padding-bottom: clamp(34px, 4vw, 54px) !important;
+}
+
+/* PROOF — компактная editorial секция */
+.about-page .about-proof-editorial-shell {
+    padding-top: clamp(30px, 4vw, 48px) !important;
+    padding-bottom: clamp(28px, 4vw, 44px) !important;
+}
+
+/* VALUES — меньше высота, но всё ещё premium */
+.about-page .about-values--accordion {
+    padding-top: clamp(46px, 5vw, 72px) !important;
+    padding-bottom: clamp(46px, 5vw, 72px) !important;
+}
+
+/* DISCLAIMER + CTA */
+.about-page .about-disclaimer,
+.about-page .about-cta {
+    padding-top: clamp(34px, 4vw, 54px) !important;
+    padding-bottom: clamp(34px, 4vw, 54px) !important;
+}
+
+/* расстояние у кнопок CTA */
+.about-page .about-cta-actions {
+    margin-top: clamp(20px, 2.5vw, 32px);
 }

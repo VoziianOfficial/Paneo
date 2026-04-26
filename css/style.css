@@ -1521,3 +1521,39 @@ h3 {
         padding: 0 !important;
     }
 }
+
+/* Burger only tablet/mobile */
+
+.mobile-menu-toggle {
+    display: none !important;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+@media (max-width: 1100px) {
+    .desktop-nav {
+        display: none !important;
+    }
+
+    .mobile-menu-toggle {
+        display: grid !important;
+        place-items: center;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+}
+
+@media (min-width: 1101px) {
+    .desktop-nav {
+        display: flex !important;
+    }
+
+    .mobile-menu-toggle,
+    .mobile-menu {
+        display: none !important;
+    }
+}
