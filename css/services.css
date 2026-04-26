@@ -715,38 +715,7 @@
     background: var(--color-accent);
 }
 
-/* ===============================
-   CTA
-================================ */
 
-.services-cta {
-    background: var(--color-white);
-}
-
-.services-cta-card {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 30px;
-    align-items: center;
-    padding: clamp(28px, 5vw, 60px);
-    border-radius: var(--radius-xl);
-    background:
-        radial-gradient(circle at 85% 20%, rgba(194, 162, 127, 0.25), transparent 30%),
-        var(--color-dark);
-    color: var(--color-white);
-    box-shadow: var(--shadow-card);
-}
-
-.services-cta-card h2 {
-    color: var(--color-white);
-    max-width: 860px;
-}
-
-.services-cta-card p {
-    max-width: 680px;
-    margin-top: 16px;
-    color: rgba(247, 245, 239, 0.72);
-}
 
 /* ===============================
    RESPONSIVE
@@ -1226,5 +1195,164 @@
         position: absolute;
         right: 18px;
         top: 22px;
+    }
+}
+
+
+/* ===============================
+   SERVICES CTA — PREMIUM CLOSE
+================================ */
+
+.services-cta {
+    background:
+        radial-gradient(circle at 14% 0%, rgba(255, 255, 255, 0.86), transparent 30%),
+        linear-gradient(180deg, #e8e3da 0%, #f4f1ec 100%);
+}
+
+.services-cta-card {
+    position: relative;
+    min-height: 360px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: clamp(28px, 5vw, 80px);
+    align-items: end;
+    padding: clamp(30px, 5vw, 64px);
+    overflow: hidden;
+    border: 1px solid rgba(244, 241, 236, 0.16);
+    border-radius: 34px;
+    background:
+        linear-gradient(90deg, rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.58)),
+        url("../images/services/custom-window-design.jpg") center/cover no-repeat;
+    color: #f4f1ec;
+    box-shadow: 0 24px 70px rgba(17, 20, 26, 0.18);
+}
+
+.services-cta-card::before {
+    content: "";
+    position: absolute;
+    inset: 18px;
+    border: 1px solid rgba(244, 241, 236, 0.16);
+    border-radius: 24px;
+    pointer-events: none;
+}
+
+.services-cta-card::after {
+    content: "";
+    position: absolute;
+    right: -80px;
+    top: -80px;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: rgba(244, 241, 236, 0.08);
+    pointer-events: none;
+}
+
+.services-cta-copy,
+.services-cta-actions {
+    position: relative;
+    z-index: 1;
+}
+
+.services-cta-card .eyebrow {
+    color: rgba(244, 241, 236, 0.72);
+}
+
+.services-cta-card .eyebrow::before {
+    background: rgba(244, 241, 236, 0.42);
+}
+
+.services-cta-card h2 {
+    max-width: 850px;
+    margin: 0;
+    color: #f8f6f0;
+    font-size: clamp(2.4rem, 5vw, 5.4rem);
+    line-height: 0.98;
+    letter-spacing: -0.075em;
+    font-weight: 520;
+}
+
+.services-cta-card p {
+    max-width: 620px;
+    margin-top: 20px;
+    color: rgba(244, 241, 236, 0.68);
+    font-size: 0.98rem;
+    line-height: 1.75;
+    font-weight: 350;
+}
+
+.services-cta-actions {
+    display: grid;
+    gap: 18px;
+    justify-items: end;
+}
+
+.services-cta-actions .btn-primary {
+    min-height: 50px;
+    padding: 0 24px;
+    background: #f4f1ec;
+    color: #171717;
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24);
+}
+
+.services-cta-actions .btn-primary:hover {
+    background: #fff;
+    transform: translateY(-2px);
+}
+
+.services-cta-link {
+    position: relative;
+    color: rgba(244, 241, 236, 0.72);
+    font-size: 0.88rem;
+    font-weight: 520;
+}
+
+.services-cta-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -7px;
+    height: 1px;
+    background: rgba(244, 241, 236, 0.42);
+    transform: scaleX(0.55);
+    transform-origin: left;
+    transition: 0.25s ease;
+}
+
+.services-cta-link:hover {
+    color: #fff;
+}
+
+.services-cta-link:hover::after {
+    transform: scaleX(1);
+}
+
+@media (max-width: 800px) {
+    .services-cta-card {
+        min-height: 420px;
+        grid-template-columns: 1fr;
+        align-items: end;
+    }
+
+    .services-cta-actions {
+        justify-items: start;
+    }
+}
+
+@media (max-width: 560px) {
+    .services-cta-card {
+        min-height: 380px;
+        padding: 26px 20px;
+        border-radius: 26px;
+    }
+
+    .services-cta-card::before {
+        inset: 12px;
+        border-radius: 18px;
+    }
+
+    .services-cta-actions .btn-primary {
+        width: 100%;
     }
 }
