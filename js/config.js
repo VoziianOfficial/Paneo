@@ -3,9 +3,6 @@ window.SITE_CONFIG = {
     companyName: "Paneo",
     companyId: "PNO-WIN-4827",
 
-    // Optional branding overrides
-    // - Set `imageSrc` to use your own logo image instead of the default inline SVG / mark.
-    // - Leave `imageSrc` empty to keep the default look.
     branding: {
         faviconHref: "favicon.svg",
         logo: {

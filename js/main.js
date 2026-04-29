@@ -105,7 +105,6 @@ function applyBranding(cfg) {
 
         if (!logoImageSrc) return;
 
-        // Header logo (inline SVG) -> replace with <img>
         const logoIcon = logo.querySelector(".logo-icon");
         if (logoIcon && logoIcon.tagName.toLowerCase() === "svg") {
             const img = document.createElement("img");
@@ -119,7 +118,6 @@ function applyBranding(cfg) {
             logoIcon.classList.add("logo-image");
         }
 
-        // Footer logo mark (CSS shape) -> set background image
         const mark = logo.querySelector(".logo-mark");
         if (mark) {
             mark.classList.add("has-image");
@@ -243,7 +241,6 @@ function renderFooter() {
         </div>
     `;
 
-    // Footer markup is injected dynamically, so re-apply branding (logo image / favicon).
     applyBranding(cfg);
 }
 
