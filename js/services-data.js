@@ -5,6 +5,8 @@ window.SERVICES_DATA = [
         title: "Window Installation",
         slug: "window-installation.html",
         image: "images/services/window-installation.jpg",
+        imageWidth: 2560,
+        imageHeight: 1920,
         icon: "fa-solid fa-window-maximize",
 
         short:
@@ -26,6 +28,8 @@ window.SERVICES_DATA = [
         title: "Window Replacement",
         slug: "window-replacement.html",
         image: "images/services/window-replacement.jpg",
+        imageWidth: 1920,
+        imageHeight: 2560,
         icon: "fa-solid fa-repeat",
 
         short:
@@ -47,6 +51,8 @@ window.SERVICES_DATA = [
         title: "Window Repair",
         slug: "window-repair.html",
         image: "images/services/window-repair.jpg",
+        imageWidth: 1536,
+        imageHeight: 1024,
         icon: "fa-solid fa-screwdriver-wrench",
 
         short:
@@ -68,6 +74,8 @@ window.SERVICES_DATA = [
         title: "Custom Window Design",
         slug: "custom-window-design.html",
         image: "images/services/custom-window-design.jpg",
+        imageWidth: 1920,
+        imageHeight: 3413,
         icon: "fa-solid fa-pen-ruler",
 
         short:
@@ -89,6 +97,8 @@ window.SERVICES_DATA = [
         title: "Energy-Efficient Windows",
         slug: "energy-efficient-windows.html",
         image: "images/services/energy-efficient-windows.jpg",
+        imageWidth: 1920,
+        imageHeight: 2880,
         icon: "fa-solid fa-temperature-half",
 
         short:
@@ -110,6 +120,8 @@ window.SERVICES_DATA = [
         title: "Window Consultation",
         slug: "window-consultation.html",
         image: "images/services/window-consultation.jpg",
+        imageWidth: 1920,
+        imageHeight: 3413,
         icon: "fa-solid fa-comments",
 
         short:

@@ -12,7 +12,7 @@ function renderServicesGrid() {
     container.innerHTML = window.SERVICES_DATA.map(service => {
         return `
             <a href="${service.slug}" class="service-card reveal-up">
-                <img src="${service.image}" alt="${service.title}">
+                <img src="${service.image}" alt="${service.title}" loading="lazy" width="${service.imageWidth}" height="${service.imageHeight}">
 
                 <div class="service-card-content">
                     <div class="service-card-icon">
