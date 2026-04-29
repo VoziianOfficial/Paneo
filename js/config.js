@@ -3,6 +3,17 @@ window.SITE_CONFIG = {
     companyName: "Paneo",
     companyId: "PNO-WIN-4827",
 
+    // Optional branding overrides
+    // - Set `imageSrc` to use your own logo image instead of the default inline SVG / mark.
+    // - Leave `imageSrc` empty to keep the default look.
+    branding: {
+        faviconHref: "favicon.svg",
+        logo: {
+            imageSrc: "",
+            alt: "Paneo"
+        }
+    },
+
     phone: "+1 888 420 6731",
     phoneHref: "+18884206731",
     phoneLabel: "Get Window Quotes",

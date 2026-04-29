@@ -25,6 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
 function applyGlobalData() {
     const cfg = window.SITE_CONFIG;
 
+    applyBranding(cfg);
+
     document.querySelectorAll("[data-company]").forEach((el) => {
         el.textContent = cfg.companyName;
     });
@@ -59,6 +61,73 @@ function applyGlobalData() {
 
     document.querySelectorAll("[data-disclaimer]").forEach((el) => {
         el.textContent = cfg.disclaimer;
+    });
+}
+
+function applyBranding(cfg) {
+    const companyName = cfg?.companyName;
+
+    const faviconHref = cfg?.branding?.faviconHref;
+    if (faviconHref) {
+        const iconLinks = document.querySelectorAll('link[rel="icon"]');
+        iconLinks.forEach((link) => {
+            link.href = faviconHref;
+        });
+    }
+
+    if (companyName) {
+        if (document.title.includes("Paneo")) {
+            document.title = document.title.replaceAll("Paneo", companyName);
+        }
+
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+            const content = metaDescription.getAttribute("content") || "";
+            if (content.includes("Paneo")) {
+                metaDescription.setAttribute("content", content.replaceAll("Paneo", companyName));
+            }
+        }
+    }
+
+    const logoImageSrc = cfg?.branding?.logo?.imageSrc;
+    const logoAlt = cfg?.branding?.logo?.alt || companyName || "Logo";
+
+    document.querySelectorAll(".logo").forEach((logo) => {
+        if (companyName) {
+            const logoText = logo.querySelector(".logo-text");
+            if (logoText) logoText.textContent = companyName;
+
+            const currentLabel = logo.getAttribute("aria-label");
+            if (currentLabel && currentLabel.toLowerCase().includes("home")) {
+                logo.setAttribute("aria-label", `${companyName} home`);
+            }
+        }
+
+        if (!logoImageSrc) return;
+
+        // Header logo (inline SVG) -> replace with <img>
+        const logoIcon = logo.querySelector(".logo-icon");
+        if (logoIcon && logoIcon.tagName.toLowerCase() === "svg") {
+            const img = document.createElement("img");
+            img.className = "logo-icon logo-image";
+            img.src = logoImageSrc;
+            img.alt = logoAlt;
+            logoIcon.replaceWith(img);
+        } else if (logoIcon && logoIcon.tagName.toLowerCase() === "img") {
+            logoIcon.src = logoImageSrc;
+            logoIcon.alt = logoAlt;
+            logoIcon.classList.add("logo-image");
+        }
+
+        // Footer logo mark (CSS shape) -> set background image
+        const mark = logo.querySelector(".logo-mark");
+        if (mark) {
+            mark.classList.add("has-image");
+            mark.style.backgroundImage = `url("${logoImageSrc}")`;
+            mark.style.backgroundSize = "cover";
+            mark.style.backgroundPosition = "center";
+            mark.style.backgroundRepeat = "no-repeat";
+        }
     });
 }
 
@@ -127,6 +196,16 @@ function renderFooter() {
                     </a>
 
                     <p>${cfg.footerText}</p>
+
+                    ${Array.isArray(cfg.socials) && cfg.socials.length ? `
+                        <div class="footer-socials" aria-label="Social links">
+                            ${cfg.socials.map((social) => `
+                                <a href="${social.href}" aria-label="${social.label}">
+                                    <i class="${social.icon}" aria-hidden="true"></i>
+                                </a>
+                            `).join("")}
+                        </div>
+                    ` : ""}
                 </div>
 
                 <nav class="footer-nav" aria-label="Footer navigation">
@@ -163,6 +242,9 @@ function renderFooter() {
             </div>
         </div>
     `;
+
+    // Footer markup is injected dynamically, so re-apply branding (logo image / favicon).
+    applyBranding(cfg);
 }
 
 
