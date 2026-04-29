@@ -27,9 +27,9 @@ window.SERVICES_DATA = [
         id: "replacement",
         title: "Window Replacement",
         slug: "window-replacement.html",
-        image: "images/services/window-replacement.jpg",
+        image: "images/service-pages/window-repair-detail.jpg",
         imageWidth: 1920,
-        imageHeight: 2560,
+        imageHeight: 3413,
         icon: "fa-solid fa-repeat",
 
         short:

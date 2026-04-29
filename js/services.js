@@ -10,24 +10,27 @@ function renderServicesGrid() {
     if (!container || !window.SERVICES_DATA) return;
 
     container.innerHTML = window.SERVICES_DATA.map(service => {
+        const isSwiper = container.classList.contains("swiper-wrapper") || Boolean(container.closest(".swiper"));
         return `
-            <a href="${service.slug}" class="service-card reveal-up">
-                <img src="${service.image}" alt="${service.title}" loading="lazy" width="${service.imageWidth}" height="${service.imageHeight}">
+            ${isSwiper ? `<div class="swiper-slide">` : ``}
+                <a href="${service.slug}" class="service-card reveal-up">
+                    <img src="${service.image}" alt="${service.title}" loading="lazy" width="${service.imageWidth}" height="${service.imageHeight}">
 
-                <div class="service-card-content">
-                    <div class="service-card-icon">
-                        <i class="${service.icon}"></i>
+                    <div class="service-card-content">
+                        <div class="service-card-icon">
+                            <i class="${service.icon}"></i>
+                        </div>
+
+                        <h3>${service.title}</h3>
+                        <p>${service.short}</p>
+
+                        <div class="service-card-arrow">
+                            Explore
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
                     </div>
-
-                    <h3>${service.title}</h3>
-                    <p>${service.short}</p>
-
-                    <div class="service-card-arrow">
-                        Explore
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </div>
-                </div>
-            </a>
+                </a>
+            ${isSwiper ? `</div>` : ``}
         `;
     }).join("");
 
@@ -47,6 +50,7 @@ function initServicesSwiper() {
         spaceBetween: 18,
         speed: 700,
         loop: true,
+        grabCursor: true,
 
         pagination: {
             el: ".servicesSwiper .swiper-pagination",
@@ -54,14 +58,11 @@ function initServicesSwiper() {
         },
 
         breakpoints: {
-            640: {
-                slidesPerView: 1.2
-            },
-            900: {
+            768: {
                 slidesPerView: 2
             },
-            1200: {
-                slidesPerView: 2.6
+            1100: {
+                slidesPerView: 3
             }
         }
     });

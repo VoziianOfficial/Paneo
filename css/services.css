@@ -685,6 +685,20 @@
     color: rgba(247, 245, 239, 0.78);
 }
 
+.servicesSwiper .swiper-wrapper {
+    gap: 1px;
+    border: 1px solid rgba(23, 23, 23, 0.11);
+    background: rgba(23, 23, 23, 0.11);
+}
+
+.servicesSwiper .swiper-slide {
+    height: auto;
+}
+
+.servicesSwiper .service-card {
+    height: 100%;
+}
+
 .servicesSwiper .swiper-pagination {
     position: relative;
     margin-top: 26px;
