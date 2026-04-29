@@ -1,15 +1,9 @@
-// ===============================
-// Services Page Logic
-// ===============================
 
 document.addEventListener("DOMContentLoaded", () => {
     renderServicesGrid();
     initServicesSwiper();
 });
 
-// ===============================
-// RENDER SERVICES GRID
-// ===============================
 
 function renderServicesGrid() {
     const container = document.querySelector("[data-services-grid]");
@@ -37,15 +31,11 @@ function renderServicesGrid() {
         `;
     }).join("");
 
-    // PANEO reveal safety: cards are injected after the global observer starts.
     requestAnimationFrame(() => {
         container.querySelectorAll(".reveal-up").forEach(card => card.classList.add("is-visible"));
     });
 }
 
-// ===============================
-// SWIPER (SHOWCASE)
-// ===============================
 
 function initServicesSwiper() {
     const slider = document.querySelector(".servicesSwiper");

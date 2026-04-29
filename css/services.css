@@ -1,6 +1,4 @@
-/* ===============================
-   SERVICES HERO — EDITORIAL LUXURY
-================================ */
+
 
 .services-hero--editorial {
     position: relative;
@@ -190,9 +188,7 @@
     letter-spacing: -0.025em;
 }
 
-/* ===============================
-   INFINITE MARQUEE — LIGHT CLICKABLE
-================================ */
+
 
 .marquee-band {
     position: relative;
@@ -282,9 +278,7 @@
     }
 }
 
-/* ===============================
-   TIMELINE — PREMIUM EDITORIAL
-================================ */
+
 
 .timeline-section {
     background:
@@ -407,9 +401,7 @@
     line-height: 1.68;
 }
 
-/* ===============================
-   SERVICES INDEX — LUXURY GRID
-================================ */
+
 
 .services-index {
     background:
@@ -568,9 +560,7 @@
     transform: translateX(4px);
 }
 
-/* ===============================
-   COMPARE SECTION
-================================ */
+
 
 .services-compare {
     background:
@@ -645,9 +635,7 @@
     color: rgba(247, 245, 239, 0.7);
 }
 
-/* ===============================
-   SHOWCASE SWIPER
-================================ */
+
 
 .services-showcase {
     background: var(--color-bg);
@@ -717,9 +705,7 @@
 
 
 
-/* ===============================
-   RESPONSIVE
-================================ */
+
 
 @media (max-width: 1100px) {
 
@@ -848,9 +834,7 @@
 }
 
 
-/* ===============================
-   COMPARE — PREMIUM EDITORIAL
-================================ */
+
 
 .services-compare {
     position: relative;
@@ -868,7 +852,7 @@
     align-items: start;
 }
 
-/* LEFT PANEL */
+
 
 .compare-panel {
     position: sticky;
@@ -891,14 +875,14 @@
     font-size: 0.95rem;
 }
 
-/* RIGHT LIST */
+
 
 .compare-list {
     display: grid;
     gap: 14px;
 }
 
-/* CARD */
+
 
 .compare-list div {
     position: relative;
@@ -914,7 +898,7 @@
     transition: 0.35s ease;
 }
 
-/* subtle glow */
+
 
 .compare-list div::after {
     content: "";
@@ -927,7 +911,7 @@
     transition: 0.35s ease;
 }
 
-/* HOVER */
+
 
 .compare-list div:hover {
     transform: translateY(-4px);
@@ -940,7 +924,7 @@
     opacity: 1;
 }
 
-/* NUMBER */
+
 
 .compare-list span {
     display: block;
@@ -954,7 +938,7 @@
     color: rgba(255, 255, 255, 0.25);
 }
 
-/* ICON */
+
 
 .compare-list i {
     position: absolute;
@@ -965,7 +949,7 @@
     color: rgba(255, 255, 255, 0.35);
 }
 
-/* TEXT */
+
 
 .compare-list h3 {
     margin: 0;
@@ -981,7 +965,7 @@
     max-width: 420px;
 }
 
-/* RESPONSIVE */
+
 
 @media (max-width: 980px) {
     .compare-layout {
@@ -1006,9 +990,7 @@
 }
 
 
-/* ===============================
-   SERVICES DECISION — PREMIUM INTERACTIVE
-================================ */
+
 
 .services-decision {
     background:
@@ -1199,9 +1181,7 @@
 }
 
 
-/* ===============================
-   SERVICES CTA — PREMIUM CLOSE
-================================ */
+
 
 .services-cta {
     background:

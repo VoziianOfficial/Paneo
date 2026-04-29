@@ -1,8 +1,3 @@
-// ===============================
-// Paneo Service Page JS
-// Safe dynamic service page content
-// Does NOT overwrite manually written page content
-// ===============================
 
 const SERVICE_PAGE_COPY = {
     installation: {
@@ -97,11 +92,7 @@ function renderServicePage() {
     const service = window.SERVICES_DATA?.find((item) => item.id === serviceId);
     const copy = SERVICE_PAGE_COPY[serviceId];
 
-    /*
-        IMPORTANT:
-        This file is safe for manually written service pages.
-        It does NOT overwrite headings, descriptions, images, icons, or CTA text.
-    */
+    
 
     if (service) {
         updateContactLinks(service);
@@ -113,9 +104,7 @@ function renderServicePage() {
     }
 }
 
-/* ===============================
-   SAFE HELPERS
-================================ */
+
 
 function updateTextOnlyIfEmpty(selector, text) {
     document.querySelectorAll(selector).forEach((el) => {
@@ -171,9 +160,7 @@ function renderServiceSpecificCopyOnlyIfEmpty(copy) {
     });
 }
 
-/* ===============================
-   PARALLAX
-================================ */
+
 
 function initServiceParallax() {
     const heroImage = document.querySelector(".service-hero-bg img");

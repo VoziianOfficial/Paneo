@@ -1,6 +1,4 @@
-/* ===============================
-   CONTACT HERO
-================================ */
+
 
 .contact-hero {
     padding: calc(var(--header-height) + 10px) 0 0;
@@ -14,7 +12,7 @@
     width: min(100% - 20px, 1480px);
 }
 
-/* Убираем дефолтную стрелку */
+
 .contact-field select {
     appearance: none;
     -webkit-appearance: none;
@@ -22,17 +20,17 @@
     cursor: pointer;
 }
 
-/* Обертка для стрелки */
+
 .contact-select {
     position: relative;
 }
 
-/* Отступ под стрелку */
+
 .contact-select select {
     padding-right: 48px;
 }
 
-/* Кастомная стрелка */
+
 .contact-select i {
     position: absolute;
     right: 18px;
@@ -43,12 +41,12 @@
     transition: 0.25s ease;
 }
 
-/* Ховер эффект */
+
 .contact-select:hover i {
     color: var(--color-accent);
 }
 
-/* Фокус */
+
 .contact-select select:focus+i {
     color: var(--color-accent);
 }
@@ -495,9 +493,7 @@
     line-height: 1.5;
     font-weight: 800;
 }
-/* ===============================
-   CONTACT MAIN
-================================ */
+
 
 .contact-main {
     background: var(--color-white);
@@ -588,9 +584,7 @@
     color: var(--color-accent);
 }
 
-/* ===============================
-   PROCESS
-================================ */
+
 
 .contact-process {
     background: var(--color-bg);
@@ -646,9 +640,7 @@
     color: var(--color-muted);
 }
 
-/* ===============================
-   CONTACT NOTE
-================================ */
+
 
 .contact-note {
     background: var(--color-white);
@@ -676,9 +668,7 @@
     color: rgba(247, 245, 239, 0.74);
 }
 
-/* ===============================
-   FORM MESSAGE
-================================ */
+
 
 .form-message {
     min-height: 24px;
@@ -694,9 +684,7 @@
     color: #8f2f2f;
 }
 
-/* ===============================
-   RESPONSIVE
-================================ */
+
 
 @media (max-width: 1100px) {
 
@@ -798,9 +786,7 @@
     align-self: start;
 }
 
-/* ===============================
-   CONTACT HERO COMPACT
-================================ */
+
 
 .contact-hero {
     padding-top: calc(var(--header-height) + 6px);
@@ -859,7 +845,7 @@
     font-size: 0.95rem;
 }
 
-/* нижняя полоска */
+
 .contact-hero-strip {
     margin: 0 16px 16px;
     border-radius: 16px;
@@ -869,7 +855,7 @@
     padding: 18px 20px;
 }
 
-/* CONTACT HERO EXTRA COMPACT */
+
 
 .contact-hero {
     padding-top: calc(var(--header-height) + 4px);
@@ -1053,7 +1039,7 @@
     font-size: 0.82rem;
 }
 
-/* CONTACT HERO BACKGROUND IMAGE */
+
 
 .contact-hero-copy {
     position: relative;
@@ -1135,9 +1121,7 @@
 }
 
 
-/* ===============================
-   CONTACT HERO — SPLIT LUXURY
-================================ */
+
 
 .contact-hero--split {
     position: relative;
@@ -1289,7 +1273,7 @@
     background: rgba(255, 255, 255, 0.82);
 }
 
-/* form */
+
 
 .contact-hero-form {
     position: relative;
@@ -1512,7 +1496,7 @@
     color: #ffb0a8;
 }
 
-/* responsive */
+
 
 @media (max-width: 980px) {
     .contact-hero-grid {
@@ -1564,9 +1548,7 @@
     }
 }
 
-/* ===============================
-   CONTACT HERO — COMPACT ONE SCREEN
-================================ */
+
 
 .contact-hero.contact-hero--split {
     min-height: calc(100vh - var(--header-height, 82px));
@@ -1618,7 +1600,7 @@
     min-height: 104px;
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
     .contact-hero.contact-hero--split {
         min-height: auto;
@@ -1636,7 +1618,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 640px) {
     .contact-hero.contact-hero--split {
         padding-top: 82px !important;
@@ -1669,7 +1651,7 @@
     }
 }
 
-/* CONTACT MAIN — compact after hero */
+
 
 .contact-main.section {
     padding-top: clamp(36px, 5vw, 64px);
@@ -1681,9 +1663,7 @@
     }
 }
 
-/* ===============================
-   CONTACT FORM TRUST ICONS FIX
-================================ */
+
 
 .contact-hero-form .contact-form-trust {
     display: flex;
@@ -1719,13 +1699,13 @@
     visibility: visible !important;
 }
 
-/* если Font Awesome где-то перебит */
+
 .contact-hero-form .contact-form-trust i::before {
     display: inline-block !important;
     opacity: 1 !important;
 }
 
-/* mobile */
+
 @media (max-width: 640px) {
     .contact-hero-form .contact-form-trust {
         justify-content: center;
@@ -1747,9 +1727,7 @@
     }
 }
 
-/* ===============================
-   CONTACT MAIN — COMPACT PREMIUM
-================================ */
+
 
 .contact-main.section {
     padding-top: clamp(34px, 4vw, 56px) !important;
@@ -1814,7 +1792,7 @@
     font-size: 0.78rem;
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
     .contact-main.section {
         padding-top: 34px !important;
@@ -1847,7 +1825,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 640px) {
     .contact-main.section {
         padding-top: 28px !important;
@@ -1902,9 +1880,7 @@
     }
 }
 
-/* ===============================
-   CONTACT — SHARP CARDS
-================================ */
+
 
 .contact-info-panel,
 .contact-map-card,
@@ -1918,13 +1894,11 @@
     border-radius: 0 !important;
 }
 
-/* ===============================
-   MOBILE — CONTACT HERO FORM COMPACT
-================================ */
+
 
 @media (max-width: 640px) {
 
-    /* весь hero-контент по центру секции */
+    
     .contact-hero .contact-hero-grid,
     .contact-hero--split .contact-hero-grid,
     .container.contact-hero-grid {
@@ -1935,7 +1909,7 @@
         gap: 20px;
     }
 
-    /* форма компактнее */
+    
     .contact-hero-form {
         width: 100%;
         max-width: 420px;
@@ -1944,7 +1918,7 @@
         padding: 16px !important;
     }
 
-    /* верх формы по центру */
+    
     .contact-form-head {
         text-align: center;
         display: grid;
@@ -1975,7 +1949,7 @@
         color: rgba(23, 23, 23, 0.58);
     }
 
-    /* поля компактнее */
+    
     .contact-hero-form form,
     .contact-hero-form .contact-form,
     .contact-form-grid {
@@ -1999,7 +1973,7 @@
         resize: vertical;
     }
 
-    /* trust icons компактно */
+    
     .contact-form-trust {
         justify-content: center;
         gap: 8px !important;
@@ -2020,14 +1994,14 @@
         font-size: 0.68rem !important;
     }
 
-    /* убрать кнопку submit на мобилке */
+    
     .contact-submit,
     .contact-hero-form .contact-submit,
     .contact-hero-form button[type="submit"] {
         display: none !important;
     }
 
-    /* убрать disclaimer на мобилке */
+    
     .contact-hero-disclaimer,
     .contact-hero-form .contact-hero-disclaimer {
         display: none !important;
@@ -2035,9 +2009,7 @@
 }
 
 
-/* ===============================
-   CONTACT NEXT — CLEAN TRUST FLOW
-================================ */
+
 
 .contact-next {
     background: #f4f1ec;
@@ -2172,9 +2144,7 @@
     }
 }
 
-/* ===============================
-   CONTACT NEXT — COMPACT PHOTO BACKGROUND
-================================ */
+
 
 .contact-next {
     position: relative;
@@ -2185,7 +2155,7 @@
     isolation: isolate;
 }
 
-/* background photo */
+
 .contact-next::before {
     content: "";
     position: absolute;
@@ -2196,7 +2166,7 @@
     transform: scale(1.04);
 }
 
-/* light gradient overlay */
+
 .contact-next::after {
     content: "";
     position: absolute;
@@ -2218,7 +2188,7 @@
     z-index: 2;
 }
 
-/* same layout, just tighter */
+
 .contact-next-head {
     margin-bottom: clamp(24px, 3vw, 38px);
 }
@@ -2246,7 +2216,7 @@
     line-height: 1.62;
 }
 
-/* cards compact */
+
 .contact-next-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -2295,7 +2265,7 @@
     line-height: 1.52;
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
     .contact-next {
         padding: 38px 0 !important;
@@ -2325,7 +2295,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 640px) {
     .contact-next {
         padding: 32px 0 !important;
@@ -2359,9 +2329,7 @@
     }
 }
 
-/* ===============================
-   CONTACT MINI FAQ — COMPACT
-================================ */
+
 
 .contact-mini-faq {
     background: #f4f1ec;
@@ -2460,7 +2428,7 @@
     line-height: 1.65;
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
     .contact-mini-faq-shell {
         grid-template-columns: 1fr;
@@ -2479,7 +2447,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 640px) {
     .contact-mini-faq {
         padding: 34px 0 !important;
@@ -2517,9 +2485,7 @@
     }
 }
 
-/* ===============================
-   CONTACT NOTE — FINAL EDITORIAL
-================================ */
+
 
 .contact-note--editorial {
     position: relative;
@@ -2638,7 +2604,7 @@
     font-weight: 560;
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
     .contact-note-card {
         grid-template-columns: 1fr;
@@ -2654,7 +2620,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 640px) {
     .contact-note--editorial {
         padding: 34px 0 !important;
@@ -2713,9 +2679,7 @@
     }
 }
 
-/* ===============================
-   CONTACT NOTE — COMPACT PHOTO
-================================ */
+
 
 .contact-note--editorial {
     position: relative;
@@ -2860,7 +2824,7 @@
     font-weight: 560;
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
     .contact-note--editorial {
         padding: 36px 0 !important;
@@ -2878,7 +2842,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 640px) {
     .contact-note--editorial {
         padding: 30px 0 !important;
@@ -2938,9 +2902,7 @@
     }
 }
 
-/* ===============================
-   FIX — CONTACT NOTE PHOTO VISIBLE
-================================ */
+
 
 .contact-note.contact-note--editorial {
     position: relative;
@@ -2949,7 +2911,7 @@
     isolation: isolate;
 }
 
-/* фото-фон */
+
 .contact-note.contact-note--editorial::before {
     content: "";
     position: absolute;
@@ -2963,7 +2925,7 @@
     transform: scale(1.04);
 }
 
-/* градиент легче, чтобы фото было видно */
+
 .contact-note.contact-note--editorial::after {
     content: "";
     position: absolute;
@@ -2980,7 +2942,7 @@
     pointer-events: none;
 }
 
-/* карточку делаем прозрачнее, чтобы фон читался */
+
 .contact-note.contact-note--editorial .contact-note-card {
     position: relative;
     z-index: 2;
@@ -2990,9 +2952,7 @@
     -webkit-backdrop-filter: blur(10px);
 }
 
-/* ===============================
-   TABLET — CENTER CONTACT HERO GRID
-================================ */
+
 
 @media (min-width: 641px) and (max-width: 980px) {
     .contact-hero.contact-hero--split {

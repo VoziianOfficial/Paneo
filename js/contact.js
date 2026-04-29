@@ -1,6 +1,3 @@
-// ===============================
-// Paneo Contact Page JS
-// ===============================
 
 document.addEventListener("DOMContentLoaded", () => {
     initContactFocusEffects();
@@ -8,9 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
     initContactMapEffect();
 });
 
-// ===============================
-// INPUT FOCUS UX (премиум ощущение)
-// ===============================
 
 function initContactFocusEffects() {
     const fields = document.querySelectorAll(".contact-field input, .contact-field textarea, .contact-field select");
@@ -28,15 +22,11 @@ function initContactFocusEffects() {
     });
 }
 
-// ===============================
-// AUTO SELECT SERVICE (UX boost)
-// ===============================
 
 function initContactAutoSelect() {
     const select = document.querySelector("select[name='service']");
     if (!select) return;
 
-    // Если пришли с service page → авто выбрать
     const params = new URLSearchParams(window.location.search);
     const service = params.get("service");
 
@@ -49,9 +39,6 @@ function initContactAutoSelect() {
     });
 }
 
-// ===============================
-// MAP HOVER EFFECT (дорогой эффект)
-// ===============================
 
 function initContactMapEffect() {
     const map = document.querySelector(".contact-map-card");

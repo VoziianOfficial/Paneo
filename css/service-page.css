@@ -1,6 +1,4 @@
-/* ===============================
-   SERVICE PAGE — PREMIUM CLEAN
-================================ */
+
 
 .service-hero,
 .service-snapshot,
@@ -17,9 +15,7 @@
     overflow: hidden;
 }
 
-/* ===============================
-   SERVICE HERO
-================================ */
+
 
 .service-hero {
     position: relative;
@@ -151,7 +147,7 @@
     background: rgba(244, 241, 236, 0.16);
 }
 
-/* HERO CARD */
+
 
 .service-hero-card {
     grid-area: card;
@@ -206,7 +202,7 @@
     line-height: 1.65;
 }
 
-/* HERO RAIL */
+
 
 .service-hero-rail {
     grid-area: rail;
@@ -250,9 +246,7 @@
     line-height: 1.45;
 }
 
-/* ===============================
-   SERVICE SNAPSHOT — EDITORIAL CUSTOM
-================================ */
+
 
 .service-snapshot--custom {
     padding: clamp(38px, 5vw, 72px) 0 !important;
@@ -423,7 +417,7 @@
     line-height: 1.55;
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
     .service-snapshot-editorial {
         grid-template-columns: 1fr;
@@ -456,7 +450,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 640px) {
     .service-snapshot--custom {
         padding: 34px 0 !important;
@@ -511,9 +505,7 @@
     }
 }
 
-/* ===============================
-   FIT SECTION
-================================ */
+
 
 .service-fit {
     background: linear-gradient(180deg, #f4f1ec, #e7e1d7);
@@ -582,9 +574,7 @@
     font-weight: 650;
 }
 
-/* ===============================
-   OPTIONS
-================================ */
+
 
 .service-options {
     background: #f4f1ec;
@@ -648,9 +638,7 @@
     line-height: 1.62;
 }
 
-/* ===============================
-   FACTORS
-================================ */
+
 
 .service-factors {
     background: #e7e1d7;
@@ -719,9 +707,7 @@
     line-height: 1.62;
 }
 
-/* ===============================
-   SPLIT SECTION
-================================ */
+
 
 .service-split {
     background: #f4f1ec;
@@ -796,9 +782,7 @@
     line-height: 1.6;
 }
 
-/* ===============================
-   VERIFY SECTION
-================================ */
+
 
 .service-verify {
     background: #171717;
@@ -886,9 +870,7 @@
     line-height: 1.55;
 }
 
-/* ===============================
-   QUESTIONS
-================================ */
+
 
 .service-questions {
     background: linear-gradient(180deg, #f4f1ec, #e7e1d7);
@@ -983,9 +965,7 @@
     line-height: 1.62;
 }
 
-/* ===============================
-   RELATED SERVICES
-================================ */
+
 
 .service-related {
     background: #f4f1ec;
@@ -1070,15 +1050,13 @@
     color: rgba(244, 241, 236, 0.64);
 }
 
-/* ===============================
-   FAQ
-================================ */
+
 
 .service-faq {
     background: #e7e1d7;
 }
 
-/* если faq-list уже есть в global — это только улучшение для service pages */
+
 
 .service-faq .faq-list {
     display: grid;
@@ -1136,9 +1114,7 @@
     line-height: 1.62;
 }
 
-/* ===============================
-   CTA
-================================ */
+
 
 .service-cta {
     background: #f4f1ec;
@@ -1206,9 +1182,7 @@
     background: #ffffff;
 }
 
-/* ===============================
-   RESPONSIVE
-================================ */
+
 
 @media (max-width: 1100px) {
     .service-hero {
@@ -1469,9 +1443,7 @@
     }
 }
 
-/* ===============================
-   SERVICE FIT — COMPACT EDITORIAL
-================================ */
+
 
 .service-fit--compact {
     padding: clamp(34px, 4.5vw, 66px) 0 !important;
@@ -1561,7 +1533,7 @@
     line-height: 1.5;
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
     .service-fit-compact-grid {
         grid-template-columns: 1fr;
@@ -1587,7 +1559,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 640px) {
     .service-fit--compact {
         padding: 32px 0 !important;
@@ -1625,9 +1597,7 @@
     }
 }
 
-/* ===============================
-   SERVICE CTA — PHOTO BACKGROUND
-================================ */
+
 
 .service-cta.section {
     position: relative;
@@ -1706,7 +1676,7 @@
     background: #ffffff;
 }
 
-/* mobile */
+
 @media (max-width: 640px) {
     .service-cta.section {
         padding: 34px 0 !important;
@@ -1717,9 +1687,7 @@
     }
 }
 
-/* ===============================
-   SERVICE PAGES — EXTRA POLISH
-================================ */
+
 
 .service-hero-card,
 .service-hero-rail,
@@ -1741,26 +1709,26 @@
         color 0.3s ease;
 }
 
-/* Hero card */
+
 .service-hero-card:hover {
     transform: translateY(-5px);
     background: rgba(244, 241, 236, 0.12);
     border-color: rgba(244, 241, 236, 0.28);
 }
 
-/* Hero rail */
+
 .rail-item:hover {
     transform: translateY(-3px);
     border-color: rgba(244, 241, 236, 0.26);
 }
 
-/* Snapshot lines */
+
 .snapshot-line-list article:hover,
 .service-fit-compact-list article:hover {
     background: rgba(255, 255, 255, 0.22);
 }
 
-/* Option cards */
+
 .service-option-card:hover,
 .factor-card:hover {
     background: #171717;
@@ -1786,29 +1754,29 @@
     color: #171717;
 }
 
-/* Verify cards */
+
 .service-verify-grid article:hover {
     transform: translateY(-4px);
     border-color: rgba(244, 241, 236, 0.26);
 }
 
-/* Questions */
+
 .service-question-list details:hover {
     transform: translateX(4px);
 }
 
-/* Related */
+
 .service-related-card:hover {
     transform: translateY(-5px);
 }
 
-/* CTA */
+
 .service-cta-card:hover {
     transform: translateY(-4px);
     border-color: rgba(244, 241, 236, 0.24);
 }
 
-/* Better mobile service pages */
+
 @media (max-width: 760px) {
     .service-hero {
         min-height: auto;

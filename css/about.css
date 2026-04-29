@@ -1,6 +1,4 @@
-/* ===============================
-   ABOUT PAGE — CLEAN LUXURY
-================================ */
+
 
 .about-hero,
 .about-story,
@@ -13,9 +11,7 @@
     overflow: hidden;
 }
 
-/* ===============================
-   HERO
-================================ */
+
 
 .about-hero--gallery {
     min-height: min(760px, calc(100vh - var(--header-height, 82px)));
@@ -157,9 +153,7 @@
     line-height: 1.5;
 }
 
-/* ===============================
-   STORY
-================================ */
+
 
 .about-story--split {
     background: linear-gradient(180deg, #f4f1ec, #e8e3da);
@@ -237,9 +231,7 @@
     border-top: 1px solid rgba(23, 23, 23, 0.14);
 }
 
-/* ===============================
-   PATH
-================================ */
+
 
 .about-path {
     padding-block: clamp(60px, 8vw, 105px);
@@ -400,9 +392,7 @@
     font-weight: 750;
 }
 
-/* ===============================
-   PROOF
-================================ */
+
 
 .about-proof--editorial {
     padding: 0;
@@ -440,9 +430,7 @@
     font-style: normal;
 }
 
-/* ===============================
-   VALUES ACCORDION
-================================ */
+
 
 .about-values--accordion {
     position: relative;
@@ -569,9 +557,7 @@
     transform: rotate(45deg);
 }
 
-/* ===============================
-   DISCLAIMER + CTA
-================================ */
+
 
 .about-disclaimer {
     background: #f4f1ec;
@@ -608,9 +594,7 @@
         url("../images/about/about-cta-window.jpg") center/cover no-repeat;
 }
 
-/* ===============================
-   RESPONSIVE
-================================ */
+
 
 @media (max-width: 980px) {
 
@@ -669,9 +653,7 @@
     margin-top: clamp(24px, 3vw, 36px);
 }
 
-/* ===============================
-   ABOUT PAGE — COMPACT SECTION FLOW
-================================ */
+
 
 .about-page .section {
     margin: 0 !important;
@@ -681,50 +663,48 @@
     margin: 0 !important;
 }
 
-/* HERO — чуть компактнее снизу */
+
 .about-page .about-hero--gallery {
     padding-bottom: clamp(18px, 2vw, 28px) !important;
 }
 
-/* STORY — меньше воздуха внутри */
+
 .about-page .about-story-split-shell {
     padding-top: clamp(36px, 4vw, 58px) !important;
     padding-bottom: clamp(34px, 4vw, 54px) !important;
 }
 
-/* PATH — одна секция = один экран, компактнее */
+
 .about-page .about-path {
     padding-top: clamp(34px, 4vw, 54px) !important;
     padding-bottom: clamp(34px, 4vw, 54px) !important;
 }
 
-/* PROOF — компактная editorial секция */
+
 .about-page .about-proof-editorial-shell {
     padding-top: clamp(30px, 4vw, 48px) !important;
     padding-bottom: clamp(28px, 4vw, 44px) !important;
 }
 
-/* VALUES — меньше высота, но всё ещё premium */
+
 .about-page .about-values--accordion {
     padding-top: clamp(46px, 5vw, 72px) !important;
     padding-bottom: clamp(46px, 5vw, 72px) !important;
 }
 
-/* DISCLAIMER + CTA */
+
 .about-page .about-disclaimer,
 .about-page .about-cta {
     padding-top: clamp(34px, 4vw, 54px) !important;
     padding-bottom: clamp(34px, 4vw, 54px) !important;
 }
 
-/* расстояние у кнопок CTA */
+
 .about-page .about-cta-actions {
     margin-top: clamp(20px, 2.5vw, 32px);
 }
 
-/* ===============================
-   TABLET + MOBILE — COMPACT ABOUT PATH TABS
-================================ */
+
 
 @media (max-width: 980px) {
     .about-path-tab {
@@ -759,9 +739,7 @@
     }
 }
 
-/* ===============================
-   ABOUT PATH TABS — HORIZONTAL TEXT
-================================ */
+
 
 .about-path-tab {
     display: flex !important;
@@ -805,9 +783,7 @@
     }
 }
 
-/* ===============================
-   ABOUT HERO — COMPACT ONE SCREEN
-================================ */
+
 
 .about-page .about-hero.about-hero--gallery {
     min-height: calc(100vh - var(--header-height, 82px));
@@ -863,16 +839,14 @@
     line-height: 1.35;
 }
 
-/* TABLET + MOBILE — remove bottom padding in about hero copy */
+
 @media (max-width: 980px) {
     .about-page .about-hero-copy {
         padding-bottom: 0 !important;
     }
 }
 
-/* ===============================
-   MOBILE — ABOUT CTA BUTTONS
-================================ */
+
 
 @media (max-width: 640px) {
     .about-cta-actions {

@@ -1,16 +1,9 @@
-// ===============================
-// Paneo Home JS
-// Page-specific home logic
-// ===============================
 
 document.addEventListener("DOMContentLoaded", () => {
     initHomeParallax();
     initAos();
 });
 
-// ===============================
-// SOFT HERO PARALLAX
-// ===============================
 
 function initHomeParallax() {
     const heroImage = document.querySelector(".hero-bg img");
@@ -24,9 +17,6 @@ function initHomeParallax() {
     }, { passive: true });
 }
 
-// ===============================
-// AOS
-// ===============================
 
 function initAos() {
     if (typeof AOS === "undefined") return;

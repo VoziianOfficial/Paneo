@@ -1,6 +1,4 @@
-/* ===============================
-   LEGAL HERO
-================================ */
+
 
 .legal-hero {
     padding: clamp(110px, 12vw, 180px) 0 clamp(30px, 4vw, 50px);
@@ -33,9 +31,7 @@
     color: var(--color-accent);
 }
 
-/* ===============================
-   LEGAL CONTENT
-================================ */
+
 
 .legal-content {
     background: var(--color-white);
@@ -47,9 +43,7 @@
     gap: clamp(30px, 5vw, 70px);
 }
 
-/* ===============================
-   SIDEBAR
-================================ */
+
 
 .legal-sidebar {
     position: sticky;
@@ -77,9 +71,7 @@
     color: white;
 }
 
-/* ===============================
-   ARTICLE
-================================ */
+
 
 .legal-article {
     max-width: 860px;
@@ -96,9 +88,7 @@
     color: var(--color-muted);
 }
 
-/* ===============================
-   DISCLAIMER BLOCK
-================================ */
+
 
 .legal-disclaimer {
     margin-top: 40px;
@@ -113,9 +103,7 @@
     color: var(--color-muted);
 }
 
-/* ===============================
-   RESPONSIVE
-================================ */
+
 
 @media (max-width: 1000px) {
     .legal-layout {

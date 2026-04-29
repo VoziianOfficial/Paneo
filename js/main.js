@@ -1,7 +1,3 @@
-// ===============================
-// Paneo Main JS
-// Global shared logic
-// ===============================
 
 document.addEventListener("DOMContentLoaded", () => {
     if (!window.SITE_CONFIG) {
@@ -25,9 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
     initAccordion();
 });
 
-// ===============================
-// GLOBAL DATA
-// ===============================
 
 function applyGlobalData() {
     const cfg = window.SITE_CONFIG;
@@ -55,11 +48,7 @@ function applyGlobalData() {
     document.querySelectorAll("[data-phone]").forEach((el) => {
         el.href = `tel:${cfg.phoneHref}`;
 
-        /*
-            Важно:
-            Не вставляем сюда иконку через HTML.
-            На мобилке иконка телефона рисуется через CSS ::before.
-        */
+        
         el.textContent = cfg.phoneLabel;
     });
 
@@ -73,9 +62,6 @@ function applyGlobalData() {
     });
 }
 
-// ===============================
-// SERVICES DROPDOWNS
-// ===============================
 
 function renderServicesDropdowns() {
     if (!window.SERVICES_DATA) return;
@@ -124,9 +110,6 @@ function renderServicesDropdowns() {
     });
 }
 
-// ===============================
-// FOOTER
-// ===============================
 
 function renderFooter() {
     const footer = document.querySelector(".site-footer");
@@ -182,9 +165,6 @@ function renderFooter() {
     `;
 }
 
-// ===============================
-// MOBILE MENU
-// ===============================
 
 function initMobileMenu() {
     const toggle = document.querySelector("[data-menu-toggle]");
@@ -231,9 +211,6 @@ function initMobileMenu() {
     });
 }
 
-// ===============================
-// HEADER DROPDOWN
-// ===============================
 
 function initHeaderDropdown() {
     const dropdown = document.querySelector(".nav-dropdown");
@@ -256,9 +233,6 @@ function initHeaderDropdown() {
     });
 }
 
-// ===============================
-// STICKY HEADER STATE
-// ===============================
 
 function initStickyHeader() {
     const header = document.querySelector(".site-header");
@@ -272,9 +246,6 @@ function initStickyHeader() {
     window.addEventListener("scroll", updateHeader, { passive: true });
 }
 
-// ===============================
-// COOKIE BANNER
-// ===============================
 
 function initCookieBanner() {
     const cfg = window.SITE_CONFIG;
@@ -318,9 +289,6 @@ function initCookieBanner() {
     });
 }
 
-// ===============================
-// FORMS
-// ===============================
 
 function initForms() {
     const forms = document.querySelectorAll("[data-lead-form]");
@@ -356,9 +324,6 @@ function showFormMessage(element, text, type) {
     }, 5000);
 }
 
-// ===============================
-// REVEAL ANIMATIONS
-// ===============================
 
 function initRevealAnimations() {
     document.documentElement.classList.add("reveal-ready");
@@ -384,9 +349,6 @@ function initRevealAnimations() {
     elements.forEach((el) => observer.observe(el));
 }
 
-// ===============================
-// METRIC COUNTERS
-// ===============================
 
 function initMetricCounters() {
     const counters = document.querySelectorAll("[data-count-to]");
@@ -454,9 +416,6 @@ function initMetricCounters() {
     counters.forEach((counter) => observer.observe(counter));
 }
 
-// ===============================
-// HOME PROJECT SWIPER
-// ===============================
 
 function initHomeProjectSwiper() {
     const slider = document.querySelector(".homeProjectSwiper");
@@ -487,9 +446,6 @@ function initHomeProjectSwiper() {
     });
 }
 
-// ===============================
-// TEXTAREA COUNTER
-// ===============================
 
 function initTextareaCounter() {
     const textarea = document.querySelector(".home-contact-field-wide textarea");
@@ -507,9 +463,6 @@ function initTextareaCounter() {
     textarea.addEventListener("input", updateCounter);
 }
 
-// ===============================
-// ABOUT PATH TABS
-// ===============================
 
 function initAboutPathTabs() {
     const tabs = document.querySelectorAll(".about-path-tab");
@@ -543,9 +496,6 @@ function initAboutPathTabs() {
     });
 }
 
-// ===============================
-// ACCORDION
-// ===============================
 
 function initAccordion() {
     const items = document.querySelectorAll(".accordion-item");

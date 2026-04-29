@@ -1,6 +1,4 @@
-/* ===============================
-   HOME HERO — QUIET LUXURY
-================================ */
+
 
 .home-hero {
     position: relative;
@@ -173,7 +171,7 @@
     display: none;
 }
 
-/* bottom hero meta */
+
 
 .home-hero-meta {
     position: relative;
@@ -225,9 +223,7 @@
 }
 
 
-/* ===============================
-   HOME STRIP — LOW QUIET TILES
-================================ */
+
 
 .home-strip {
     position: relative;
@@ -363,9 +359,7 @@
 }
 
 
-/* ===============================
-   HOME SERVICES — QUIET LUXURY
-================================ */
+
 
 .home-services {
     position: relative;
@@ -589,9 +583,7 @@
 }
 
 
-/* ===============================
-   HOME USECASES — QUIET SPLIT
-================================ */
+
 
 .home-usecases {
     position: relative;
@@ -796,9 +788,7 @@
 }
 
 
-/* ===============================
-   METRIC STRIP — QUIET LUXURY
-================================ */
+
 
 .metric-strip {
     position: relative;
@@ -981,9 +971,7 @@
 }
 
 
-/* ===============================
-   EXPERIENCE
-================================ */
+
 
 .home-experience {
     background: var(--color-white);
@@ -1044,9 +1032,7 @@
 }
 
 
-/* ===============================
-   HOME SLIDER — QUIET LUXURY SWIPER
-================================ */
+
 
 .home-slider {
     position: relative;
@@ -1282,9 +1268,7 @@
 
 
 
-/* ===============================
-   FAQ
-================================ */
+
 
 .home-faq {
     background: var(--color-white);
@@ -1310,9 +1294,7 @@
 }
 
 
-/* ===============================
-   RESPONSIVE
-================================ */
+
 
 @media (max-width: 1100px) {
 
@@ -1702,9 +1684,7 @@
     }
 }
 
-/* ===============================
-   HOME CONTACT — TRANSPARENT FORM + MAP
-================================ */
+
 
 .home-contact {
     position: relative;
@@ -1741,7 +1721,7 @@
     align-items: stretch;
 }
 
-/* cards */
+
 
 .home-contact-card {
     position: relative;
@@ -1775,7 +1755,7 @@
     padding: 28px;
 }
 
-/* small label */
+
 
 .home-contact-kicker {
     width: fit-content;
@@ -1798,7 +1778,7 @@
     font-size: 0.74rem;
 }
 
-/* left form text */
+
 
 .home-contact-top h2,
 .home-contact-map-head h3 {
@@ -1835,7 +1815,7 @@
     max-width: 560px;
 }
 
-/* transparent simple form */
+
 
 .home-contact-form {
     margin-top: 24px;
@@ -1942,7 +1922,7 @@
     font-weight: 700;
 }
 
-/* bottom form */
+
 
 .home-contact-bottom {
     margin-top: auto;
@@ -2028,7 +2008,7 @@
     color: #8e3232;
 }
 
-/* right card: title, paragraph, map column */
+
 
 .home-contact-map-card-wrap .home-contact-card-inner {
     padding: 28px;
@@ -2140,7 +2120,7 @@
     background: rgba(255, 255, 255, 0.56);
 }
 
-/* responsive */
+
 
 @media (max-width: 1100px) {
     .home-contact .container {
@@ -2226,9 +2206,7 @@
     }
 }
 
-/* ===============================
-   HOME SLIDER — COMPACT QUIET LUXURY
-================================ */
+
 
 .home-slider {
     position: relative;

@@ -1,6 +1,4 @@
-/* ===============================
-   PANE0 / PANEO GLOBAL STYLES
-================================ */
+
 
 @import url("home.css");
 @import url("services.css");
@@ -10,9 +8,7 @@
 @import url("legal.css");
 
 
-/* ===============================
-   VARIABLES
-================================ */
+
 
 :root {
     --color-bg: #d1cfc7;
@@ -42,9 +38,7 @@
     --transition: 0.35s ease;
 }
 
-/* ===============================
-   RESET
-================================ */
+
 
 *,
 *::before,
@@ -116,9 +110,7 @@ p {
     margin: 0;
 }
 
-/* ===============================
-   ACCESSIBILITY
-================================ */
+
 
 .skip-link {
     position: fixed;
@@ -142,9 +134,7 @@ p {
     outline-offset: 4px;
 }
 
-/* ===============================
-   BASE LAYOUT
-================================ */
+
 
 .container {
     width: min(100% - 40px, var(--container));
@@ -235,9 +225,7 @@ h3 {
     font-size: clamp(1rem, 1.3vw, 1.18rem);
 }
 
-/* ===============================
-   BUTTONS
-================================ */
+
 
 .btn {
     display: inline-flex;
@@ -286,9 +274,7 @@ h3 {
     border-color: var(--color-dark);
 }
 
-/* ===============================
-   HEADER
-================================ */
+
 
 .site-header {
     position: fixed;
@@ -388,9 +374,7 @@ h3 {
     color: var(--color-white);
 }
 
-/* ===============================
-   DROPDOWN
-================================ */
+
 
 .nav-dropdown {
     position: relative;
@@ -432,9 +416,7 @@ h3 {
     background: rgba(194, 162, 127, 0.18);
 }
 
-/* ===============================
-   MOBILE MENU
-================================ */
+
 
 .mobile-menu {
     position: fixed;
@@ -506,9 +488,7 @@ h3 {
     color: rgba(247, 245, 239, 0.78);
 }
 
-/* ===============================
-   STICKY LEFT SERVICE BUTTON
-================================ */
+
 
 .sticky-service-btn {
     position: fixed;
@@ -534,9 +514,7 @@ h3 {
     color: var(--color-dark);
 }
 
-/* ===============================
-   CARDS
-================================ */
+
 
 .premium-card {
     position: relative;
@@ -585,9 +563,7 @@ h3 {
     gap: 12px;
 }
 
-/* ===============================
-   FORMS
-================================ */
+
 
 .form-card {
     max-width: 560px;
@@ -651,9 +627,7 @@ h3 {
     transform: scale(1);
 }
 
-/* ===============================
-   FOOTER
-================================ */
+
 
 .site-footer {
     position: relative;
@@ -710,9 +684,7 @@ h3 {
     font-size: 0.85rem;
 }
 
-/* ===============================
-   COOKIE BANNER
-================================ */
+
 
 .cookie-banner {
     position: fixed;
@@ -774,9 +746,7 @@ h3 {
     font-size: 0.82rem;
 }
 
-/* ===============================
-   ANIMATION HELPERS
-================================ */
+
 
 .reveal-up {
     opacity: 1;
@@ -813,9 +783,7 @@ h3 {
     width: 100%;
 }
 
-/* ===============================
-   RESPONSIVE
-================================ */
+
 
 @media (max-width: 1100px) {
     .desktop-nav {
@@ -908,9 +876,7 @@ h3 {
     }
 }
 
-/* ===============================
-   LOGO FIX
-================================ */
+
 
 .site-header .logo {
     display: inline-flex;
@@ -956,9 +922,7 @@ h3 {
     transform: translateY(-50%);
 }
 
-/* ===============================
-   PREMIUM SIMPLE LOGO
-================================ */
+
 
 .logo-premium-simple {
     display: inline-flex;
@@ -969,28 +933,28 @@ h3 {
     letter-spacing: -0.045em;
 }
 
-/* сама иконка */
+
 .logo-premium-simple .logo-icon {
     width: 38px;
     height: 38px;
     stroke: #1a1b1f;
     stroke-width: 2.4;
-    /* жирнее */
+    
     border-radius: 12px;
 
-    /* subtle depth */
+    
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.08));
     transition: all 0.3s ease;
 }
 
-/* текст */
+
 .logo-premium-simple .logo-text {
     font-size: 1.32rem;
     color: #171b22;
     transition: 0.3s ease;
 }
 
-/* hover — дорогой subtle */
+
 .logo-premium-simple:hover .logo-icon {
     stroke: #b08a5e;
     transform: translateY(-1px);
@@ -1017,9 +981,7 @@ h3 {
     font-weight: 850;
 }
 
-/* ===============================
-   PREMIUM COMPACT BURGER MENU
-================================ */
+
 
 .mobile-menu-toggle {
     display: none;
@@ -1206,9 +1168,7 @@ h3 {
     }
 }
 
-/* ===============================
-   HEADER MOBILE POLISH
-================================ */
+
 
 .site-header.is-scrolled {
     background: rgba(247, 245, 239, 0.9);
@@ -1219,7 +1179,7 @@ h3 {
     white-space: nowrap;
 }
 
-/* prettier desktop quote button */
+
 .header-actions .btn-primary {
     min-height: 46px;
     padding: 0 18px;
@@ -1228,7 +1188,7 @@ h3 {
     box-shadow: 0 12px 28px rgba(17, 20, 26, 0.16);
 }
 
-/* mobile: make Get Window Quotes an icon button */
+
 @media (max-width: 760px) {
     .header-actions .btn-primary {
         width: 42px;
@@ -1266,7 +1226,7 @@ h3 {
     }
 }
 
-/* smaller header on very small phones */
+
 @media (max-width: 420px) {
     .logo-premium-simple .logo-icon {
         width: 34px;
@@ -1289,9 +1249,7 @@ h3 {
     }
 }
 
-/* ===============================
-   PREMIUM FULLSCREEN MOBILE MENU
-================================ */
+
 
 @media (max-width: 900px) {
     .header-actions .btn-primary {
@@ -1439,11 +1397,9 @@ h3 {
     }
 }
 
-/* ===============================
-   FINAL ICON CENTER FIX
-================================ */
 
-/* все кнопки с иконками */
+
+
 .btn,
 .mobile-menu-toggle,
 .home-slider-btn,
@@ -1458,7 +1414,7 @@ h3 {
     gap: 10px;
 }
 
-/* сама иконка */
+
 .btn i,
 .mobile-menu-toggle i,
 .home-slider-btn i,
@@ -1476,7 +1432,7 @@ h3 {
     text-align: center !important;
 }
 
-/* Font Awesome внутри */
+
 .btn i::before,
 .mobile-menu-toggle i::before,
 .home-slider-btn i::before,
@@ -1487,7 +1443,7 @@ h3 {
     line-height: 1 !important;
 }
 
-/* кнопка телефона в мобилке — только иконка */
+
 @media (max-width: 760px) {
     .header-actions .btn-primary[data-phone] {
         width: 42px !important;
@@ -1522,7 +1478,7 @@ h3 {
     }
 }
 
-/* Burger only tablet/mobile */
+
 
 .mobile-menu-toggle {
     display: none !important;
@@ -1558,16 +1514,14 @@ h3 {
     }
 }
 
-/* MOBILE — hide home slider heading */
+
 @media (max-width: 640px) {
     .home-slider-head {
         display: none !important;
     }
 }
 
-/* ===============================
-   FINAL HEADER ICON ALIGN FIX
-================================ */
+
 
 .header-actions {
     display: flex;
@@ -1576,7 +1530,7 @@ h3 {
     gap: 10px;
 }
 
-/* desktop button */
+
 .header-actions .btn-primary[data-phone] {
     display: inline-flex !important;
     align-items: center !important;
@@ -1584,12 +1538,12 @@ h3 {
     line-height: 1 !important;
 }
 
-/* burger must stay hidden on desktop */
+
 .mobile-menu-toggle {
     display: none !important;
 }
 
-/* tablet/mobile header icons */
+
 @media (max-width: 1100px) {
     .mobile-menu-toggle {
         display: grid !important;
@@ -1597,7 +1551,7 @@ h3 {
     }
 }
 
-/* mobile phone circle */
+
 @media (max-width: 900px) {
     .header-actions .btn-primary[data-phone] {
         position: relative;
@@ -1656,12 +1610,9 @@ h3 {
     }
 }
 
-/* ===============================
-   GLOBAL SITE POLISH
-   adaptive / hovers / color shifts
-================================ */
 
-/* Smooth transitions for main interactive elements */
+
+
 a,
 button,
 .btn,
@@ -1699,7 +1650,7 @@ select {
         opacity 0.28s ease;
 }
 
-/* Better focus */
+
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -1709,7 +1660,7 @@ select:focus-visible {
     outline-offset: 4px;
 }
 
-/* Better image hover */
+
 img {
     transition: transform 0.7s ease, filter 0.7s ease;
 }
@@ -1722,7 +1673,7 @@ a:hover img,
     transform: scale(1.045);
 }
 
-/* Buttons polish */
+
 .btn {
     position: relative;
     overflow: hidden;
@@ -1760,7 +1711,7 @@ a:hover img,
     color: #f7f5ef;
 }
 
-/* Header polish */
+
 .site-header {
     transition:
         background 0.3s ease,
@@ -1774,7 +1725,7 @@ a:hover img,
     box-shadow: 0 16px 40px rgba(17, 20, 26, 0.08);
 }
 
-/* Desktop nav hover */
+
 .desktop-nav a,
 .nav-dropdown-toggle {
     position: relative;
@@ -1799,7 +1750,7 @@ a:hover img,
     transform: scaleX(1);
 }
 
-/* Dropdown better hover */
+
 .services-dropdown a:hover {
     background: rgba(23, 23, 23, 0.08);
     transform: translateX(4px);
@@ -1809,7 +1760,7 @@ a:hover img,
     color: #171717;
 }
 
-/* Cards hover */
+
 .premium-card:hover,
 .factor-card:hover,
 .service-option-card:hover,
@@ -1824,7 +1775,7 @@ a:hover img,
     box-shadow: 0 24px 58px rgba(17, 20, 26, 0.14);
 }
 
-/* Light cards color shift */
+
 .service-feature:hover,
 .factor-card:hover,
 .service-option-card:hover,
@@ -1835,7 +1786,7 @@ a:hover img,
     border-color: rgba(23, 23, 23, 0.16);
 }
 
-/* Icon hover */
+
 .factor-card:hover i,
 .service-option-card:hover i,
 .service-feature:hover i,
@@ -1846,7 +1797,7 @@ a:hover img,
     color: #f7f5ef;
 }
 
-/* Dark sections card hover */
+
 .service-verify-grid article:hover,
 .rail-item:hover,
 .contact-next-card:hover,
@@ -1854,7 +1805,7 @@ a:hover img,
     background: rgba(244, 241, 236, 0.1);
 }
 
-/* FAQ hover */
+
 .faq-list details {
     overflow: hidden;
 }
@@ -1868,7 +1819,7 @@ a:hover img,
     color: #000;
 }
 
-/* Forms polish */
+
 input:hover,
 textarea:hover,
 select:hover {
@@ -1882,7 +1833,7 @@ select:focus {
     box-shadow: 0 0 0 4px rgba(194, 162, 127, 0.14);
 }
 
-/* Logo hover */
+
 .logo-premium-simple:hover .logo-icon {
     stroke: #b08a5e;
     transform: translateY(-1px) scale(1.03);
@@ -1892,7 +1843,7 @@ select:focus {
     color: #b08a5e;
 }
 
-/* Mobile menu polish */
+
 .mobile-nav a:hover,
 .mobile-services-toggle:hover {
     background: rgba(23, 23, 23, 0.08);
@@ -1904,16 +1855,14 @@ select:focus {
     color: #171717;
 }
 
-/* Sticky service button */
+
 .sticky-service-btn:hover {
     transform: translateY(-50%) translateX(4px);
     background: #f4f1ec;
     color: #171717;
 }
 
-/* ===============================
-   GLOBAL RESPONSIVE IMPROVEMENTS
-================================ */
+
 
 @media (max-width: 1100px) {
     .section {

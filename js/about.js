@@ -1,6 +1,3 @@
-// ===============================
-// Paneo About Page JS
-// ===============================
 
 document.addEventListener("DOMContentLoaded", () => {
     initAboutParallax();
@@ -8,9 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
     initAboutCounters();
 });
 
-// ===============================
-// PARALLAX (мягкий, дорогой)
-// ===============================
 
 function initAboutParallax() {
     const heroImage = document.querySelector(".about-hero-visual img");
@@ -31,9 +25,6 @@ function initAboutParallax() {
     }, { passive: true });
 }
 
-// ===============================
-// HOVER CARDS EFFECT
-// ===============================
 
 function initAboutHoverEffects() {
     const cards = document.querySelectorAll(".model-card, .values-list div");
@@ -64,9 +55,6 @@ function initAboutHoverEffects() {
     });
 }
 
-// ===============================
-// SOFT COUNTERS (если добавим позже)
-// ===============================
 
 function initAboutCounters() {
     const counters = document.querySelectorAll("[data-counter]");

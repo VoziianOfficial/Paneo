@@ -1,15 +1,9 @@
-// ===============================
-// Paneo Legal Page JS
-// ===============================
 
 document.addEventListener("DOMContentLoaded", () => {
     initLegalActiveState();
     initLegalProgress();
 });
 
-// ===============================
-// ACTIVE SIDEBAR LINK
-// ===============================
 
 function initLegalActiveState() {
     const page = document.documentElement.dataset.legalPage;
@@ -32,9 +26,6 @@ function initLegalActiveState() {
     });
 }
 
-// ===============================
-// READING PROGRESS LINE
-// ===============================
 
 function initLegalProgress() {
     const article = document.querySelector(".legal-article");
