@@ -129,7 +129,9 @@
 
 .hero-actions .btn-primary:hover {
     transform: translateY(-2px);
-    background: #ffffff;
+    background: #9f7d59;
+    color: #ffffff;
+    border-color: rgba(159, 125, 89, 0.9);
     box-shadow: 0 24px 54px rgba(0, 0, 0, 0.28);
 }
 
