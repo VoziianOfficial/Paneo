@@ -445,7 +445,7 @@
     position: absolute;
     inset: 0;
     z-index: -2;
-    background: url("../images/about/about-window-grid.jpg") center/cover no-repeat;
+    background: url("../images/about/about-service.jpg") center/cover no-repeat;
     filter: grayscale(20%) contrast(1.05) brightness(0.75);
     transform: scale(1.03);
 }
